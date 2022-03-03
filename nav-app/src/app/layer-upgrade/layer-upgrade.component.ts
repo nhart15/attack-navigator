@@ -123,13 +123,13 @@ export class LayerUpgradeComponent implements OnInit {
      * @returns {Technique} the technique object
      */
     public getTechnique(attackID: string, vm: ViewModel, section?: string): Technique {
-        let domain = this.dataService.getDomain(vm.domainVersionID);
+        let domain = this.dataService.getDomain(vm.domainID);
         let all_techniques = domain.techniques.concat(domain.subtechniques);
         let technique = all_techniques.find(t => t.attackID == attackID);
 
         if (section == 'revocations' && this.viewModel.version == vm.version) {
             // get revoking object
-            let revokedByID = technique.revoked_by(vm.domainVersionID);
+            let revokedByID = technique.revoked_by(vm.domainID);
             let revokingObject = all_techniques.find(t => t.id == revokedByID);
             return revokingObject;
         } else return technique;
@@ -145,7 +145,7 @@ export class LayerUpgradeComponent implements OnInit {
     public getTactics(attackID: string, vm: ViewModel, section?: string): Tactic[] {
         if (section == 'additions') vm = this.viewModel;
         let technique = this.getTechnique(attackID, vm, section);
-        let domain = this.dataService.getDomain(vm.domainVersionID);
+        let domain = this.dataService.getDomain(vm.domainID);
         return technique.tactics.map(shortname => domain.tactics.find(t => t.shortname == shortname));
     }
 

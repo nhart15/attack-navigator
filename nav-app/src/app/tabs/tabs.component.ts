@@ -1,6 +1,6 @@
 // https://embed.plnkr.co/wWKnXzpm8V31wlvu64od/
 import { Component, AfterContentInit, ViewChild, TemplateRef, AfterViewInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
-import { DataService, Technique } from '../data.service'; //import the DataService component so we can use it
+import { DataService, Domain, Technique } from '../data.service'; //import the DataService component so we can use it
 import { ConfigService } from '../config.service';
 import * as is from 'is_js';
 import { forkJoin } from 'rxjs';
@@ -136,7 +136,7 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
         }
 
         // create a new tab
-        let domain = data? data.domainVersionID : "";
+        let domain = data? data.domainID : "";
         let tab = new Tab(title, isCloseable, false, domain, dataTable);
         tab.dataContext = data;
 
@@ -231,12 +231,6 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
      */
     closeActiveTab(allowNoTab=false) {
         if (this.activeTab) this.closeTab(this.activeTab, allowNoTab);
-        // this.activeTab = null;
-        // let activeTabs = this.layerTabs.filter((tab)=>tab.active);
-        // if(activeTabs.length > 0)  {
-        //     // close the 1st active tab (should only be one at a time)
-        //     this.closeTab(activeTabs[0], allowNoTab);
-        // }
     }
 
     getActiveTab() {
@@ -253,11 +247,16 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
         else this.dropdownEnabled = this.dropdownEnabled !== 'description' ? 'description' : '';
     }
 
-    filterDomains(version: string) {
-        return this.dataService.domains.filter((d) => d.version === version)
+    /**
+     * Retrieve the list of domains in the given version
+     * @param version the version to filter by
+     * @returns list of domains in the given version
+     */
+    public filterDomains(version: string): Domain[] {
+        return this.dataService.domains.filter((d) => d.version.number === version);
     }
 
-    hasFeature(featureName: string): boolean {
+    public hasFeature(featureName: string): boolean {
         return this.configService.getFeature(featureName);
     }
 
@@ -337,18 +336,19 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
 
     /**
      * Open a new blank layer tab
+     * @param domainID the domain-version identifier of the new layer's domain
      */
-    newLayer(domainVersionID: string) {
+    public newLayer(domainID: string): void {
         // load domain data, if not yet loaded
-        if (!this.dataService.getDomain(domainVersionID).dataLoaded) {
-            this.dataService.loadDomainData(domainVersionID, true);
+        if (!this.dataService.getDomain(domainID).dataLoaded) {
+            this.dataService.loadDomainData(domainID, true);
         }
 
         // find non conflicting name
         let name = this.getUniqueLayerName("layer")
 
         // create and open VM
-        let vm = this.viewModelsService.newViewModel(name, domainVersionID);
+        let vm = this.viewModelsService.newViewModel(name, domainID);
         vm.loadVMData();
         this.openTab(name, vm, true, true, true, true)
     }
@@ -396,7 +396,7 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
     /**
      * layer layer operation
      */
-    layerByOperation(): void {
+    public layerByOperation(): void {
         // build score expression map, mapping inline variables to their actual VMs
         let scoreVariables = new Map<string, ViewModel>();
         let regex = /\b[a-z]\b/g //\b matches word boundary
@@ -415,7 +415,7 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
         try {
             // all layers must be of the same domain/version
             let vms = Array.from(scoreVariables.values());
-            if(vms && !vms.every((vm) => vm.domainVersionID === vms[0].domainVersionID)) {
+            if(vms && !vms.every((vm) => vm.domainID === vms[0].domainID)) {
                 throw {message: "cannot apply operations to layers of different domains"};
             }
             let vm = this.viewModelsService.layerLayerOperation(this.domain, this.scoreExpression, scoreVariables, this.comments, this.links, this.metadata, this.gradient, this.coloring, this.enabledness, layerName, this.filters, this.legendItems)
@@ -442,7 +442,7 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
      * Retrieves a list of view models with the chosen domain
      */
     getLayers(): ViewModel[] {
-        return this.viewModelsService.viewModels.filter((vm) => vm.domainVersionID == this.domain)
+        return this.viewModelsService.viewModels.filter((vm) => vm.domainID == this.domain)
     }
 
     /**
@@ -466,7 +466,7 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
                     // console.log("chartoindex["+match+"]", self.charToIndex(match))
                     if (typeof(self.charToIndex(match)) == "undefined") {
                         noMatch = "Variable " + match + " does not match any layers"
-                    } else if (self.domain && self.layerTabs[self.charToIndex(match)].dataContext.domainVersionID !== self.domain) {
+                    } else if (self.domain && self.layerTabs[self.charToIndex(match)].dataContext.domainID !== self.domain) {
                         noMatch = "Layer " + match + " does not match the chosen domain"
                     }
                 });
@@ -495,7 +495,7 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
      */
     versionUpgradeDialog(viewModel): Promise<any> {
         let dataPromise: Promise<any> = new Promise((resolve, reject) => {
-            let currVersion = this.dataService.getCurrentVersion();
+            let currVersion = this.dataService.getLatestVersion();
             if (viewModel.version !== currVersion) { // ask to upgrade
                 let dialog = this.dialog.open(VersionUpgradeComponent, {
                     data: {
@@ -513,8 +513,8 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
                             reject("Uploaded layer version (" + String(viewModel.version) + ") is not supported by Navigator v" + globals.nav_version)
                         }
                         if (result.upgrade) {
-                            let newDomainVersionID = this.dataService.getDomainVersionID(viewModel.domain, currVersion);
-                            resolve({oldID: viewModel.domainVersionID, newID: newDomainVersionID});
+                            let newDomainID = this.dataService.getDomainID(viewModel.domain, currVersion);
+                            resolve({oldID: viewModel.domainID, newID: newDomainID});
                         }
                         resolve(null);
                     },
@@ -541,8 +541,8 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
                         // create and open the latest version
                         let newViewModel = this.viewModelsService.newViewModel("loading layer...", undefined);
                         newViewModel.name = oldViewModel.name;
-                        newViewModel.domainVersionID = versions.newID; // update domainVersionID to new ID
-                        newViewModel.version = this.dataService.getCurrentVersion(); // update version to new ID
+                        newViewModel.domainID = versions.newID; // update domain-version identifier to the new ID
+                        newViewModel.version = this.dataService.getLatestVersion(); // update version to new ID
                         newViewModel.loadVMData();
                         newViewModel.compareTo = oldViewModel;
                         this.openTab("new layer", newViewModel, true, replace, true, true);
@@ -576,8 +576,8 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
                         }
                     } else { // user did not upgrade, keep the old version
                         this.openTab("new layer", oldViewModel, true, replace, true, true);
-                        if (!this.dataService.getDomain(oldViewModel.domainVersionID).dataLoaded) {
-                            this.dataService.loadDomainData(oldViewModel.domainVersionID, true).then( () => {
+                        if (!this.dataService.getDomain(oldViewModel.domainID).dataLoaded) {
+                            this.dataService.loadDomainData(oldViewModel.domainID, true).then( () => {
                                 oldViewModel.deSerialize(serialized);
                                 oldViewModel.loadVMData();
                                 resolve(null);
@@ -596,8 +596,8 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
                 });
             } else { // is a default layer, do not upgrade
                 this.openTab("new layer", oldViewModel, true, replace, true, true);
-                if (!this.dataService.getDomain(oldViewModel.domainVersionID).dataLoaded) {
-                    this.dataService.loadDomainData(oldViewModel.domainVersionID, true).then( () => {
+                if (!this.dataService.getDomain(oldViewModel.domainID).dataLoaded) {
+                    this.dataService.loadDomainData(oldViewModel.domainID, true).then( () => {
                         oldViewModel.deSerialize(serialized);
                         oldViewModel.loadVMData();
                         resolve(null);
@@ -636,8 +636,8 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
         reader.onload = (e) =>{
             var string = String(reader.result);
             try{
-                viewModel.deSerializeDomainVersionID(string);
-                if (!this.dataService.getDomain(viewModel.domainVersionID)) {
+                viewModel.deserializeDomainID(string);
+                if (!this.dataService.getDomain(viewModel.domainID)) {
                     throw {message: "Error: '" + viewModel.domain + "' (" + viewModel.version + ") is an invalid domain."};
                 }
                 this.layerUpgrade(viewModel, string, true);
@@ -666,8 +666,8 @@ export class TabsComponent implements AfterContentInit, AfterViewInit {
                 next: async (res) => {
                     let viewModel = this.viewModelsService.newViewModel("loading layer...", undefined);
                     try {
-                        viewModel.deSerializeDomainVersionID(res);
-                        if (!this.dataService.getDomain(viewModel.domainVersionID)) {
+                        viewModel.deserializeDomainID(res);
+                        if (!this.dataService.getDomain(viewModel.domainID)) {
                             throw {message: "Error: '" + viewModel.domain + "' (" + viewModel.version + ") is an invalid domain."};
                         }
                         await this.layerUpgrade(viewModel, res, replace, defaultLayers);

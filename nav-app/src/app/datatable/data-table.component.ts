@@ -66,9 +66,9 @@ export class DataTableComponent implements AfterViewInit, OnDestroy {
 
     saveLayerLocallyExcel() {
         var workbook = new Excel.Workbook();
-        let domain = this.dataService.getDomain(this.viewModel.domainVersionID);
+        let domain = this.dataService.getDomain(this.viewModel.domainID);
         for (let matrix of domain.matrices) {
-            var worksheet = workbook.addWorksheet(matrix.name + " (v" + domain.getVersion() + ")");
+            var worksheet = workbook.addWorksheet(matrix.name + " (v" + domain.version + ")");
 
             // create tactic columns
             let columns = this.viewModel.filterTactics(matrix.tactics, matrix).map(tactic => { return {header: this.getDisplayName(tactic), key: tactic.name} });
@@ -328,7 +328,7 @@ export class DataTableComponent implements AfterViewInit, OnDestroy {
      */
     expandSubtechniques(showAnnotatedOnly?: boolean): void {
         if (this.viewModel.layout.layout == "mini") return; //control disabled in mini layout
-        for (let technique of this.dataService.getDomain(this.viewModel.domainVersionID).techniques) {
+        for (let technique of this.dataService.getDomain(this.viewModel.domainID).techniques) {
             if (technique.subtechniques.length > 0) {
                 for (let id of technique.get_all_technique_tactic_ids()) {
                     let tvm = this.viewModel.getTechniqueVM_id(id);

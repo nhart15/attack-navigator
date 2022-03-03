@@ -28,11 +28,11 @@ export class ViewModelsService {
     /**
      * Create and return a new viewModel
      * @param {string} name the viewmodel name
-     * @param {string} domainVersionID the ID of the domain & version
+     * @param {string} domainID the domain-version identifier of the domain
      * @return {ViewModel} the created ViewModel
      */
-    newViewModel(name: string, domainVersionID: string) {
-        let vm = new ViewModel(name, "vm"+ this.getNonce(), domainVersionID, this.dataService);
+    newViewModel(name: string, domainID: string) {
+        let vm = new ViewModel(name, "vm"+ this.getNonce(), domainID, this.dataService);
         this.viewModels.push(vm);
         return vm;
     }
@@ -64,7 +64,7 @@ export class ViewModelsService {
 
     /**
      * layer combination operation
-     * @param  domainVersionID  domain & version ID
+     * @param  domainID         domain-version identifier
      * @param  scoreExpression  math expression of score expression
      * @param  scoreVariables   variables in math expression, mapping to viewmodel they correspond to
      * @param  comments         what viewmodel to inherit comments from
@@ -76,8 +76,8 @@ export class ViewModelsService {
      * @param  filters          viewmodel to inherit filters from
      * @return                  new viewmodel inheriting above properties
      */
-    layerLayerOperation(domainVersionID: string, scoreExpression: string, scoreVariables: Map<string, ViewModel>, comments: ViewModel, links: ViewModel, metadata: ViewModel, gradient: ViewModel, coloring: ViewModel, enabledness: ViewModel, layerName: string, filters: ViewModel, legendItems: ViewModel): ViewModel {
-        let result = new ViewModel("layer by operation", "vm" + this.getNonce(), domainVersionID, this.dataService);
+    public layerLayerOperation(domainID: string, scoreExpression: string, scoreVariables: Map<string, ViewModel>, comments: ViewModel, links: ViewModel, metadata: ViewModel, gradient: ViewModel, coloring: ViewModel, enabledness: ViewModel, layerName: string, filters: ViewModel, legendItems: ViewModel): ViewModel {
+        let result = new ViewModel("layer by operation", "vm" + this.getNonce(), domainID, this.dataService);
 
         if (scoreExpression) {
             scoreExpression = scoreExpression.toLowerCase() //should be enforced by input, but just in case
@@ -358,7 +358,7 @@ export class ViewModel {
     name: string; // layer name
     domain: string = ""; // attack domain
     version: string = ""; // attack version
-    domainVersionID: string; // layer domain & version
+    domainID: string; // layer domain-version identifier
     description: string = ""; //layer description
     uid: string; //unique identifier for this ViewModel. Do not serialize, let it get initialized by the VmService
 
@@ -413,31 +413,30 @@ export class ViewModel {
         else this._sidebarContentType = '';
     };
 
-    constructor(name: string, uid: string, domainVersionID: string, private dataService: DataService) {
-        this.domainVersionID = domainVersionID;
+    constructor(name: string, uid: string, domainID: string, private dataService: DataService) {
+        this.domainID = domainID;
         console.log("initializing ViewModel '" + name + "'");
         this.filters = new Filter();
         this.name = name;
         this.uid = uid;
     }
 
-    loadVMData() {
-        if (!this.domainVersionID || !this.dataService.getDomain(this.domainVersionID).dataLoaded) {
-            console.log("subscribing to data loaded callback")
+    public loadVMData(): void {
+        if (!this.domainID || !this.dataService.getDomain(this.domainID).dataLoaded) {
             let self = this;
-            this.dataService.onDataLoad(this.domainVersionID, function() {
+            this.dataService.onDataLoad(this.domainID, function() {
                 self.initTechniqueVMs()
-                self.filters.initPlatformOptions(self.dataService.getDomain(self.domainVersionID));
+                self.filters.initPlatformOptions(self.dataService.getDomain(self.domainID));
             });
         } else {
             this.initTechniqueVMs();
-            this.filters.initPlatformOptions(this.dataService.getDomain(this.domainVersionID));
+            this.filters.initPlatformOptions(this.dataService.getDomain(this.domainID));
         }
     }
 
-    initTechniqueVMs() {
+    public initTechniqueVMs(): void {
         console.log(this.name, "initializing technique VMs");
-        for (let technique of this.dataService.getDomain(this.domainVersionID).techniques) {
+        for (let technique of this.dataService.getDomain(this.domainID).techniques) {
             for (let id of technique.get_all_technique_tactic_ids()) {
                 let techniqueVM = new TechniqueVM(id);
                 techniqueVM.score = this.initializeScoresTo;
@@ -454,25 +453,8 @@ export class ViewModel {
         }
     }
 
-    // changeTechniqueIDSelectionLock() {
-    //     this.selectTechniquesAcrossTactics = !this.selectTechniquesAcrossTactics;
-    // }
-
-    showTacticRowBackground: boolean = false;
-    tacticRowBackground: string = "#dddddd";
-
-    // getTechniqueIDFromUID(technique_tactic_union_id: string){
-    //     return this.techIDtoUIDMap[technique_tactic_union_id];
-    // }
-
-    // getTechniquesUIDFromID(technique_id: string){
-    //     return this.techIDtoUIDMap[technique_id];
-    // }
-
-    // setTechniqueMaps(techIDtoUIDMapt, techUIDtoIDMapt){
-    //     this.techIDtoUIDMap = Object.freeze(techIDtoUIDMapt);
-    //     this.techUIDtoIDMap = Object.freeze(techUIDtoIDMapt);
-    // }
+    public showTacticRowBackground: boolean = false;
+    public tacticRowBackground: string = "#dddddd";
 
      //  _____ ___ ___ _  _ _  _ ___ ___  _   _ ___     _   ___ ___
      // |_   _| __/ __| || | \| |_ _/ _ \| | | | __|   /_\ | _ \_ _|
@@ -771,13 +753,13 @@ export class ViewModel {
         let self = this;
 
         function copy(attackID: string) {
-            let fromTechnique = self.dataService.getTechnique(attackID, self.compareTo.domainVersionID);
-            let domain = self.dataService.getDomain(self.domainVersionID);
+            let fromTechnique = self.dataService.getTechnique(attackID, self.compareTo.domainID);
+            let domain = self.dataService.getDomain(self.domainID);
             let tactics = fromTechnique.tactics.map(shortname => domain.tactics.find(t => t.shortname == shortname));
             tactics.forEach(tactic => {
                 let fromVM = self.compareTo.getTechniqueVM(fromTechnique, tactic);
                 if (fromVM.annotated()) {
-                    let toTechnique = self.dataService.getTechnique(attackID, self.domainVersionID);
+                    let toTechnique = self.dataService.getTechnique(attackID, self.domainID);
                     self.copyAnnotations(fromTechnique, toTechnique, tactic);
                 }
             });
@@ -1233,13 +1215,14 @@ export class ViewModel {
         let rep: {[k: string]: any } = {};
         rep.name = this.name;
 
+        let domain = this.dataService.getDomain(this.domainID);
         rep.versions = {
-            "attack": this.dataService.getDomain(this.domainVersionID).getVersion(),
+            "attack": domain.version.number,
             "navigator": globals.nav_version,
             "layer": globals.layer_version
         }
 
-        rep.domain = this.domainVersionID.substr(0, this.domainVersionID.search(/-v[0-9]+/g));
+        rep.domain = domain.identifier;
         rep.description = this.description;
         rep.filters = JSON.parse(this.filters.serialize());
         rep.sorting = this.sorting;
@@ -1263,14 +1246,14 @@ export class ViewModel {
      * restore the domain and version from a string
      * @param rep string to restore from
      */
-    deSerializeDomainVersionID(rep: any): void {
+    deserializeDomainID(rep: any): void {
         let obj = (typeof(rep) == "string")? JSON.parse(rep) : rep
         this.name = obj.name
-        this.version = this.dataService.getCurrentVersion(); // layer with no specified version defaults to current version
+        this.version = this.dataService.getLatestVersion(); // layer with no specified version defaults to current version
         if ("versions" in obj) {
             if ("attack" in obj.versions) {
                 if (typeof(obj.versions.attack) === "string") {
-                    if (obj.versions.attack.length > 0) this.version = "v" + obj.versions.attack.match(/[0-9]+/g)[0];
+                    if (obj.versions.attack.length > 0) this.version = obj.versions.attack.match(/[0-9]+/g)[0];
                 }
                 else console.error("TypeError: attack version field is not a string");
             }
@@ -1289,7 +1272,7 @@ export class ViewModel {
         if(obj.domain in this.dataService.domain_backwards_compatibility) {
             this.domain = this.dataService.domain_backwards_compatibility[obj.domain];
         } else { this.domain = obj.domain; }
-        this.domainVersionID = this.dataService.getDomainVersionID(this.domain, this.version);
+        this.domainID = this.dataService.getDomainID(this.domain, this.version);
     }
 
     /**
@@ -1379,7 +1362,7 @@ export class ViewModel {
                     } else {
                         // occurs in multiple tactics
                         // match to Technique by attackID
-                        for (let technique of this.dataService.getDomain(this.domainVersionID).techniques) {
+                        for (let technique of this.dataService.getDomain(this.domainID).techniques) {
                             if (technique.attackID == obj_technique.techniqueID) {
                                 // match technique
                                 // don't load deprecated/revoked, causes crash since tactics don't get loaded on revoked techniques
