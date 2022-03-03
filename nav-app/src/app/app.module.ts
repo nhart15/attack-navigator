@@ -50,6 +50,11 @@ import { ChangelogComponent } from './changelog/changelog.component';
 import { MatTabsModule } from "@angular/material/tabs";
 import { ListInputComponent } from './list-input/list-input.component';
 
+declare global {
+    interface Navigator {
+        msSaveBlob?: (blob: any, defaultName?: string) => boolean;
+    }
+}
 
 @NgModule({
   declarations: [
