@@ -122,6 +122,7 @@
                 },
                 {
                     "name": "Mobile",
+                    "identifier": "mobile-attack",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v4.0/mobile-attack/mobile-attack.json"]
                 }
             ]
