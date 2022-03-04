@@ -207,14 +207,32 @@ export class DataService {
     private setUpURLs(versions: []): void {
         if (versions) {
             versions.forEach((versionData: any) => {
-                // retrieve version information
+                // validate & retrieve version information
+                if (!versionData["name"] || typeof(versionData["name"]) !== "string") {
+                    this.configError(`Error: version name is not a string: ${versionData["name"]} (${typeof(versionData["name"])})`);
+                    return;
+                }
+                if (!versionData["version"] || typeof(versionData["version"]) !== "string") {
+                    this.configError(`Error: version number is not a string: ${versionData["version"]} (${typeof(versionData["version"])})`);
+                    return;
+                }
                 let version: Version = new Version(versionData["name"], versionData["version"]);
 
-                // retrieve domain information
+                // validate & retrieve domain information
                 if (versionData["domains"] && versionData["domains"].length > 0) {
                     this.versions.push(version); // only add version to list if domains exist
+
                     versionData["domains"].forEach((domainData: any) => {
                         let identifier = domainData["identifier"];
+                        if (!domainData["name"] || typeof(domainData["name"]) !== "string") {
+                            this.configError(`Error: domain name is not a string: ${domainData["name"]} (${typeof(domainData["name"])})`);
+                            return;
+                        }
+                        if (!identifier || typeof(identifier) !== "string") {
+                            this.configError(`Error: domain identifier for '${domainData["name"]}' is not a string: ${identifier} (${typeof(identifier)})`);
+                            return;
+                        }
+
                         let domainID = `${identifier}-${version.number}`;
                         let domain = new Domain(domainID, domainData["name"], identifier, version);
 
@@ -238,6 +256,15 @@ export class DataService {
             let icsDomain = new Domain("ics-attack", "ICS", "ics-attack", this.latestVersion, [this.icsAttackURL]);
             this.domains.push(...[enterpriseDomain, mobileDomain, icsDomain]);
         }
+    }
+
+    /**
+     * Alert user of configuration file errors
+     * @param message the specific error to print to console
+     */
+    public configError(message: string): void {
+        console.error(message);
+        alert(`Error parsing configuration file. Some information may have been lost. See console for more details.`);
     }
 
     /**
