@@ -50,16 +50,6 @@ import { ChangelogComponent } from './changelog/changelog.component';
 import { MatTabsModule } from "@angular/material/tabs";
 import { ListInputComponent } from './list-input/list-input.component';
 
-// declaration merging workaround for msSaveBlob function that was
-// marked for removal as a non-standard feature due to the removal of IE support
-// msSaveBlob removal issued: https://github.com/microsoft/TypeScript-DOM-lib-generator/issues/1029
-// workaround pulled from: https://github.com/microsoft/TypeScript/issues/45612
-declare global {
-    interface Navigator {
-        msSaveBlob?: (blob: any, defaultName?: string) => boolean;
-    }
-}
-
 @NgModule({
   declarations: [
     AppComponent,
