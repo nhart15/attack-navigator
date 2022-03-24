@@ -14,6 +14,10 @@
                 {
                     "name": "ICS",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v10.1/ics-attack/ics-attack.json"]
+                },
+                {
+                    "name": "Engage",
+                    "data": ["https://raw.githubusercontent.com/nhart15/attack-navigator/master/nav-app/src/assets/engage-attack.json"]
                 }
             ]
         },
