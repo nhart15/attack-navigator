@@ -31233,7 +31233,29 @@
             "created": "2018-10-17T00:14:20.652Z"
         },
         {
-            "name": "Device Access",
+            "name": "Plan",
+            "id": "x-mitre-matrix--a382db5e-d009-4135-b893-0e0ff021c95b",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "tactic_refs": [
+                "x-mitre-tactic--0a93fd8e-4a83-4c15-8203-db290e5f2ac6"
+            ],
+            "description": "My plan description",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/matrices/mobile",
+                    "external_id": "mobile-attack"
+                }
+            ],
+            "modified": "2021-11-01T18:29:08.818Z",
+            "type": "x-mitre-matrix",
+            "created": "2018-10-17T00:14:20.652Z"
+        },
+        {
+            "name": "Operate",
             "id": "x-mitre-matrix--a382db5e-d009-4135-b893-0e0ff021c95b",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "object_marking_refs": [
@@ -31266,7 +31288,7 @@
             "created": "2018-10-17T00:14:20.652Z"
         },
         {
-            "name": "Network-Based Effects",
+            "name": "Understand",
             "id": "x-mitre-matrix--5104d5f0-16b7-4aec-8ae3-0a90cd5494fc",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "object_marking_refs": [
