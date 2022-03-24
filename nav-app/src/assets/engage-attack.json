@@ -30953,7 +30953,7 @@
             "description": "[Xbot](https://attack.mitre.org/software/S0298) is an Android malware family that was observed in 2016 primarily targeting Android users in Russia and Australia. (Citation: PaloAlto-Xbot)"
         },
         {
-            "name": "Collection",
+            "name": "Analyze",
             "x_mitre_shortname": "collection",
             "id": "x-mitre-tactic--7a0d25d3-f0c0-40bf-bf90-c743871b19ba",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
@@ -30993,7 +30993,7 @@
             "created": "2018-10-17T00:14:20.652Z"
         },
         {
-            "name": "Credential Access",
+            "name": "Disrupt",
             "x_mitre_shortname": "credential-access",
             "id": "x-mitre-tactic--6fcb36b8-3776-483b-8699-42215714fb10",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
@@ -31013,7 +31013,7 @@
             "created": "2018-10-17T00:14:20.652Z"
         },
         {
-            "name": "Defense Evasion",
+            "name": "Direct",
             "x_mitre_shortname": "defense-evasion",
             "id": "x-mitre-tactic--987cda6d-eb77-406b-bf68-bcb5f3d2e1df",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
@@ -31033,7 +31033,7 @@
             "created": "2018-10-17T00:14:20.652Z"
         },
         {
-            "name": "Discovery",
+            "name": "Reassure",
             "x_mitre_shortname": "discovery",
             "id": "x-mitre-tactic--d418cdeb-1b9f-4a6b-a15d-2f89f549f8c1",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
@@ -31053,7 +31053,7 @@
             "created": "2018-10-17T00:14:20.652Z"
         },
         {
-            "name": "Execution",
+            "name": "Collect",
             "x_mitre_shortname": "execution",
             "id": "x-mitre-tactic--4a800987-a3a8-4d56-a1bd-0d7171431756",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
@@ -31113,7 +31113,7 @@
             "created": "2018-10-17T00:14:20.652Z"
         },
         {
-            "name": "Initial Access",
+            "name": "Plan",
             "x_mitre_shortname": "initial-access",
             "id": "x-mitre-tactic--0a93fd8e-4a83-4c15-8203-db290e5f2ac6",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
@@ -31133,7 +31133,7 @@
             "created": "2018-10-17T00:14:20.652Z"
         },
         {
-            "name": "Lateral Movement",
+            "name": "Motivate",
             "x_mitre_shortname": "lateral-movement",
             "id": "x-mitre-tactic--7be441c2-0095-4b1e-8125-fa8ffda29b0f",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
@@ -31173,7 +31173,7 @@
             "created": "2018-10-17T00:14:20.652Z"
         },
         {
-            "name": "Persistence",
+            "name": "Detect",
             "x_mitre_shortname": "persistence",
             "id": "x-mitre-tactic--363bbeff-bb2a-4734-ac74-d6d37202fe54",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
@@ -31193,7 +31193,7 @@
             "created": "2018-10-17T00:14:20.652Z"
         },
         {
-            "name": "Privilege Escalation",
+            "name": "Prevent",
             "x_mitre_shortname": "privilege-escalation",
             "id": "x-mitre-tactic--3e962de5-3280-43b7-bc10-334fbc1d6fa8",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
@@ -31233,7 +31233,7 @@
             "created": "2018-10-17T00:14:20.652Z"
         },
         {
-            "name": "Plan",
+            "name": "Prepare",
             "id": "x-mitre-matrix--a382db5e-d009-4135-b893-0e0ff021c95d",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "object_marking_refs": [
@@ -31255,27 +31255,64 @@
             "created": "2018-10-17T00:14:20.652Z"
         },
         {
-            "name": "Operate",
+            "name": "Expose",
             "id": "x-mitre-matrix--a382db5e-d009-4135-b893-0e0ff021c95b",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
             "tactic_refs": [
-                "x-mitre-tactic--0a93fd8e-4a83-4c15-8203-db290e5f2ac6",
                 "x-mitre-tactic--4a800987-a3a8-4d56-a1bd-0d7171431756",
-                "x-mitre-tactic--363bbeff-bb2a-4734-ac74-d6d37202fe54",
-                "x-mitre-tactic--3e962de5-3280-43b7-bc10-334fbc1d6fa8",
-                "x-mitre-tactic--987cda6d-eb77-406b-bf68-bcb5f3d2e1df",
-                "x-mitre-tactic--6fcb36b8-3776-483b-8699-42215714fb10",
-                "x-mitre-tactic--d418cdeb-1b9f-4a6b-a15d-2f89f549f8c1",
-                "x-mitre-tactic--7be441c2-0095-4b1e-8125-fa8ffda29b0f",
-                "x-mitre-tactic--7a0d25d3-f0c0-40bf-bf90-c743871b19ba",
-                "x-mitre-tactic--3f660805-fa2e-42e8-8851-57f9e9b653e3",
-                "x-mitre-tactic--10fa8d8d-1b04-4176-917e-738724239981",
-                "x-mitre-tactic--6ebce653-294a-444a-bffb-14c04c8d137e"
+                "x-mitre-tactic--363bbeff-bb2a-4734-ac74-d6d37202fe54"
             ],
             "description": "Below are the tactics and techniques representing the two MITRE ATT&CK Matrices for Mobile. The Matrices cover techniques involving device access and network-based effects that can be used by adversaries without device access. The Matrices contains information for the following platforms: Android, iOS.",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/matrices/mobile",
+                    "external_id": "mobile-attack"
+                }
+            ],
+            "modified": "2021-11-01T18:29:08.818Z",
+            "type": "x-mitre-matrix",
+            "created": "2018-10-17T00:14:20.652Z"
+        },
+        {
+            "name": "Affect",
+            "id": "x-mitre-matrix--a382db5e-d009-4135-b893-0e0ff021c95d",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "tactic_refs": [
+                "x-mitre-tactic--3e962de5-3280-43b7-bc10-334fbc1d6fa8",
+                "x-mitre-tactic--987cda6d-eb77-406b-bf68-bcb5f3d2e1df",
+                "x-mitre-tactic--6fcb36b8-3776-483b-8699-42215714fb10"
+            ],
+            "description": "My plan description",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/matrices/mobile",
+                    "external_id": "mobile-attack"
+                }
+            ],
+            "modified": "2021-11-01T18:29:08.818Z",
+            "type": "x-mitre-matrix",
+            "created": "2018-10-17T00:14:20.652Z"
+        },
+        {
+            "name": "Elicit",
+            "id": "x-mitre-matrix--a382db5e-d009-4135-b893-0e0ff021c95d",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "tactic_refs": [
+                "x-mitre-tactic--d418cdeb-1b9f-4a6b-a15d-2f89f549f8c1",
+                "x-mitre-tactic--7be441c2-0095-4b1e-8125-fa8ffda29b0f"
+            ],
+            "description": "My plan description",
             "external_references": [
                 {
                     "source_name": "mitre-attack",
@@ -31295,8 +31332,7 @@
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
             "tactic_refs": [
-                "x-mitre-tactic--9eb4c21e-4fa8-44c9-b167-dbfc455f9210",
-                "x-mitre-tactic--e78d7d60-41b5-49b7-b0a9-5c5d4cbabe17"
+                "x-mitre-tactic--7a0d25d3-f0c0-40bf-bf90-c743871b19ba"
             ],
             "description": "Below are the tactics and techniques representing the two MITRE ATT&CK Matrices for Mobile. The Matrices cover techniques involving device access and network-based effects that can be used by adversaries without device access. The Matrices contains information for the following platforms: Android, iOS.",
             "external_references": [
