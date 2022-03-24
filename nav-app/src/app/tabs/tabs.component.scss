@@ -5,8 +5,7 @@
 }
 
 .tabs-container {
-    left: 0;
-    //display: flex;
+    display: flex;
     .mat-ink-bar {
         display: none;
     }
@@ -22,7 +21,7 @@
     }
     .tabs .tab-title:not(.active) {
       @include adaptive-color("border-color", color(panel-dark), color(dark-4));
-      border-width: 0 50px 0 0;
+      border-width: 0 1px 0 0;
       border-style: solid;
     }
 }
