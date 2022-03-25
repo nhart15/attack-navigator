@@ -2143,7 +2143,7 @@
             ]
         },
         {
-            "id": "attack-pattern--ef771e03-e080-43b4-a619-ac6f84899885",
+            "id": "attack-pattern--ef771e03-e080-43b4-a619-ac6f84899884",
             "kill_chain_phases": [
                 {
                     "phase_name": "credential-access",
@@ -2205,7 +2205,7 @@
             ]
         },
         {
-            "id": "attack-pattern--ef771e03-e080-43b4-a619-ac6f84899886",
+            "id": "attack-pattern--ef771e03-e080-43b4-a619-ac6f84899884",
             "kill_chain_phases": [
                 {
                     "phase_name": "credential-access",
