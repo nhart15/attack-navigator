@@ -5,19 +5,19 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "credential-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "impact",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -26,7 +26,7 @@
             "name": "Abuse Accessibility Features",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1453",
                     "external_id": "T1453"
                 },
@@ -72,7 +72,7 @@
             "name": "Abuse of iOS Enterprise App Signing Key",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1445",
                     "external_id": "T1445"
                 }
@@ -86,7 +86,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -95,7 +95,7 @@
             "description": "An adversary could call standard operating system APIs from a malicious application to gather calendar entry data, or with escalated privileges could directly access files containing calendar data.",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1435",
                     "external_id": "T1435"
                 },
@@ -115,7 +115,7 @@
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "modified": "2018-10-17T00:14:20.652Z",
             "x_mitre_version": "1.0",
-            "name": "Access Calendar Entries",
+            "name": "After-Action Review",
             "type": "attack-pattern",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
@@ -126,7 +126,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -135,7 +135,7 @@
             "name": "Access Call Log",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1433",
                     "external_id": "T1433"
                 },
@@ -166,7 +166,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -175,7 +175,7 @@
             "description": "An adversary could call standard operating system APIs from a malicious application to gather contact list (i.e., address book) data, or with escalated privileges could directly access files containing contact list data.",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1432",
                     "external_id": "T1432"
                 },
@@ -206,11 +206,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "credential-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -219,7 +219,7 @@
             "name": "Access Notifications",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1517",
                     "external_id": "T1517"
                 },
@@ -252,11 +252,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "credential-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -265,7 +265,7 @@
             "description": "On versions of Android prior to 4.1, an adversary may use a malicious application that holds the READ_LOGS permission to obtain private keys, passwords, other credentials, or other sensitive data stored in the device's system log. On Android 4.1 and later, an adversary would need to attempt to perform an operating system privilege escalation attack to be able to access the log.",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1413",
                     "external_id": "T1413"
                 },
@@ -299,11 +299,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "credential-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -312,7 +312,7 @@
             "name": "Access Stored Application Data",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1409",
                     "external_id": "T1409"
                 },
@@ -348,11 +348,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "command-and-control",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "exfiltration",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -361,7 +361,7 @@
             "description": "Adversaries can communicate using cellular networks rather than enterprise Wi-Fi in order to bypass enterprise network monitoring systems. Adversaries may also communicate using other non-Internet Protocol mediums such as SMS, NFC, or Bluetooth to bypass network monitoring systems.",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1438",
                     "external_id": "T1438"
                 },
@@ -393,7 +393,7 @@
             "name": "App Delivered via Email Attachment",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1434",
                     "external_id": "T1434"
                 }
@@ -409,7 +409,7 @@
             "name": "App Delivered via Web Download",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1431",
                     "external_id": "T1431"
                 }
@@ -423,11 +423,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "discovery",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -436,7 +436,7 @@
             "description": "Adversaries may seek to identify all applications installed on the device. One use case for doing so is to identify the presence of endpoint security applications that may increase the adversary's risk of detection. Another use case is to identify the presence of applications that the adversary may wish to target.\n\nOn Android, applications can use methods in the PackageManager class (Citation: Android-PackageManager) to enumerate other apps installed on device, or an entity with shell access can use the pm command line tool.\n\nOn iOS, apps can use private API calls to obtain a list of other apps installed on the device. (Citation: Kurtz-MaliciousiOSApps) However, use of private API calls will likely prevent the application from being distributed through Apple's App Store.",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1418",
                     "external_id": "T1418"
                 },
@@ -460,7 +460,7 @@
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "modified": "2018-10-17T00:14:20.652Z",
             "x_mitre_version": "1.0",
-            "name": "Application Discovery",
+            "name": "Attack Vector Migration",
             "type": "attack-pattern",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
@@ -471,7 +471,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "lateral-movement",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -480,7 +480,7 @@
             "description": "With escalated privileges, an adversary could program the mobile device to impersonate USB devices such as input devices (keyboard and mouse), storage devices, and/or networking devices in order to attack a physically connected PC(Citation: Wang-ExploitingUSB)(Citation: ArsTechnica-PoisonTap) This technique has been demonstrated on Android. We are unaware of any demonstrations on iOS.",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1427",
                     "external_id": "T1427"
                 },
@@ -508,7 +508,7 @@
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "modified": "2019-02-03T14:51:19.932Z",
             "x_mitre_version": "1.1",
-            "name": "Attack PC via USB Connection",
+            "name": "Personas",
             "type": "attack-pattern",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
@@ -521,7 +521,7 @@
             "name": "Biometric Spoofing",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1460",
                     "external_id": "T1460"
                 }
@@ -535,20 +535,20 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "persistence",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "execution",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Broadcast Receivers",
+            "name": "API Monitoring",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1402",
                     "external_id": "T1402"
                 },
@@ -582,15 +582,15 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "impact",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "command-and-control",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -599,7 +599,7 @@
             "name": "Call Control",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1616",
                     "external_id": "T1616"
                 },
@@ -652,7 +652,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -661,7 +661,7 @@
             "name": "Capture Audio",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1429",
                     "external_id": "T1429"
                 },
@@ -692,7 +692,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -701,7 +701,7 @@
             "name": "Capture Camera",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1512",
                     "external_id": "T1512"
                 },
@@ -731,11 +731,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "credential-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -744,7 +744,7 @@
             "name": "Capture Clipboard Data",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1414",
                     "external_id": "T1414"
                 },
@@ -790,11 +790,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "credential-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -803,7 +803,7 @@
             "name": "Capture SMS Messages",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1412",
                     "external_id": "T1412"
                 }
@@ -829,7 +829,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "impact",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -838,7 +838,7 @@
             "name": "Carrier Billing Fraud",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1448",
                     "external_id": "T1448"
                 },
@@ -874,7 +874,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "impact",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -883,7 +883,7 @@
             "name": "Clipboard Modification",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1510",
                     "external_id": "T1510"
                 },
@@ -937,24 +937,24 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "persistence",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "privilege-escalation",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Code Injection",
+            "name": "Introduced Vulnerabilities",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1540",
                     "external_id": "T1540"
                 },
@@ -995,16 +995,16 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "execution",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Command-Line Interface",
+            "name": "Network Monitoring",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1605",
                     "external_id": "T1605"
                 }
@@ -1030,11 +1030,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "command-and-control",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "exfiltration",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -1043,7 +1043,7 @@
             "name": "Commonly Used Port",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1436",
                     "external_id": "T1436"
                 }
@@ -1068,16 +1068,16 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "persistence",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Compromise Application Executable",
+            "name": "Lures",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1577",
                     "external_id": "T1577"
                 },
@@ -1112,7 +1112,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "exfiltration",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -1121,7 +1121,7 @@
             "name": "Data Encrypted",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1532",
                     "external_id": "T1532"
                 }
@@ -1146,7 +1146,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "impact",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -1155,7 +1155,7 @@
             "name": "Data Encrypted for Impact",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1471",
                     "external_id": "T1471"
                 },
@@ -1184,7 +1184,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -1193,7 +1193,7 @@
             "name": "Data from Local System",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1533",
                     "external_id": "T1533"
                 }
@@ -1218,20 +1218,20 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "impact",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Delete Device Data",
+            "name": "Email Manipulation",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1447",
                     "external_id": "T1447"
                 },
@@ -1261,45 +1261,17 @@
             "id": "attack-pattern--d9db3d46-66ca-44b4-9daa-1ef97cb7465a",
             "kill_chain_phases": [
                 {
-                    "phase_name": "initial-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "phase_name": "plan",
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Deliver Malicious App via Authorized App Store",
+            "name": "Cyber Threat Intelligence",
             "external_references": [
-                {
-                    "source_name": "mitre-mobile-attack",
-                    "url": "https://attack.mitre.org/techniques/T1475",
-                    "external_id": "T1475"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/ecosystem-threats/ECO-4.html",
-                    "external_id": "ECO-4"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/ecosystem-threats/ECO-16.html",
-                    "external_id": "ECO-16"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/ecosystem-threats/ECO-17.html",
-                    "external_id": "ECO-17"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-20.html",
-                    "external_id": "APP-20"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-21.html",
-                    "external_id": "APP-21"
-                },
+              
+
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/ecosystem-threats/ECO-22.html",
@@ -1309,32 +1281,10 @@
                     "description": "Thanasis Petsas, Giannis Voyatzis, Elias Athanasopoulos, Michalis Polychronakis, Sotiris Ioannidis. (2014, April). Rage Against the Virtual Machine: Hindering Dynamic Analysis of Android Malware. Retrieved December 12, 2016.",
                     "source_name": "Petsas",
                     "url": "http://dl.acm.org/citation.cfm?id=2592796"
-                },
-                {
-                    "description": "Jon Oberheide and Charlie Miller. (2012). Dissecting the Android Bouncer. Retrieved December 12, 2016.",
-                    "source_name": "Oberheide-Bouncer",
-                    "url": "https://jon.oberheide.org/files/summercon12-bouncer.pdf"
-                },
-                {
-                    "description": "Nicholas J. Percoco and Sean Schulte. (2012). Adventures in BouncerLand. Retrieved December 12, 2016.",
-                    "source_name": "Percoco-Bouncer",
-                    "url": "https://media.blackhat.com/bh-us-12/Briefings/Percoco/BH_US_12_Percoco_Adventures_in_Bouncerland_WP.pdf"
-                },
-                {
-                    "description": "Tielei Wang, Kangjie Lu, Long Lu, Simon Chung, and Wenke Lee. (2013, August). Jekyll on iOS: When Benign Apps Become Evil. Retrieved December 9, 2016.",
-                    "source_name": "Wang",
-                    "url": "https://www.usenix.org/conference/usenixsecurity13/technical-sessions/presentation/wang_tielei"
-                },
-                {
-                    "description": "Jon Oberheide. (2010, June 25). Remote Kill and Install on Google Android. Retrieved December 12, 2016.",
-                    "source_name": "Oberheide-RemoteInstall",
-                    "url": "https://jon.oberheide.org/blog/2010/06/25/remote-kill-and-install-on-google-android/"
-                },
-                {
-                    "description": "Radhesh Krishnan Konoth, Victor van der Veen, and Herbert Bos. (n.d.). How Anywhere Computing Just Killed Your Phone-Based Two-Factor Authentication. Retrieved December 12, 2016.",
-                    "source_name": "Konoth",
-                    "url": "http://www.vvdveen.com/publications/BAndroid.pdf"
                 }
+                
+                   
+              
             ],
             "created": "2018-10-17T00:14:20.652Z",
             "x_mitre_detection": "* An EMM/MDM or mobile threat defense solution can identify the presence of unwanted or known insecure or malicious apps on devices.\n* Developers can scan (or have a third party scan on their behalf) the app stores for presence of unauthorized apps that were submitted using the developer's identity.",
@@ -1356,30 +1306,16 @@
             "id": "attack-pattern--53263a67-075e-48fa-974b-91c5b5445db7",
             "kill_chain_phases": [
                 {
-                    "phase_name": "initial-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "phase_name": "plan",
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Deliver Malicious App via Other Means",
+            "name": "Engagement Environment",
             "external_references": [
-                {
-                    "source_name": "mitre-mobile-attack",
-                    "url": "https://attack.mitre.org/techniques/T1476",
-                    "external_id": "T1476"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/authentication-threats/AUT-9.html",
-                    "external_id": "AUT-9"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/ecosystem-threats/ECO-13.html",
-                    "external_id": "ECO-13"
-                },
+                
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/ecosystem-threats/ECO-21.html",
@@ -1389,22 +1325,8 @@
                     "description": "A Prasad. (2016, February 19). Danger lurks in third-party Android app stores. Retrieved November 8, 2018.",
                     "source_name": "IBTimes-ThirdParty",
                     "url": "https://www.ibtimes.co.uk/danger-lurks-third-party-android-app-stores-1544861"
-                },
-                {
-                    "description": "Jordan Pan. (2016, February 10). User Beware: Rooting Malware Found in 3rd Party App Stores. Retrieved November 8, 2018.",
-                    "source_name": "TrendMicro-RootingMalware",
-                    "url": "https://blog.trendmicro.com/trendlabs-security-intelligence/user-beware-rooting-malware-found-in-3rd-party-app-stores/"
-                },
-                {
-                    "description": "Veo Zhang. (2014, February 18). Flappy Bird and Third-Party App Stores. Retrieved November 8, 2018.",
-                    "source_name": "TrendMicro-FlappyBird",
-                    "url": "https://blog.trendmicro.com/trendlabs-security-intelligence/flappy-bird-and-third-party-app-stores/"
-                },
-                {
-                    "description": "Luk\u00e1\u0161 \u0160tefanko. (2018, December 11). Android Trojan steals money from PayPal accounts even with 2FA on. Retrieved July 11, 2019.",
-                    "source_name": "android-trojan-steals-paypal-2fa",
-                    "url": "https://www.welivesecurity.com/2018/12/11/android-trojan-steals-money-paypal-accounts-2fa/"
                 }
+               
             ],
             "created": "2018-10-17T00:14:20.652Z",
             "x_mitre_detection": "* An EMM/MDM or mobile threat defense solution may be able to identify the presence of apps installed from sources other than an authorized app store. \n* An EMM/MDM or mobile threat defense solution may be able to identify Android devices configured to allow apps to be installed from \"Unknown Sources\".\n* Enterprise email security solutions can identify the presence of Android or iOS application packages within email messages.",
@@ -1430,7 +1352,7 @@
             "name": "Detect App Analysis Environment",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1440",
                     "external_id": "T1440"
                 }
@@ -1444,16 +1366,16 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "privilege-escalation",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Device Administrator Permissions",
+            "name": "Baseline",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1401",
                     "external_id": "T1401"
                 },
@@ -1489,20 +1411,20 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "impact",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Device Lockout",
+            "name": "Peripheral Management",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1446",
                     "external_id": "T1446"
                 },
@@ -1545,7 +1467,7 @@
             "name": "Device Type Discovery",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1419",
                     "external_id": "T1419"
                 },
@@ -1566,7 +1488,7 @@
             "name": "Device Unlock Code Guessing or Brute Force",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1459",
                     "external_id": "T1459"
                 }
@@ -1580,7 +1502,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -1589,7 +1511,7 @@
             "description": "An adversary could use knowledge of the techniques used by security software to evade detection(Citation: Brodie)(Citation: Tan). For example, some mobile security products perform compromised device detection by searching for particular artifacts such as an installed \"su\" binary, but that check could be evaded by naming the binary something else. Similarly, polymorphic code techniques could be used to evade signature-based detection(Citation: Rastogi).",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1408",
                     "external_id": "T1408"
                 },
@@ -1634,7 +1556,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "command-and-control",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -1643,7 +1565,7 @@
             "name": "Domain Generation Algorithms",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1520",
                     "external_id": "T1520"
                 },
@@ -1678,7 +1600,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "network-effects",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -1687,7 +1609,7 @@
             "description": "An adversary could cause the mobile device to use less secure protocols, for example by jamming frequencies used by newer protocols such as LTE and only allowing older protocols such as GSM to communicate(Citation: NIST-SP800187). Use of less secure protocols may make communication easier to eavesdrop upon or manipulate.",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1466",
                     "external_id": "T1466"
                 },
@@ -1722,7 +1644,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -1731,7 +1653,7 @@
             "name": "Download New Code at Runtime",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1407",
                     "external_id": "T1407"
                 },
@@ -1781,8 +1703,8 @@
             "id": "attack-pattern--fd339382-bfec-4bf0-8d47-1caedc9e7e57",
             "kill_chain_phases": [
                 {
-                    "phase_name": "initial-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "phase_name": "plan",
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -1790,21 +1712,7 @@
             ],
             "description": "As described by [Drive-by Compromise](https://attack.mitre.org/techniques/T1189), a drive-by compromise is when an adversary gains access to a system through a user visiting a website over the normal course of browsing. With this technique, the user's web browser is targeted for exploitation. For example, a website may contain malicious media content intended to exploit vulnerabilities in media parsers as demonstrated by the Android Stagefright vulnerability  (Citation: Zimperium-Stagefright).\n\n(This technique was formerly known as Malicious Web Content. It has been renamed to better align with ATT&CK for Enterprise.)",
             "external_references": [
-                {
-                    "source_name": "mitre-mobile-attack",
-                    "url": "https://attack.mitre.org/techniques/T1456",
-                    "external_id": "T1456"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/cellular-threats/CEL-22.html",
-                    "external_id": "CEL-22"
-                },
-                {
-                    "source_name": "Zimperium-Stagefright",
-                    "description": "Zimperium. (2015, January 27). Experts Found a Unicorn in the Heart of Android. Retrieved December 23, 2016.",
-                    "url": "https://blog.zimperium.com/experts-found-a-unicorn-in-the-heart-of-android/"
-                }
+               
             ],
             "created": "2017-10-25T14:48:06.822Z",
             "x_mitre_platforms": [
@@ -1815,7 +1723,7 @@
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "modified": "2018-10-17T00:14:20.652Z",
             "x_mitre_version": "1.0",
-            "name": "Drive-by Compromise",
+            "name": "Gating Criteria",
             "type": "attack-pattern",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
@@ -1826,7 +1734,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "network-effects",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -1835,7 +1743,7 @@
             "description": "If network traffic between the mobile device and remote servers is unencrypted or is encrypted in an insecure manner, then an adversary positioned on the network can eavesdrop on communication.(Citation: mHealth)",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1439",
                     "external_id": "T1439"
                 },
@@ -1875,11 +1783,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "discovery",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -1888,7 +1796,7 @@
             "name": "Evade Analysis Environment",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1523",
                     "external_id": "T1523"
                 },
@@ -1945,7 +1853,7 @@
             "name": "Exploit Baseband Vulnerability",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1455",
                     "external_id": "T1455"
                 }
@@ -1959,7 +1867,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "lateral-movement",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -1968,7 +1876,7 @@
             "description": "Adversaries may attempt to exploit enterprise servers, workstations, or other resources over the network. This technique may take advantage of the mobile device's access to an internal enterprise network either through local connectivity or through a Virtual Private Network (VPN).",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1428",
                     "external_id": "T1428"
                 },
@@ -1998,7 +1906,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "privilege-escalation",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2007,7 +1915,7 @@
             "description": "A malicious app can exploit unpatched vulnerabilities in the operating system to obtain escalated privileges.",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1404",
                     "external_id": "T1404"
                 },
@@ -2026,7 +1934,7 @@
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "modified": "2018-10-17T00:14:20.652Z",
             "x_mitre_version": "1.0",
-            "name": "Exploit OS Vulnerability",
+            "name": "Harware Manipulation",
             "type": "attack-pattern",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
@@ -2037,7 +1945,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "network-effects",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2046,7 +1954,7 @@
             "name": "Exploit SS7 to Redirect Phone Calls/SMS",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1449",
                     "external_id": "T1449"
                 },
@@ -2108,7 +2016,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "network-effects",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2117,7 +2025,7 @@
             "name": "Exploit SS7 to Track Device Location",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1450",
                     "external_id": "T1450"
                 },
@@ -2177,11 +2085,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "credential-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "privilege-escalation",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2190,7 +2098,7 @@
             "description": "A malicious app or other attack vector could be used to exploit vulnerabilities in code running within the Trusted Execution Environment (TEE) (Citation: Thomas-TrustZone). The adversary could then obtain privileges held by the TEE potentially including the ability to access cryptographic keys or other sensitive data (Citation: QualcommKeyMaster). Escalated operating system privileges may be first required in order to have the ability to attack the TEE (Citation: EkbergTEE). If not, privileges within the TEE can potentially be used to exploit the operating system (Citation: laginimaineb-TEE).",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1405",
                     "external_id": "T1405"
                 },
@@ -2228,7 +2136,131 @@
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "modified": "2018-10-17T00:14:20.652Z",
             "x_mitre_version": "1.0",
-            "name": "Exploit TEE Vulnerability",
+            "name": "Isolation",
+            "type": "attack-pattern",
+            "x_mitre_tactic_type": [
+                "Post-Adversary Device Access"
+            ]
+        },
+        {
+            "id": "attack-pattern--ef771e03-e080-43b4-a619-ac6f84899885",
+            "kill_chain_phases": [
+                {
+                    "phase_name": "credential-access",
+                    "kill_chain_name": "mitre-engage-attack"
+                },
+                {
+                    "phase_name": "privilege-escalation",
+                    "kill_chain_name": "mitre-engage-attack"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "description": "A malicious app or other attack vector could be used to exploit vulnerabilities in code running within the Trusted Execution Environment (TEE) (Citation: Thomas-TrustZone). The adversary could then obtain privileges held by the TEE potentially including the ability to access cryptographic keys or other sensitive data (Citation: QualcommKeyMaster). Escalated operating system privileges may be first required in order to have the ability to attack the TEE (Citation: EkbergTEE). If not, privileges within the TEE can potentially be used to exploit the operating system (Citation: laginimaineb-TEE).",
+            "external_references": [
+                {
+                    "source_name": "mitre-engage-attack",
+                    "url": "https://attack.mitre.org/techniques/T1405",
+                    "external_id": "T1405"
+                },
+                {
+                    "source_name": "NIST Mobile Threat Catalogue",
+                    "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-27.html",
+                    "external_id": "APP-27"
+                },
+                {
+                    "source_name": "Thomas-TrustZone",
+                    "description": "Josh Thomas and Charles Holmes. (2015, September). An infestation of dragons: Exploring vulnerabilities in the ARM TrustZone architecture. Retrieved December 9, 2016.",
+                    "url": "https://usmile.at/symposium/program/2015/thomas-holmes"
+                },
+                {
+                    "source_name": "QualcommKeyMaster",
+                    "description": "laginimaineb. (2016, June). Extracting Qualcomm's KeyMaster Keys - Breaking Android Full Disk Encryption. Retrieved December 9, 2016.",
+                    "url": "https://bits-please.blogspot.in/2016/06/extracting-qualcomms-keymaster-keys.html"
+                },
+                {
+                    "source_name": "EkbergTEE",
+                    "description": "Jan-Erik Ekberg. (2015, September 10). Android and trusted execution environments. Retrieved December 9, 2016.",
+                    "url": "https://usmile.at/symposium/program/2015/ekberg"
+                },
+                {
+                    "source_name": "laginimaineb-TEE",
+                    "description": "laginimaineb. (2016, May). War of the Worlds - Hijacking the Linux Kernel from QSEE. Retrieved December 21, 2016.",
+                    "url": "http://bits-please.blogspot.co.il/2016/05/war-of-worlds-hijacking-linux-kernel.html"
+                }
+            ],
+            "created": "2017-10-25T14:48:22.716Z",
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_old_attack_id": "MOB-T1008",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "modified": "2018-10-17T00:14:20.652Z",
+            "x_mitre_version": "1.0",
+            "name": "Network Manipulation",
+            "type": "attack-pattern",
+            "x_mitre_tactic_type": [
+                "Post-Adversary Device Access"
+            ]
+        },
+        {
+            "id": "attack-pattern--ef771e03-e080-43b4-a619-ac6f84899886",
+            "kill_chain_phases": [
+                {
+                    "phase_name": "credential-access",
+                    "kill_chain_name": "mitre-engage-attack"
+                },
+                {
+                    "phase_name": "privilege-escalation",
+                    "kill_chain_name": "mitre-engage-attack"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "description": "A malicious app or other attack vector could be used to exploit vulnerabilities in code running within the Trusted Execution Environment (TEE) (Citation: Thomas-TrustZone). The adversary could then obtain privileges held by the TEE potentially including the ability to access cryptographic keys or other sensitive data (Citation: QualcommKeyMaster). Escalated operating system privileges may be first required in order to have the ability to attack the TEE (Citation: EkbergTEE). If not, privileges within the TEE can potentially be used to exploit the operating system (Citation: laginimaineb-TEE).",
+            "external_references": [
+                {
+                    "source_name": "mitre-engage-attack",
+                    "url": "https://attack.mitre.org/techniques/T1405",
+                    "external_id": "T1405"
+                },
+                {
+                    "source_name": "NIST Mobile Threat Catalogue",
+                    "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-27.html",
+                    "external_id": "APP-27"
+                },
+                {
+                    "source_name": "Thomas-TrustZone",
+                    "description": "Josh Thomas and Charles Holmes. (2015, September). An infestation of dragons: Exploring vulnerabilities in the ARM TrustZone architecture. Retrieved December 9, 2016.",
+                    "url": "https://usmile.at/symposium/program/2015/thomas-holmes"
+                },
+                {
+                    "source_name": "QualcommKeyMaster",
+                    "description": "laginimaineb. (2016, June). Extracting Qualcomm's KeyMaster Keys - Breaking Android Full Disk Encryption. Retrieved December 9, 2016.",
+                    "url": "https://bits-please.blogspot.in/2016/06/extracting-qualcomms-keymaster-keys.html"
+                },
+                {
+                    "source_name": "EkbergTEE",
+                    "description": "Jan-Erik Ekberg. (2015, September 10). Android and trusted execution environments. Retrieved December 9, 2016.",
+                    "url": "https://usmile.at/symposium/program/2015/ekberg"
+                },
+                {
+                    "source_name": "laginimaineb-TEE",
+                    "description": "laginimaineb. (2016, May). War of the Worlds - Hijacking the Linux Kernel from QSEE. Retrieved December 21, 2016.",
+                    "url": "http://bits-please.blogspot.co.il/2016/05/war-of-worlds-hijacking-linux-kernel.html"
+                }
+            ],
+            "created": "2017-10-25T14:48:22.716Z",
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_old_attack_id": "MOB-T1008",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "modified": "2018-10-17T00:14:20.652Z",
+            "x_mitre_version": "1.0",
+            "name": "Security Controls",
             "type": "attack-pattern",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
@@ -2238,8 +2270,8 @@
             "id": "attack-pattern--667e5707-3843-4da8-bd34-88b922526f0d",
             "kill_chain_phases": [
                 {
-                    "phase_name": "initial-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "phase_name": "plan",
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2248,7 +2280,7 @@
             "description": "If the mobile device is connected (typically via USB) to a charging station or a PC, for example to charge the device's battery, then a compromised or malicious charging station or PC could attempt to exploit the mobile device via the connection(Citation: Krebs-JuiceJacking).\n\nPrevious demonstrations have included:\n\n* Injecting malicious applications into iOS devices(Citation: Lau-Mactans).\n* Exploiting a Nexus 6 or 6P device over USB and gaining the ability to perform actions including intercepting phone calls, intercepting network traffic, and obtaining the device physical location(Citation: IBM-NexusUSB).\n* Exploiting Android devices such as the Google Pixel 2 over USB(Citation: GoogleProjectZero-OATmeal).\n\nProducts from Cellebrite and Grayshift purportedly can use physical access to the data port to unlock the passcode on some iOS devices(Citation: Computerworld-iPhoneCracking).",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1458",
                     "external_id": "T1458"
                 },
@@ -2292,7 +2324,7 @@
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "modified": "2019-02-03T15:10:41.460Z",
             "x_mitre_version": "1.1",
-            "name": "Exploit via Charging Station or PC",
+            "name": "Operational Objective",
             "type": "attack-pattern",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
@@ -2302,8 +2334,8 @@
             "id": "attack-pattern--2d646840-f6f5-4619-a5a8-29c8316bbac5",
             "kill_chain_phases": [
                 {
-                    "phase_name": "initial-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "phase_name": "plan",
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2312,7 +2344,7 @@
             "description": "The mobile device may be targeted for exploitation through its interface to cellular networks or other radio interfaces.\n\n### Baseband Vulnerability Exploitation\n\nA message sent over a radio interface (typically cellular, but potentially Bluetooth, GPS, NFC, Wi-Fi(Citation: ProjectZero-BroadcomWiFi) or other) to the mobile device could exploit a vulnerability in code running on the device(Citation: Register-BaseStation)(Citation: Weinmann-Baseband).\n\n### Malicious SMS Message\n\nAn SMS message could contain content designed to exploit vulnerabilities in the SMS parser on the receiving device(Citation: Forbes-iPhoneSMS). An SMS message could also contain a link to a web site containing malicious content designed to exploit the device web browser. Vulnerable SIM cards may be remotely exploited and reprogrammed via SMS messages(Citation: SRLabs-SIMCard).",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1477",
                     "external_id": "T1477"
                 },
@@ -2351,7 +2383,7 @@
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "modified": "2019-02-03T15:19:22.439Z",
             "x_mitre_version": "1.1",
-            "name": "Exploit via Radio Interfaces",
+            "name": "Persona Creation",
             "type": "attack-pattern",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
@@ -2364,7 +2396,7 @@
             "name": "Fake Developer Accounts",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1442",
                     "external_id": "T1442"
                 }
@@ -2378,7 +2410,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "discovery",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2387,7 +2419,7 @@
             "description": "On Android, command line tools or the Java file APIs can be used to enumerate file system contents. However, Linux file permissions and SELinux policies generally strongly restrict what can be accessed by apps (without taking advantage of a privilege escalation exploit). The contents of the external storage directory are generally visible, which could present concern if sensitive data is inappropriately stored there.\n\niOS's security architecture generally restricts the ability to perform file and directory discovery without use of escalated privileges.",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1420",
                     "external_id": "T1420"
                 }
@@ -2400,7 +2432,7 @@
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "modified": "2018-10-17T00:14:20.652Z",
             "x_mitre_version": "1.0",
-            "name": "File and Directory Discovery",
+            "name": "Application Diversity",
             "type": "attack-pattern",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
@@ -2411,20 +2443,20 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "persistence",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Foreground Persistence",
+            "name": "Malware Detonation",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1541",
                     "external_id": "T1541"
                 },
@@ -2477,7 +2509,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "impact",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2486,7 +2518,7 @@
             "name": "Generate Fraudulent Advertising Revenue",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1472",
                     "external_id": "T1472"
                 }
@@ -2511,7 +2543,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2520,7 +2552,7 @@
             "name": "Geofencing",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1581",
                     "external_id": "T1581"
                 },
@@ -2561,7 +2593,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2570,7 +2602,7 @@
             "name": "Hooking",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1617",
                     "external_id": "T1617"
                 }
@@ -2598,11 +2630,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "credential-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2611,7 +2643,7 @@
             "name": "Input Capture",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1417",
                     "external_id": "T1417"
                 },
@@ -2643,11 +2675,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "impact",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2656,7 +2688,7 @@
             "name": "Input Injection",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1516",
                     "external_id": "T1516"
                 },
@@ -2699,7 +2731,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "credential-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2708,7 +2740,7 @@
             "name": "Input Prompt",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1411",
                     "external_id": "T1411"
                 },
@@ -2802,7 +2834,7 @@
             "name": "Insecure Third-Party Libraries",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1425",
                     "external_id": "T1425"
                 }
@@ -2816,38 +2848,19 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
-                    "phase_name": "initial-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "phase_name": "plan",
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Install Insecure or Malicious Configuration",
+            "name": "Storyboarding",
             "external_references": [
-                {
-                    "source_name": "mitre-mobile-attack",
-                    "url": "https://attack.mitre.org/techniques/T1478",
-                    "external_id": "T1478"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/stack-threats/STA-7.html",
-                    "external_id": "STA-7"
-                },
-                {
-                    "source_name": "Symantec-iOSProfile",
-                    "description": "Yair Amit. (2013, March 12). Malicious Profiles \u2013 The Sleeping Giant of iOS Security. Retrieved September 24, 2018.",
-                    "url": "https://www.symantec.com/connect/blogs/malicious-profiles-sleeping-giant-ios-security"
-                },
-                {
-                    "source_name": "Talos-MDM",
-                    "description": "Warren Mercer, Paul Rascagneres, Andrew Williams. (2018, July 12). Advanced Mobile Malware Campaign in India uses Malicious MDM. Retrieved September 24, 2018.",
-                    "url": "https://blog.talosintelligence.com/2018/07/Mobile-Malware-Campaign-uses-Malicious-MDM.html"
-                }
+               
             ],
             "created": "2018-10-17T00:14:20.652Z",
             "x_mitre_detection": "On Android, the user can view trusted CA certificates through the device settings and look for unexpected certificates. A mobile security product could similarly examine the trusted CA certificate store for anomalies.\n\nOn iOS, the user can view installed Configuration Profiles through the device settings and look for unexpected profiles. A Mobile Device Management (MDM) system could use the iOS MDM APIs to examine the list of installed Configuration Profiles for anomalies.",
@@ -2871,7 +2884,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "network-effects",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2880,7 +2893,7 @@
             "description": "An attacker could jam radio signals (e.g. Wi-Fi, cellular, GPS) to prevent the mobile device from communicating. (Citation: NIST-SP800187)(Citation: CNET-Celljammer)(Citation: NYTimes-Celljam)(Citation: Digitaltrends-Celljam)(Citation: Arstechnica-Celljam)",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1464",
                     "external_id": "T1464"
                 },
@@ -2950,7 +2963,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "credential-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -2959,7 +2972,7 @@
             "name": "Keychain",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1579",
                     "external_id": "T1579"
                 },
@@ -2999,20 +3012,20 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "discovery",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Location Tracking",
+            "name": "Artifact Diversity",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1430",
                     "external_id": "T1430"
                 },
@@ -3042,8 +3055,8 @@
             "id": "attack-pattern--dfe29258-ce59-421c-9dee-e85cb9fa90cd",
             "kill_chain_phases": [
                 {
-                    "phase_name": "initial-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "phase_name": "plan",
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -3052,7 +3065,7 @@
             "description": "An adversary with physical access to a mobile device may seek to bypass the device's lockscreen.\n\n### Biometric Spoofing\nIf biometric authentication is used, an adversary could attempt to spoof a mobile device's biometric authentication mechanism(Citation: SRLabs-Fingerprint)(Citation: SecureIDNews-Spoof)(Citation: TheSun-FaceID).\n\niOS partly mitigates this attack by requiring the device passcode rather than a fingerprint to unlock the device after every device restart and after 48 hours since the device was last unlocked (Citation: Apple-TouchID). Android has similar mitigations.\n\n### Device Unlock Code Guessing or Brute Force\nAn adversary could attempt to brute-force or otherwise guess the lockscreen passcode (typically a PIN or password), including physically observing (\"shoulder surfing\") the device owner's use of the lockscreen passcode. \n\n### Exploit Other Device Lockscreen Vulnerabilities\nTechniques have periodically been demonstrated that exploit vulnerabilities on Android (Citation: Wired-AndroidBypass), iOS (Citation: Kaspersky-iOSBypass), or other mobile devices to bypass the device lockscreen. The vulnerabilities are generally patched by the device/operating system vendor once they become aware of their existence.",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1461",
                     "external_id": "T1461"
                 },
@@ -3096,7 +3109,7 @@
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "modified": "2019-02-03T17:08:07.111Z",
             "x_mitre_version": "1.1",
-            "name": "Lockscreen Bypass",
+            "name": "Threat Model",
             "type": "attack-pattern",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
@@ -3109,7 +3122,7 @@
             "name": "Malicious Media Content",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1457",
                     "external_id": "T1457"
                 }
@@ -3125,7 +3138,7 @@
             "name": "Malicious SMS Message",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1454",
                     "external_id": "T1454"
                 }
@@ -3141,7 +3154,7 @@
             "name": "Malicious Software Development Tools",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1462",
                     "external_id": "T1462"
                 }
@@ -3157,7 +3170,7 @@
             "name": "Malicious or Vulnerable Built-in Device Functionality",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1473",
                     "external_id": "T1473"
                 }
@@ -3171,7 +3184,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "impact",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -3180,7 +3193,7 @@
             "name": "Manipulate App Store Rankings or Ratings",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1452",
                     "external_id": "T1452"
                 }
@@ -3205,7 +3218,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "network-effects",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -3214,7 +3227,7 @@
             "name": "Manipulate Device Communication",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1463",
                     "external_id": "T1463"
                 },
@@ -3245,84 +3258,22 @@
             "description": "If network traffic between the mobile device and a remote server is not securely protected, then an attacker positioned on the network may be able to manipulate network communication without being detected. For example, FireEye researchers found in 2014 that 68% of the top 1,000 free applications in the Google Play Store had at least one Transport Layer Security (TLS) implementation vulnerability potentially opening the applications' network traffic to adversary-in-the-middle attacks (Citation: FireEye-SSL).",
             "x_mitre_is_subtechnique": false
         },
-        {
-            "id": "attack-pattern--a93ccb8f-3996-42e2-b7c7-bb599d4e205f",
-            "kill_chain_phases": [
-                {
-                    "phase_name": "initial-access",
-                    "kill_chain_name": "mitre-mobile-attack"
-                },
-                {
-                    "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
-                }
-            ],
-            "object_marking_refs": [
-                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
-            ],
-            "name": "Masquerade as Legitimate Application",
-            "external_references": [
-                {
-                    "source_name": "mitre-mobile-attack",
-                    "url": "https://attack.mitre.org/techniques/T1444",
-                    "external_id": "T1444"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-31.html",
-                    "external_id": "APP-31"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-14.html",
-                    "external_id": "APP-14"
-                },
-                {
-                    "description": "Yajin Zhou and Xuxian Jiang. (2012, May). Dissecting Android Malware: Characterization and Evolution. Retrieved December 9, 2016.",
-                    "source_name": "Zhou",
-                    "url": "http://ieeexplore.ieee.org/document/6234407"
-                },
-                {
-                    "source_name": "Palo Alto HenBox",
-                    "description": "A. Hinchliffe, M. Harbison, J. Miller-Osborn, et al. (2018, March 13). HenBox: The Chickens Come Home to Roost. Retrieved September 9, 2019.",
-                    "url": "https://unit42.paloaltonetworks.com/unit42-henbox-chickens-come-home-roost/"
-                }
-            ],
-            "created": "2017-10-25T14:48:35.247Z",
-            "x_mitre_detection": "Users can detect malicious applications by watching for nuances that could indicate the application is not the intended one when it is being installed.",
-            "x_mitre_contributors": [
-                "Alex Hinchliffe, Palo Alto Networks"
-            ],
-            "x_mitre_platforms": [
-                "Android",
-                "iOS"
-            ],
-            "x_mitre_tactic_type": [
-                "Post-Adversary Device Access"
-            ],
-            "x_mitre_old_attack_id": "MOB-T1047",
-            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
-            "modified": "2020-04-08T15:19:56.147Z",
-            "x_mitre_version": "2.1",
-            "type": "attack-pattern",
-            "description": "An adversary could distribute developed malware by masquerading the malware as a legitimate application. This can be done in two different ways: by embedding the malware in a legitimate application, or by pretending to be a legitimate application.\n\nEmbedding the malware in a legitimate application is done by downloading the application, disassembling it, adding the malicious code, and then re-assembling it.(Citation: Zhou) The app would appear to be the original app, but would contain additional malicious functionality. The adversary could then publish the malicious application to app stores or use another delivery method.\n\nPretending to be a legitimate application relies heavily on lack of scrutinization by the user. Typically, a malicious app pretending to be a legitimate one will have many similar details as the legitimate one, such as name, icon, and description.(Citation: Palo Alto HenBox)\n\nMalicious applications may also masquerade as legitimate applications when requesting access to the accessibility service in order to appear as legitimate to the user, increasing the likelihood that the access will be granted.",
-            "x_mitre_is_subtechnique": false
-        },
+        
         {
             "id": "attack-pattern--88932a8c-3a17-406f-9431-1da3ff19f6d6",
             "kill_chain_phases": [
                 {
                     "phase_name": "persistence",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Modify Cached Executable Code",
+            "name": "Network Analysis",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1403",
                     "external_id": "T1403"
                 },
@@ -3347,195 +3298,27 @@
             "type": "attack-pattern",
             "description": "ART (the Android Runtime) compiles optimized code on the device itself to improve performance. An adversary may be able to use escalated privileges to modify the cached code in order to hide malicious behavior. Since the code is compiled on the device, it may not receive the same level of integrity checks that are provided to code running in the system partition.(Citation: Sabanal-ART)"
         },
-        {
-            "id": "attack-pattern--46d818a5-67fa-4585-a7fc-ecf15376c8d5",
-            "kill_chain_phases": [
-                {
-                    "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
-                },
-                {
-                    "phase_name": "persistence",
-                    "kill_chain_name": "mitre-mobile-attack"
-                }
-            ],
-            "object_marking_refs": [
-                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
-            ],
-            "description": "If an adversary can escalate privileges, he or she may be able to use those privileges to place malicious code in the device kernel or other boot partition components, where the code may evade detection, may persist after device resets, and may not be removable by the device user. In some cases (e.g., the Samsung Knox warranty bit as described under Detection), the attack may be detected but could result in the device being placed in a state that no longer allows certain functionality.\n\nMany Android devices provide the ability to unlock the bootloader for development purposes, but doing so introduces the potential ability for others to maliciously update the kernel or other boot partition code.\n\nIf the bootloader is not unlocked, it may still be possible to exploit device vulnerabilities to update the code.",
-            "external_references": [
-                {
-                    "source_name": "mitre-mobile-attack",
-                    "url": "https://attack.mitre.org/techniques/T1398",
-                    "external_id": "T1398"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-26.html",
-                    "external_id": "APP-26"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-27.html",
-                    "external_id": "APP-27"
-                },
-                {
-                    "source_name": "Samsung-KnoxWarrantyBit",
-                    "description": "Samsung. (n.d.). What is a Knox Warranty Bit and how is it triggered?. Retrieved December 21, 2016.",
-                    "url": "https://www2.samsungknox.com/en/faq/what-knox-warranty-bit-and-how-it-triggered"
-                },
-                {
-                    "source_name": "Apple-iOSSecurityGuide",
-                    "description": "Apple. (2016, May). iOS Security. Retrieved December 21, 2016.",
-                    "url": "https://www.apple.com/business/docs/iOS_Security_Guide.pdf"
-                }
-            ],
-            "created": "2017-10-25T14:48:31.294Z",
-            "x_mitre_detection": "The Android SafetyNet API's remote attestation capability could potentially be used to identify and respond to compromised devices. Samsung KNOX also provides a remote attestation capability on supported Samsung Android devices.\n\nSamsung KNOX devices include a non-reversible Knox warranty bit fuse that is triggered \"if a non-Knox kernel has been loaded on the device\" (Citation: Samsung-KnoxWarrantyBit). If triggered, enterprise Knox container services will no longer be available on the device.\n\nAs described in the iOS Security Guide (Citation: Apple-iOSSecurityGuide), iOS devices will fail to boot or fail to allow device activation if unauthorized modifications are detected.\n\nMany enterprise applications perform their own checks to detect and respond to compromised devices. These checks are not foolproof but can detect common signs of compromise.",
-            "x_mitre_platforms": [
-                "Android",
-                "iOS"
-            ],
-            "x_mitre_old_attack_id": "MOB-T1001",
-            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
-            "modified": "2018-10-17T00:14:20.652Z",
-            "x_mitre_version": "1.0",
-            "name": "Modify OS Kernel or Boot Partition",
-            "type": "attack-pattern",
-            "x_mitre_tactic_type": [
-                "Post-Adversary Device Access"
-            ]
-        },
-        {
-            "id": "attack-pattern--c5089859-b21f-40a3-8be4-63e381b8b1c0",
-            "kill_chain_phases": [
-                {
-                    "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
-                },
-                {
-                    "phase_name": "persistence",
-                    "kill_chain_name": "mitre-mobile-attack"
-                },
-                {
-                    "phase_name": "impact",
-                    "kill_chain_name": "mitre-mobile-attack"
-                }
-            ],
-            "object_marking_refs": [
-                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
-            ],
-            "name": "Modify System Partition",
-            "external_references": [
-                {
-                    "source_name": "mitre-mobile-attack",
-                    "url": "https://attack.mitre.org/techniques/T1400",
-                    "external_id": "T1400"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-27.html",
-                    "external_id": "APP-27"
-                },
-                {
-                    "description": "Android. (n.d.). Verified Boot. Retrieved December 21, 2016.",
-                    "source_name": "Android-VerifiedBoot",
-                    "url": "https://source.android.com/security/verifiedboot/"
-                },
-                {
-                    "description": "Apple. (2016, May). iOS Security. Retrieved December 21, 2016.",
-                    "source_name": "Apple-iOSSecurityGuide",
-                    "url": "https://www.apple.com/business/docs/iOS_Security_Guide.pdf"
-                }
-            ],
-            "created": "2017-10-25T14:48:30.890Z",
-            "x_mitre_detection": "Android devices with the Verified Boot capability (Citation: Android-VerifiedBoot) perform cryptographic checks of the integrity of the system partition.\n\nThe Android SafetyNet API's remote attestation capability could potentially be used to identify and respond to compromised devices.\n\nSamsung KNOX also provides a remote attestation capability on supported Samsung Android devices.\n\niOS devices will fail to boot or fail to allow device activation if unauthorized modifications are detected.(Citation: Apple-iOSSecurityGuide)",
-            "x_mitre_platforms": [
-                "Android",
-                "iOS"
-            ],
-            "x_mitre_tactic_type": [
-                "Post-Adversary Device Access"
-            ],
-            "x_mitre_old_attack_id": "MOB-T1003",
-            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
-            "modified": "2019-09-04T13:35:57.549Z",
-            "x_mitre_version": "1.2",
-            "type": "attack-pattern",
-            "description": "If an adversary can escalate privileges, he or she may be able to use those privileges to place malicious code in the device system partition, where it may persist after device resets and may not be easily removed by the device user.\n\nMany Android devices provide the ability to unlock the bootloader for development purposes. An unlocked bootloader may provide the ability for an adversary to modify the system partition. Even if the bootloader is locked, it may be possible for an adversary to escalate privileges and then modify the system partition."
-        },
-        {
-            "id": "attack-pattern--f1c3d071-0c24-483d-aca0-e8b8496ce468",
-            "kill_chain_phases": [
-                {
-                    "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
-                },
-                {
-                    "phase_name": "persistence",
-                    "kill_chain_name": "mitre-mobile-attack"
-                }
-            ],
-            "object_marking_refs": [
-                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
-            ],
-            "name": "Modify Trusted Execution Environment",
-            "external_references": [
-                {
-                    "source_name": "mitre-mobile-attack",
-                    "url": "https://attack.mitre.org/techniques/T1399",
-                    "external_id": "T1399"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-27.html",
-                    "external_id": "APP-27"
-                },
-                {
-                    "source_name": "Roth-Rootkits",
-                    "description": "Thomas Roth. (2013). Next generation mobile rootkits. Retrieved December 21, 2016.",
-                    "url": "https://hackinparis.com/data/slides/2013/Slidesthomasroth.pdf"
-                },
-                {
-                    "source_name": "Apple-iOSSecurityGuide",
-                    "description": "Apple. (2016, May). iOS Security. Retrieved December 21, 2016.",
-                    "url": "https://www.apple.com/business/docs/iOS_Security_Guide.pdf"
-                }
-            ],
-            "created": "2017-10-25T14:48:18.583Z",
-            "x_mitre_detection": "Devices may perform cryptographic integrity checks of code running within the TEE at boot time.\n\niOS devices will fail to boot if the software running within the Secure Enclave does not pass signature verification.(Citation: Apple-iOSSecurityGuide)",
-            "x_mitre_platforms": [
-                "Android"
-            ],
-            "x_mitre_tactic_type": [
-                "Post-Adversary Device Access"
-            ],
-            "x_mitre_old_attack_id": "MOB-T1002",
-            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
-            "modified": "2019-02-03T14:23:10.576Z",
-            "x_mitre_version": "1.1",
-            "type": "attack-pattern",
-            "description": "If an adversary can escalate privileges, he or she may be able to use those privileges to place malicious code in the device's Trusted Execution Environment (TEE) or other similar isolated execution environment where the code can evade detection, may persist after device resets, and may not be removable by the device user. Running code within the TEE may provide an adversary with the ability to monitor or tamper with overall device behavior.(Citation: Roth-Rootkits)"
-        },
+   
+      
         {
             "id": "attack-pattern--52eff1c7-dd30-4121-b762-24ae6fa61bbb",
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "execution",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Native Code",
+            "name": "Software Manipulation",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1575",
                     "external_id": "T1575"
                 },
@@ -3570,7 +3353,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -3579,7 +3362,7 @@
             "name": "Network Information Discovery",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1507",
                     "external_id": "T1507"
                 }
@@ -3602,7 +3385,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "discovery",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -3611,7 +3394,7 @@
             "description": "Adversaries may attempt to get a listing of services running on remote hosts, including those that may be vulnerable to remote software exploitation. Methods to acquire this information include port scans and vulnerability scans from the mobile device. This technique may take advantage of the mobile device's access to an internal enterprise network either through local connectivity or through a Virtual Private Network (VPN).",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1423",
                     "external_id": "T1423"
                 }
@@ -3625,7 +3408,7 @@
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "modified": "2018-10-17T00:14:20.652Z",
             "x_mitre_version": "1.0",
-            "name": "Network Service Scanning",
+            "name": "Burn-In",
             "type": "attack-pattern",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
@@ -3636,11 +3419,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "credential-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -3649,7 +3432,7 @@
             "description": "An adversary may capture network traffic to and from the device to obtain credentials or other sensitive data, or redirect network traffic to flow through an adversary-controlled gateway to do the same.\n\nA malicious app could register itself as a VPN client on Android or iOS to gain access to network packets. However, on both platforms, the user must grant consent to the app to act as a VPN client, and on iOS the app requires a special entitlement that must be granted by Apple.\n\nAlternatively, if a malicious app is able to escalate operating system privileges, it may be able to use those privileges to gain access to network traffic.\n\nAn adversary could redirect network traffic to an adversary-controlled gateway by establishing a VPN connection or by manipulating the device's proxy settings. For example, Skycure (Citation: Skycure-Profiles) describes the ability to redirect network traffic by installing a malicious iOS Configuration Profile.\n\nIf applications encrypt their network traffic, sensitive data may not be accessible to an adversary, depending on the point of capture.",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1410",
                     "external_id": "T1410"
                 },
@@ -3680,7 +3463,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -3689,7 +3472,7 @@
             "name": "Obfuscated Files or Information",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1406",
                     "external_id": "T1406"
                 },
@@ -3740,7 +3523,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "remote-service-effects",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -3749,7 +3532,7 @@
             "description": "An adversary who is able to obtain unauthorized access to or misuse authorized access to cloud backup services (e.g. Google's Android backup service or Apple's iCloud) could use that access to obtain sensitive data stored in device backups. For example, the Elcomsoft Phone Breaker product advertises the ability to retrieve iOS backup data from Apple's iCloud (Citation: Elcomsoft-EPPB). Elcomsoft also describes (Citation: Elcomsoft-WhatsApp) obtaining WhatsApp communication histories from backups stored in iCloud.",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1470",
                     "external_id": "T1470"
                 },
@@ -3795,7 +3578,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "discovery",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -3804,7 +3587,7 @@
             "description": "On Android versions prior to 5, applications can observe information about other processes that are running through methods in the ActivityManager class. On Android versions prior to 7, applications can obtain this information by executing the <code>ps</code> command, or by examining the <code>/proc</code> directory. Starting in Android version 7, use of the Linux kernel's <code>hidepid</code> feature prevents applications (without escalated privileges) from accessing this information (Citation: Android-SELinuxChanges).",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1424",
                     "external_id": "T1424"
                 },
@@ -3822,7 +3605,7 @@
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "modified": "2018-10-17T00:14:20.652Z",
             "x_mitre_version": "1.0",
-            "name": "Process Discovery",
+            "name": "Information Manipulation",
             "type": "attack-pattern",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
@@ -3833,7 +3616,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -3842,7 +3625,7 @@
             "name": "Proxy Through Victim",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1604",
                     "external_id": "T1604"
                 },
@@ -3872,7 +3655,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "command-and-control",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -3881,7 +3664,7 @@
             "name": "Remote File Copy",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1544",
                     "external_id": "T1544"
                 }
@@ -3909,7 +3692,7 @@
             "name": "Remotely Install Application",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1443",
                     "external_id": "T1443"
                 }
@@ -3923,7 +3706,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "remote-service-effects",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -3932,7 +3715,7 @@
             "name": "Remotely Track Device Without Authorization",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1468",
                     "external_id": "T1468"
                 },
@@ -3973,7 +3756,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "remote-service-effects",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -3982,7 +3765,7 @@
             "description": "An adversary who is able to obtain unauthorized access to or misuse authorized access to cloud services (e.g. Google's Android Device Manager or Apple iCloud's Find my iPhone) or to an EMM console could use that access to wipe enrolled devices (Citation: Honan-Hacking).",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1469",
                     "external_id": "T1469"
                 },
@@ -4023,7 +3806,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "network-effects",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4032,7 +3815,7 @@
             "description": "An adversary could set up a rogue cellular base station and then use it to eavesdrop on or manipulate cellular device communication. A compromised cellular femtocell could be used to carry out this technique(Citation: Computerworld-Femtocell).",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1467",
                     "external_id": "T1467"
                 },
@@ -4067,7 +3850,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "network-effects",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4076,7 +3859,7 @@
             "description": "An adversary could set up unauthorized Wi-Fi access points or compromise existing access points and, if the device connects to them, carry out network-based attacks such as eavesdropping on or modifying network communication(Citation: NIST-SP800153)(Citation: Kaspersky-DarkHotel).",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1465",
                     "external_id": "T1465"
                 },
@@ -4116,7 +3899,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "network-effects",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4125,7 +3908,7 @@
             "name": "SIM Card Swap",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1451",
                     "external_id": "T1451"
                 },
@@ -4194,7 +3977,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "impact",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4203,7 +3986,7 @@
             "name": "SMS Control",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1582",
                     "external_id": "T1582"
                 },
@@ -4248,20 +4031,20 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "execution",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "persistence",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "Scheduled Task/Job",
+            "name": "System Activity Monitoring",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1603",
                     "external_id": "T1603"
                 },
@@ -4300,7 +4083,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "collection",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4309,7 +4092,7 @@
             "name": "Screen Capture",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1513",
                     "external_id": "T1513"
                 },
@@ -4364,11 +4147,11 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "command-and-control",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 },
                 {
                     "phase_name": "exfiltration",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4377,7 +4160,7 @@
             "description": "Adversaries may communicate using a common, standardized application layer protocol such as HTTP, HTTPS, SMTP, or DNS to avoid detection by blending in with existing traffic.\n\nIn the mobile environment, the Google Cloud Messaging (GCM; two-way) and Apple Push Notification Service (APNS; one-way server-to-device) are commonly used protocols on Android and iOS respectively that would blend in with routine device traffic and are difficult for enterprises to inspect. Google reportedly responds to reports of abuse by blocking access to GCM.(Citation: Kaspersky-MobileMalware)",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1437",
                     "external_id": "T1437"
                 },
@@ -4412,7 +4195,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "command-and-control",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4421,7 +4204,7 @@
             "name": "Standard Cryptographic Protocol",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1521",
                     "external_id": "T1521"
                 }
@@ -4448,7 +4231,7 @@
             "name": "Stolen Developer Credentials or Signing Keys",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1441",
                     "external_id": "T1441"
                 }
@@ -4457,63 +4240,13 @@
             "type": "attack-pattern",
             "x_mitre_old_attack_id": "MOB-T1044"
         },
-        {
-            "id": "attack-pattern--0d95940f-9583-4e0f-824c-a42c1be47fad",
-            "kill_chain_phases": [
-                {
-                    "phase_name": "initial-access",
-                    "kill_chain_name": "mitre-mobile-attack"
-                }
-            ],
-            "object_marking_refs": [
-                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
-            ],
-            "name": "Supply Chain Compromise",
-            "external_references": [
-                {
-                    "source_name": "mitre-mobile-attack",
-                    "url": "https://attack.mitre.org/techniques/T1474",
-                    "external_id": "T1474"
-                },
-                {
-                    "source_name": "NIST Mobile Threat Catalogue",
-                    "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-6.html",
-                    "external_id": "APP-6"
-                },
-                {
-                    "source_name": "NowSecure-RemoteCode",
-                    "description": "Ryan Welton. (2015, June 15). A Pattern for Remote Code Execution using Arbitrary File Writes and MultiDex Applications. Retrieved December 22, 2016.",
-                    "url": "https://www.nowsecure.com/blog/2015/06/15/a-pattern-for-remote-code-execution-using-arbitrary-file-writes-and-multidex-applications/"
-                },
-                {
-                    "source_name": "Grace-Advertisement",
-                    "description": "M. Grace et al. (2012, April 16-18). Unsafe exposure analysis of mobile in-app advertisements. Retrieved December 22, 2016.",
-                    "url": "https://www.csc2.ncsu.edu/faculty/xjiang4/pubs/WISEC12_ADRISK.pdf"
-                }
-            ],
-            "created": "2018-10-17T00:14:20.652Z",
-            "x_mitre_detection": "* Insecure third-party libraries could be detected by application vetting techniques. For example, Google's [App Security Improvement Program](https://developer.android.com/google/play/asi) detects the use of third-party libraries with known vulnerabilities within Android apps submitted to the Google Play Store.\n* Malicious software development tools could be detected by enterprises deploying integrity checking software to the computers that they use to develop code to detect presence of unauthorized, modified software development tools.",
-            "x_mitre_platforms": [
-                "Android",
-                "iOS"
-            ],
-            "x_mitre_tactic_type": [
-                "Post-Adversary Device Access"
-            ],
-            "x_mitre_old_attack_id": "MOB-T1077",
-            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
-            "modified": "2021-03-10T21:06:37.536Z",
-            "x_mitre_version": "1.1",
-            "type": "attack-pattern",
-            "description": "As further described in [Supply Chain Compromise](https://attack.mitre.org/techniques/T1195), supply chain compromise is the manipulation of products or product delivery mechanisms prior to receipt by a final consumer for the purpose of data or system compromise. Somewhat related, adversaries could also identify and exploit inadvertently present vulnerabilities. In many cases, it may be difficult to be certain whether exploitable functionality is due to malicious intent or simply inadvertent mistake.\n\nThird-party libraries incorporated into mobile apps could contain malicious behavior, privacy-invasive behavior, or exploitable vulnerabilities. An adversary could deliberately insert malicious behavior or could exploit inadvertent vulnerabilities. For example, security issues have previously been identified in third-party advertising libraries incorporated into apps.(Citation: NowSecure-RemoteCode)(Citation: Grace-Advertisement).",
-            "x_mitre_is_subtechnique": false
-        },
+   
         {
             "id": "attack-pattern--fd658820-cbba-4c95-8ac9-0fac6b1099e2",
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4522,7 +4255,7 @@
             "name": "Suppress Application Icon",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1508",
                     "external_id": "T1508"
                 },
@@ -4565,16 +4298,16 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "discovery",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "System Information Discovery",
+            "name": "Network Diversity",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1426",
                     "external_id": "T1426"
                 },
@@ -4610,16 +4343,16 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "discovery",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
-            "name": "System Network Configuration Discovery",
+            "name": "Pocket Litter",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1422",
                     "external_id": "T1422"
                 },
@@ -4655,7 +4388,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "discovery",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4664,7 +4397,7 @@
             "description": "On Android, applications can use standard APIs to gather a list of network connections to and from the device. For example, the Network Connections app available in the Google Play Store (Citation: ConnMonitor) advertises this functionality.",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1421",
                     "external_id": "T1421"
                 },
@@ -4693,7 +4426,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "credential-access",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4702,7 +4435,7 @@
             "name": "URI Hijacking",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1416",
                     "external_id": "T1416"
                 },
@@ -4745,7 +4478,7 @@
             "name": "URL Scheme Hijacking",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1415",
                     "external_id": "T1415"
                 },
@@ -4784,7 +4517,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "command-and-control",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4793,7 +4526,7 @@
             "name": "Uncommonly Used Port",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1509",
                     "external_id": "T1509"
                 }
@@ -4818,7 +4551,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4827,7 +4560,7 @@
             "name": "Uninstall Malicious Application",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1576",
                     "external_id": "T1576"
                 },
@@ -4856,7 +4589,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "defense-evasion",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4865,7 +4598,7 @@
             "name": "User Evasion",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1618",
                     "external_id": "T1618"
                 }
@@ -4890,7 +4623,7 @@
             "kill_chain_phases": [
                 {
                     "phase_name": "command-and-control",
-                    "kill_chain_name": "mitre-mobile-attack"
+                    "kill_chain_name": "mitre-engage-attack"
                 }
             ],
             "object_marking_refs": [
@@ -4899,7 +4632,7 @@
             "name": "Web Service",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/techniques/T1481",
                     "external_id": "T1481"
                 }
@@ -27337,7 +27070,7 @@
             "name": "ANDROIDOS_ANSERVER.A",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0310",
                     "external_id": "S0310"
                 },
@@ -27376,7 +27109,7 @@
             "name": "Adups",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0309",
                     "external_id": "S0309"
                 },
@@ -27458,7 +27191,7 @@
             "name": "Allwinner",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0319",
                     "external_id": "S0319"
                 },
@@ -27497,7 +27230,7 @@
             "name": "AndroRAT",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0292",
                     "external_id": "S0292"
                 },
@@ -27570,7 +27303,7 @@
             "name": "Android/Chuli.A",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0304",
                     "external_id": "S0304"
                 },
@@ -27720,7 +27453,7 @@
             "name": "BrainTest",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0293",
                     "external_id": "S0293"
                 },
@@ -27948,7 +27681,7 @@
             "name": "Charger",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0323",
                     "external_id": "S0323"
                 },
@@ -28138,7 +27871,7 @@
             "name": "Dendroid",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0301",
                     "external_id": "S0301"
                 },
@@ -28245,7 +27978,7 @@
             "name": "DressCode",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0300",
                     "external_id": "S0300"
                 },
@@ -28284,7 +28017,7 @@
             "name": "DroidJack",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0320",
                     "external_id": "S0320"
                 },
@@ -28328,7 +28061,7 @@
             "name": "DualToy",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0315",
                     "external_id": "S0315"
                 },
@@ -28825,7 +28558,7 @@
             "name": "Gooligan",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0290",
                     "external_id": "S0290"
                 },
@@ -28947,7 +28680,7 @@
             "name": "HummingBad",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0322",
                     "external_id": "S0322"
                 },
@@ -28986,7 +28719,7 @@
             "name": "HummingWhale",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0321",
                     "external_id": "S0321"
                 },
@@ -29059,7 +28792,7 @@
             "name": "Judy",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0325",
                     "external_id": "S0325"
                 },
@@ -29098,7 +28831,7 @@
             "name": "KeyRaider",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0288",
                     "external_id": "S0288"
                 },
@@ -29191,7 +28924,7 @@
             "name": "Marcher",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0317",
                     "external_id": "S0317"
                 },
@@ -29230,7 +28963,7 @@
             "name": "MazarBOT",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0303",
                     "external_id": "S0303"
                 },
@@ -29306,7 +29039,7 @@
             "name": "NotCompatible",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0299",
                     "external_id": "S0299"
                 },
@@ -29345,7 +29078,7 @@
             "name": "OBAD",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0286",
                     "external_id": "S0286"
                 },
@@ -29384,7 +29117,7 @@
             "name": "OldBoot",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0285",
                     "external_id": "S0285"
                 },
@@ -29423,7 +29156,7 @@
             "name": "PJApps",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0291",
                     "external_id": "S0291"
                 },
@@ -29500,7 +29233,7 @@
             "name": "Pegasus for Android",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0316",
                     "external_id": "S0316"
                 },
@@ -29549,7 +29282,7 @@
             "name": "Pegasus for iOS",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0289",
                     "external_id": "S0289"
                 },
@@ -29593,7 +29326,7 @@
             "name": "RCSAndroid",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0295",
                     "external_id": "S0295"
                 },
@@ -29666,7 +29399,7 @@
             "name": "RedDrop",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0326",
                     "external_id": "S0326"
                 },
@@ -29773,7 +29506,7 @@
             "name": "RuMMS",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0313",
                     "external_id": "S0313"
                 },
@@ -29812,7 +29545,7 @@
             "name": "ShiftyBug",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0294",
                     "external_id": "S0294"
                 },
@@ -29919,7 +29652,7 @@
             "name": "Skygofree",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0327",
                     "external_id": "S0327"
                 },
@@ -29958,7 +29691,7 @@
             "name": "SpyDealer",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0324",
                     "external_id": "S0324"
                 },
@@ -29997,7 +29730,7 @@
             "name": "SpyNote RAT",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0305",
                     "external_id": "S0305"
                 },
@@ -30036,7 +29769,7 @@
             "name": "Stealth Mango",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0328",
                     "external_id": "S0328"
                 },
@@ -30109,7 +29842,7 @@
             "name": "Tangelo",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0329",
                     "external_id": "S0329"
                 },
@@ -30255,7 +29988,7 @@
             "name": "Trojan-SMS.AndroidOS.Agent.ao",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0307",
                     "external_id": "S0307"
                 },
@@ -30294,7 +30027,7 @@
             "name": "Trojan-SMS.AndroidOS.FakeInst.a",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0306",
                     "external_id": "S0306"
                 },
@@ -30333,7 +30066,7 @@
             "name": "Trojan-SMS.AndroidOS.OpFake.a",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0308",
                     "external_id": "S0308"
                 },
@@ -30372,7 +30105,7 @@
             "name": "Twitoor",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0302",
                     "external_id": "S0302"
                 },
@@ -30493,7 +30226,7 @@
             "name": "WireLurker",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0312",
                     "external_id": "S0312"
                 },
@@ -30566,7 +30299,7 @@
             "name": "X-Agent for Android",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0314",
                     "external_id": "S0314"
                 },
@@ -30605,7 +30338,7 @@
             "name": "XLoader for Android",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0318",
                     "external_id": "S0318"
                 },
@@ -30683,7 +30416,7 @@
             "name": "XcodeGhost",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0297",
                     "external_id": "S0297"
                 },
@@ -30727,7 +30460,7 @@
             "name": "YiSpecter",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0311",
                     "external_id": "S0311"
                 },
@@ -30800,7 +30533,7 @@
             "name": "ZergHelper",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0287",
                     "external_id": "S0287"
                 },
@@ -30921,7 +30654,7 @@
             "name": "Xbot",
             "external_references": [
                 {
-                    "source_name": "mitre-mobile-attack",
+                    "source_name": "mitre-engage-attack",
                     "url": "https://attack.mitre.org/software/S0298",
                     "external_id": "S0298"
                 },
@@ -31114,7 +30847,7 @@
         },
         {
             "name": "Plan",
-            "x_mitre_shortname": "initial-access",
+            "x_mitre_shortname": "plan",
             "id": "x-mitre-tactic--0a93fd8e-4a83-4c15-8203-db290e5f2ac6",
             "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "object_marking_refs": [
