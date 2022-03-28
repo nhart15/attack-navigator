@@ -11,8 +11,8 @@ Creates the combined ATLAS YAML file from source data.
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument("--matrix", "-m", type=str, default="engage_matrix.yaml", help="Path to engage_matrix.yaml")
-    parser.add_argument("--output", "-o", type=str, default="/attack_navigator/src/assets", help="Output directory")
+    parser.add_argument("--matrix", "-m", type=str, default="C:\\Users\\NHART\\OneDrive - The MITRE Corporation\\Documents\\CDAM\\attack-navigator\\attack-navigator\\nav-app\\src\\assets\\engage_matrix.yaml", help="Path to engage_matrix.yaml")
+    parser.add_argument("--output", "-o", type=str, default="C:\\Users\\NHART\\OneDrive - The MITRE Corporation\\Documents\\CDAM\\attack-navigator\\attack-navigator\\nav-app\\src\\assets", help="Output directory")
     args = parser.parse_args()
 
     # Create output directories as needed
@@ -60,8 +60,7 @@ def load_atlas_data(matrix_yaml_filepath):
         "name": data["name"],
         "version": data["version"],
         "approaches": data["approaches"],
-        "activities": [],
-        "case-studies": []
+        "activities": []
     }
     for object in objects:
         if object["object-type"] == "activity":
@@ -70,8 +69,6 @@ def load_atlas_data(matrix_yaml_filepath):
             if object["id"] in matrix["approaches"]:
                 idx = matrix["approaches"].index(object["id"])
                 matrix["approaches"][idx] = object
-        elif object["object-type"] == "case-study":
-            matrix["case-studies"].append(object)
 
     return matrix
 

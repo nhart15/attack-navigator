@@ -25,13 +25,13 @@
   name: Collect
   object-type: approach
   description: |
-   Gather adversary tools, observe tactics, and collect other raw intelligence about the adversary 's activity.
+    Gather adversary tools, observe tactics, and collect other raw intelligence about the adversary 's activity.
 
-   Collection activities are used to gather information about an adversary or their activities. This collection can
-   include gathering system logs, network traffic, adversary artifacts, or other data that can be used to expose
-   adversary activity. In many cases, collection activities are also good cybersecurity practices. However, in 
-   Engage, these activities will focus exclusively on the intersection of denial, deception, and adversary
-   engagement technologies and the defender's ability to Expose the adversary.
+    Collection activities are used to gather information about an adversary or their activities. This collection can
+    include gathering system logs, network traffic, adversary artifacts, or other data that can be used to expose
+    adversary activity. In many cases, collection activities are also good cybersecurity practices. However, in 
+    Engage, these activities will focus exclusively on the intersection of denial, deception, and adversary
+    engagement technologies and the defender's ability to Expose the adversary.
 
   
 
@@ -41,17 +41,17 @@
   name: Detect
   object-type: approach
   description: | 
-   Establish or maintain awareness regarding adversary activity.
-
-   Detection activities focus on the defender's ability to monitor adversary 
-   activity throughout an environment, often by creating high-fidelity detections. 
-   These detections can be produced in several ways. For example, a defender can 
-   deploy lures as tripwires in the environment. The defender may create custom 
-   alerts based on TTPs or IOCs observed during a malware detonation operation. 
-   Finally, the defender may write customer decoders to analyze and alert on malicious traffic.
-
-   In all these cases, detection activities allow the defender to produce a high-fidelity
-   alert to monitor adversary activities. Often Detection activities are also good cybersecurity 
+    Establish or maintain awareness regarding adversary activity.
+    
+    Detection activities focus on the defender's ability to monitor adversary 
+    activity throughout an environment, often by creating high-fidelity detections. 
+    These detections can be produced in several ways. For example, a defender can 
+    deploy lures as tripwires in the environment. The defender may create custom 
+    alerts based on TTPs or IOCs observed during a malware detonation operation. 
+    Finally, the defender may write customer decoders to analyze and alert on malicious traffic.
+    
+    In all these cases, detection activities allow the defender to produce a high-fidelity
+    alert to monitor adversary activities. Often Detection activities are also good cybersecurity 
     practices. However, in Engage, these activities will focus exclusively on the intersection of
     denial, deception, and adversary engagement technologies and the defender' s ability to Expose the adversary.
     
@@ -61,18 +61,18 @@
   name: Prevent
   object-type: aprroach
   description: | 
-   Stop all or part of the adversary's ability to conduct their operation as intended.
+    Stop all or part of the adversary's ability to conduct their operation as intended.
 
-   Prevention activities focus on stopping the adversary's ability to conduct their operations as intended.
-   The defender can physically or virtually remove or disable resources, tighten security controls, or
-   otherwise impair the adversary's ability to operate. A defender might prevent an adversary from operating
-   to force them to reveal different, possibly more advanced, capabilities. Additionally, a defender can
-   use prevention activities to discourage the adversary from operating against a specific target. 
-   In this case, the defender may be attempting to encourage the adversary to focus elsewhere in the 
-   engagement environment. There are many more prevention activities that are also good cybersecurity
-   practices. However, in Engage, we are focused on a subset of activities. Those are focused exclusively
-   on the intersection of denial, deception, and adversary engagement technologies and the defender's 
-   ability to Affect the adversary.
+    Prevention activities focus on stopping the adversary's ability to conduct their operations as intended.
+    The defender can physically or virtually remove or disable resources, tighten security controls, or
+    otherwise impair the adversary's ability to operate. A defender might prevent an adversary from operating
+    to force them to reveal different, possibly more advanced, capabilities. Additionally, a defender can
+    use prevention activities to discourage the adversary from operating against a specific target. 
+    In this case, the defender may be attempting to encourage the adversary to focus elsewhere in the 
+    engagement environment. There are many more prevention activities that are also good cybersecurity
+    practices. However, in Engage, we are focused on a subset of activities. Those are focused exclusively
+    on the intersection of denial, deception, and adversary engagement technologies and the defender's 
+    ability to Affect the adversary.
 
     
 
@@ -81,18 +81,17 @@
   name: Direct
   object-type: approach
   description: | 
-   
-   Encourage or discourage the adversary from conducting their operation as intended.
+    Encourage or discourage the adversary from conducting their operation as intended.
 
-   Direction activities focus on moving the adversary towards or away from an intended path. 
-   This forced direction can be accomplished by removing or disabling some resources, while 
-   adding or enabling others. The defender can add lures or otherwise manipulate the environment 
-   to attempt to elicit specific responses from the adversary. Additionally, the defender can 
-   tighten some security controls while leaving others overly permissive or weakened. Finally,
-   the defender can physically move the adversary by moving threats from their intended environment 
-   and into a safe engagement environment. For example, a suspicious email attachment can be moved 
-   from the intended target to an engagement environment for analysis. No matter how the direction 
-   is achieved, the defender hopes to force the adversary to take unintended actions or stop intended actions.
+    Direction activities focus on moving the adversary towards or away from an intended path. 
+    This forced direction can be accomplished by removing or disabling some resources, while 
+    adding or enabling others. The defender can add lures or otherwise manipulate the environment 
+    to attempt to elicit specific responses from the adversary. Additionally, the defender can 
+    tighten some security controls while leaving others overly permissive or weakened. Finally,
+    the defender can physically move the adversary by moving threats from their intended environment 
+    and into a safe engagement environment. For example, a suspicious email attachment can be moved 
+    from the intended target to an engagement environment for analysis. No matter how the direction 
+    is achieved, the defender hopes to force the adversary to take unintended actions or stop intended actions.
 
     
 
@@ -101,17 +100,17 @@
   name: Disrupt
   object-type: approach
   description: |
-   Impair an adversary's ability to conduct their operation as intended.
+    Impair an adversary's ability to conduct their operation as intended.
 
-   Disruption activities are used to stop or discourage an adversary from conducting part 
-   or all of their mission. This disruption may increase the time, skills, or resources
-   needed for the adversary to accomplish a specific task. For example, a defender may 
-   degrade network speeds as the adversary attempts to exfiltrate large blocks of data.
-   As a second example, the defender may manipulate the output of commonly used discovery
-   commands to show targets that do not exist or to hide real targets. In either case, 
-   the adversary may waste resources acting on partial or falsified data. Disruptions 
-   may also include planting misinformation designed to influence the adversary's 
-   decision-makers to make the wrong decisions or to waste resources.
+    Disruption activities are used to stop or discourage an adversary from conducting part 
+    or all of their mission. This disruption may increase the time, skills, or resources
+    needed for the adversary to accomplish a specific task. For example, a defender may 
+    degrade network speeds as the adversary attempts to exfiltrate large blocks of data.
+    Asa second example, the defender may manipulate the output of commonly used discovery
+    commands to show targets that do not exist or to hide real targets. In either case, 
+    the adversary may waste resources acting on partial or falsified data. Disruptions 
+    may also include planting misinformation designed to influence the adversary's 
+    decision-makers to make the wrong decisions or to waste resources.
 
     
 
@@ -120,15 +119,15 @@
   name: Reassure
   object-type: approach
   description: |
-   Add authenticity to deceptive components to convince an adversary that an environment is real.
+    Add authenticity to deceptive components to convince an adversary that an environment is real.
 
-   Reassurance activities are used to add authenticity to deceptive components to reduce adversary suspicion about
-   the legitimacy of the environment. Activities include adding realistic user accounts, files, system activity, 
-   and any other content that an adversary might expect to find on the system. These activities may add new 
-   artifacts, such as peripherals and pocket litter, while concealing others, such as how recently an environment
-   was stood up. If done correctly, reassuring an adversary may help to make them feel more comfortable upon
-   landing in a new environment. This initial level of comfort can help anchor the adversary in the environment,
-   increasing their tolerance to faults or weaknesses discovered later.
+    Reassurance activities are used to add authenticity to deceptive components to reduce adversary suspicion about
+    the legitimacy of the environment. Activities include adding realistic user accounts, files, system activity, 
+    and any other content that an adversary might expect to find on the system. These activities may add new 
+    artifacts, such as peripherals and pocket litter, while concealing others, such as how recently an environment
+    was stood up. If done correctly, reassuring an adversary may help to make them feel more comfortable upon
+    landing in a new environment. This initial level of comfort can help anchor the adversary in the environment,
+    increasing their tolerance to faults or weaknesses discovered later.
 
     
 - &motivate 
@@ -136,11 +135,11 @@
   name: Motivate
   object-type: approach
   description: |
-   Encourage an adversary to conduct part or all of their mission.
+    Encourage an adversary to conduct part or all of their mission.
 
-   Motivating activities is used to encourage an adversary to conduct part or 
-   all of their mission by providing a target-rich environment. To do this, the 
-   defender can use unpatched versions of operating systems and software, remove
+    Motivating activities is used to encourage an adversary to conduct part or 
+    all of their mission by providing a target-rich environment. To do this, the 
+    defender can use unpatched versions of operating systems and software, remove
     end-point detection software, and use weak passwords. Additionally, the defender 
     can open firewall ports, add proxy capabilities, or introduce elements that an 
     adversary can easily leverage to bypass an obstacle in their operations. 
@@ -153,16 +152,16 @@
   name: Analyze
   object-type: approach
   description: |
-   Retrospective review of information gained from an operation .
+    Retrospective review of information gained from an operation .
 
-   Analysis is used to aggregate, examine, and evaluate the results of an operation. 
-   Analysis is useful for improving the defender's security posture through the synthesis
-   of operational data. Additionally, analysis can be used to turn data into actionable
-   intelligence about an adversary's motivators, behaviors, tactics, and techniques. 
-   Defenders can use analysis to gain insight into adversary activity and thus inform
-   detection and analytics refinements. Reviewing the execution of an operation also
-   provides feedback for the team to improve the quality of future operations. 
-   Finally, Analysis activities ensure that each operation is informed by the successes
-   and learns from the failures of past operations.
+    Analysis is used to aggregate, examine, and evaluate the results of an operation. 
+    Analysis is useful for improving the defender's security posture through the synthesis
+    of operational data. Additionally, analysis can be used to turn data into actionable
+    intelligence about an adversary's motivators, behaviors, tactics, and techniques. 
+    Defenders can use analysis to gain insight into adversary activity and thus inform
+    detection and analytics refinements. Reviewing the execution of an operation also
+    provides feedback for the team to improve the quality of future operations. 
+    Finally, Analysis activities ensure that each operation is informed by the successes
+    and learns from the failures of past operations.
 
     

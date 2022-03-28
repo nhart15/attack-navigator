@@ -4,13 +4,12 @@ id: ENGAGE
 name: Engage Navigator
 version: 1.0.0
 
-tactics:
+approaches:
   - "{{prevent.id}}"
   - "{{direct.id}}"
   - "{{disrupt.id}}"
  
 
 data:
-  - !include tactics.yaml
-  - !include techniques.yaml
-  - !include case-studies/*.yaml
+  - !include engage_tactics.yaml
+  - !include engage_techniques.yaml

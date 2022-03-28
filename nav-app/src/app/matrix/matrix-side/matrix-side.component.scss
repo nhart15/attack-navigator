@@ -30,6 +30,7 @@
         .techniques-table {
             border-collapse: collapse;
             width: 100%;
+            // background-color: rgb(146, 146, 29);
             tr, td {
                 padding: 0;
             }
@@ -37,6 +38,18 @@
                 height: 1px;
             }
         }
+
+        // .matrix-techniques-table {
+        //     border-collapse: collapse;
+        //     width: 100%;
+        //     background-color: rgb(146, 146, 29);
+        //     tr, td {
+        //         padding: 0;
+        //     }
+        //     tr {
+        //         height: 1px;
+        //     }
+        // }
 
         .supertechnique {
             border-collapse: collapse;
