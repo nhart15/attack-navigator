@@ -247,6 +247,14 @@
                 {
                     "kill_chain_name": "mitre-atlas",
                     "phase_name": "prevent"
+                },
+                {
+                    "kill_chain_name": "mitre-atlas",
+                    "phase_name": "disrupt"
+                },
+                {
+                    "kill_chain_name": "mitre-atlas",
+                    "phase_name": "direct"
                 }
             ],
             "external_references": [
