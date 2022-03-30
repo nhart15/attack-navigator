@@ -246,7 +246,7 @@
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-atlas",
-                    "phase_name": "reconnaissance"
+                    "phase_name": "prevent"
                 }
             ],
             "external_references": [
