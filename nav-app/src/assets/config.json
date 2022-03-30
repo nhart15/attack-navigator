@@ -17,7 +17,7 @@
                 },
                 {
                     "name": "Engage",
-                    "data": ["https://raw.githubusercontent.com/nhart15/attack-navigator/master/nav-app/src/assets/engage-attack.json"]
+                    "data": ["https://raw.githubusercontent.com/nhart15/attack-navigator/master/nav-app/src/assets/stix-engage.json"]
                 }
             ]
         },

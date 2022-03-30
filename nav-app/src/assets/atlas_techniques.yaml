@@ -21,6 +21,18 @@
 #     - "{{tactic_short_name.id}}"
 #   subtechnique-of: "{{parent_short_name}}"
 
+- &security_controls
+  id: EAC0018
+  name: Security Controls
+  object-type: technique
+  description: |
+    Alter security controls to make the system more or less vulnerable to attack.
+
+    Manipulating Security Controls involves making configuration changes to a system's security settings including modifying Group Policies, disabling/enabling autorun for removable media, tightening or relaxing system firewalls, etc. Such security controls can be tightened to dissuade or prevent adversary activity. Conversely, security controls can be weakened or left overly permissive to encourage or enable adversary activity. \n<br><br>\nTightening security controls can typically be done by implementing any of the mitigations described in MITRE ATT&CK. See https://attack.mitre.org/mitigations/enterprise/ for a full list of mitigation strategies. While loosening security controls may seem obvious (i.e., simply don't employ a given mitigation strategy), there is an additional level of nuance that must be considered
+  tactics:
+    - "{{prevent.id}}"
+    - "{{direct.id}}"
+
 - &victim_research
   id: AML.T0000
   name: Search for Victim's Publicly Available Research Materials
@@ -599,7 +611,7 @@
   object-type: technique
   description: |
     Adversaries may exfiltrate ML artifacts or other information relevant to their goals via traditional cyber means.
-
+    
     See the ATT&CK [Exfiltration](https://attack.mitre.org/tactics/TA0010/) tactic for more information.
   tactics:
     - "{{exfiltration.id}}"
