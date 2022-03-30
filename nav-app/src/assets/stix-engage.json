@@ -401,6 +401,56 @@
             "modified": "2022-03-30T12:50:48.710Z"
         },
         {
+            "name": "ML Development Workspaces",
+            "description": "Developing and staging machine learning attacks often requires expensive compute resources.\nAdversaries may need access to one or many GPUs in order to develop an attack.\nThey may try to anonymously use free resources such as Google Colaboratory, or cloud resources such as AWS, Azure, or Google Cloud as an efficient way to stand up temporary resources to conduct operations.\nMultiple workspaces may be used to avoid detection.\n",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-engage",
+                    "phase_name": "resource-development"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/techniques/AML.T0008.000",
+                    "external_id": "AML.T0008.000"
+                }
+            ],
+            "x_mitre_platforms": [
+                "ENGAGE"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "type": "attack-pattern",
+            "id": "attack-pattern--58c08543-0c31-4eee-b786-036086f8e2db",
+            "created": "2022-03-30T12:50:48.710Z",
+            "modified": "2022-03-30T12:50:48.710Z"
+        },
+        {
+            "name": "Consumer Hardware",
+            "description": "Adversaries may acquire consumer hardware to conduct their attacks.\nOwning the hardware provides the adversary with complete control of the environment. These devices can be hard to trace.\n",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-engage",
+                    "phase_name": "resource-development"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/techniques/AML.T0008.001",
+                    "external_id": "AML.T0008.001"
+                }
+            ],
+            "x_mitre_platforms": [
+                "ENGAGE"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "type": "attack-pattern",
+            "id": "attack-pattern--3e0bb768-3661-4aa4-9704-c4db1b1d24b3",
+            "created": "2022-03-30T12:50:48.711Z",
+            "modified": "2022-03-30T12:50:48.711Z"
+        },
+        {
             "type": "relationship",
             "id": "relationship--bf17feae-92c0-45e0-a2a0-26aecc3b7186",
             "created": "2022-03-30T12:50:48.711Z",
