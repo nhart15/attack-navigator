@@ -246,7 +246,7 @@ if __name__ == '__main__':
     parser.add_argument("-f",
         type=str,
         dest="atlas_data_filepath",
-        default="attack-navigator\\nav-app\\src\\assets\\ENGAGE.yaml",
+        default="attack-navigator\\nav-app\\src\\matrix_info\\atlas_reference\\ATLAS.yaml",
         help="Path to ATLAS.yaml file"
     )
     parser.add_argument("--url",
@@ -258,7 +258,7 @@ if __name__ == '__main__':
     parser.add_argument("-o",
         type=str,
         dest="output_dir",
-        default="attack-navigator\\nav-app\\src\\assets",
+        default="attack-navigator\\nav-app\\src\\matrix_info\\atlas_reference",
         help="Output directory for STIX JSON"
     )
 
