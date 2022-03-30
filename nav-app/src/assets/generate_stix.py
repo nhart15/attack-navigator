@@ -11,7 +11,7 @@ Custom MITRE ATT&CK STIX object to be able to use the Navigator.
         https://github.com/mitre/cti/blob/master/USAGE.md#the-attck-data-model
         https://stix2.readthedocs.io/en/latest/guide/custom.html?highlight=custom#Custom-STIX-Object-Types
 """
-@CustomObject('x-mitre-approach', [
+@CustomObject('x-mitre-tactic', [
     ('name', properties.StringProperty()),
     ('description', properties.StringProperty()),
     # https://github.com/oasis-open/cti-python-stix2/blob/master/stix2/properties.py#L197
@@ -92,7 +92,7 @@ class ENGAGE:
         print(f'Converted {len(stix_activities)} ENGAGE activities to STIX objects.')
         print(f'Created {len(relationships)} subactivity relationships.')
 
-        # Convert ENGAGE approaches to x-mitre-approaches
+        # Convert ENGAGE approaches to x-mitre-tactics
         stix_approaches = [self.approach_to_mitre_attack_approach(t, engage_url) for t in self.approaches]
         print(f'Converted {len(stix_approaches)} ENGAGE approaches to STIX objects.')
 
@@ -196,7 +196,7 @@ class ENGAGE:
         ]
 
     def approach_to_mitre_attack_approach(self, t, engage_url):
-        """Returns a STIX x-mitre-approach representing this approach."""
+        """Returns a STIX x-mitre-tactic representing this approach."""
         at = AttackTactic(
             name=t['name'],
             description=t['description'],
