@@ -60,7 +60,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/activities/EAC0019",
+                    "url": "https://localhost:4200/techniques/EAC0019",
                     "external_id": "EAC0019"
                 }
             ],
@@ -84,7 +84,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/activities/EAC0017",
+                    "url": "https://localhost:4200/techniques/EAC0017",
                     "external_id": "EAC0017"
                 }
             ],
@@ -112,7 +112,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/activities/EAC0020",
+                    "url": "https://localhost:4200/techniques/EAC0020",
                     "external_id": "EAC0020"
                 }
             ],
@@ -144,7 +144,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/activities/EAC0016",
+                    "url": "https://localhost:4200/techniques/EAC0016",
                     "external_id": "EAC0016"
                 }
             ],
@@ -172,7 +172,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/activities/EAC0018",
+                    "url": "https://localhost:4200/techniques/EAC0018",
                     "external_id": "EAC0018"
                 }
             ],
@@ -196,7 +196,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/activities/EAC0021",
+                    "url": "https://localhost:4200/techniques/EAC0021",
                     "external_id": "EAC0021"
                 }
             ],
@@ -220,7 +220,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/activities/EAC0009",
+                    "url": "https://localhost:4200/techniques/EAC0009",
                     "external_id": "EAC0009"
                 }
             ],
@@ -244,7 +244,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/activities/EAC0023",
+                    "url": "https://localhost:4200/techniques/EAC0023",
                     "external_id": "EAC0023"
                 }
             ],
@@ -272,7 +272,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/activities/EAC0005",
+                    "url": "https://localhost:4200/techniques/EAC0005",
                     "external_id": "EAC0005"
                 }
             ],
@@ -296,7 +296,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/activities/EAC0013",
+                    "url": "https://localhost:4200/techniques/EAC0013",
                     "external_id": "EAC0013"
                 }
             ],
@@ -320,7 +320,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/activities/EAC0010",
+                    "url": "https://localhost:4200/techniques/EAC0010",
                     "external_id": "EAC0010"
                 }
             ],
@@ -348,7 +348,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/activities/EAC0014",
+                    "url": "https://localhost:4200/techniques/EAC0014",
                     "external_id": "EAC0014"
                 }
             ],
