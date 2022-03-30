@@ -150,17 +150,7 @@ class ENGAGE:
             kill_chain_name= '?'
             phase_name = '?'
 
-            if approach_id.startswith('EAP'):
-                # ENGAGE
-                kill_chain_name = ENGAGE.SOURCE_NAME # Using this as an identifier
-
-                # Look up ENGAGE approach name
-                approach = next((approach for approach in self.approaches if approach['id'] == approach_id), None)
-                # Ensure this is found
-                assert(approach is not None)
-                # Convert name to lowercase and hyphens to fit spec
-                phase_name = approach['name'].lower().replace(' ', '-')
-            elif approach_id.startswith('SAP'):
+            if approach_id.startswith('EAP') or approach_id.startswith('SAP'):
                 # ENGAGE
                 kill_chain_name = ENGAGE.SOURCE_NAME # Using this as an identifier
 

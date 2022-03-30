@@ -58,7 +58,7 @@
 
 - &network_manipulation
   id: EAC0016
-  name: Netowrk Manipulation
+  name: Network Manipulation
   object-type: activity
   description: |
     Make changes to network properties and functions to achieve a desired effect.
