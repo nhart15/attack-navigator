@@ -12,9 +12,9 @@
             ],
             "x_mitre_shortname": "prevent",
             "type": "x-mitre-tactic",
-            "id": "x-mitre-tactic--c8646a30-9f9f-4296-bc0c-9a1e02d88ad9",
-            "created": "2022-03-30T15:26:47.477Z",
-            "modified": "2022-03-30T15:26:47.477Z"
+            "id": "x-mitre-tactic--e77e6ac1-2c67-411b-b7e6-f5a701d3499d",
+            "created": "2022-03-30T18:47:33.145Z",
+            "modified": "2022-03-30T18:47:33.145Z"
         },
         {
             "name": "Direct",
@@ -28,9 +28,9 @@
             ],
             "x_mitre_shortname": "direct",
             "type": "x-mitre-tactic",
-            "id": "x-mitre-tactic--78b199a5-1cda-44ce-9e6b-69c0a9f0f953",
-            "created": "2022-03-30T15:26:47.477Z",
-            "modified": "2022-03-30T15:26:47.477Z"
+            "id": "x-mitre-tactic--d9227b2a-b8a1-4898-96a5-8536f9e7f0e7",
+            "created": "2022-03-30T18:47:33.145Z",
+            "modified": "2022-03-30T18:47:33.145Z"
         },
         {
             "name": "Disrupt",
@@ -44,9 +44,25 @@
             ],
             "x_mitre_shortname": "disrupt",
             "type": "x-mitre-tactic",
-            "id": "x-mitre-tactic--c00b9e87-345b-4fb9-a525-f360548cf4d0",
-            "created": "2022-03-30T15:26:47.477Z",
-            "modified": "2022-03-30T15:26:47.477Z"
+            "id": "x-mitre-tactic--a1a8f059-284a-4092-84d0-0faee248eddf",
+            "created": "2022-03-30T18:47:33.145Z",
+            "modified": "2022-03-30T18:47:33.145Z"
+        },
+        {
+            "name": "Resource Development",
+            "description": "The adversary is trying to establish resources they can use to support operations.\n\nResource Development consists of techniques that involve adversaries creating,\npurchasing, or compromising/stealing resources that can be used to support targeting.\nSuch resources include machine learning artifacts, infrastructure, accounts, or capabilities.\nThese resources can be leveraged by the adversary to aid in other phases of the adversary lifecycle, such as ML Attack Staging.\n",
+            "external_references": [
+                {
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/approaches/AML.TA0003",
+                    "external_id": "AML.TA0003"
+                }
+            ],
+            "x_mitre_shortname": "resource-development",
+            "type": "x-mitre-tactic",
+            "id": "x-mitre-tactic--8fb30c8b-43fa-486b-b652-5bedc52328da",
+            "created": "2022-03-30T12:50:48.721Z",
+            "modified": "2022-03-30T12:50:48.721Z"
         },
         {
             "name": "Baseline",
@@ -68,9 +84,9 @@
                 "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--3ba0cdee-0ee7-464e-80b7-799a9004a278",
-            "created": "2022-03-30T15:26:47.475Z",
-            "modified": "2022-03-30T15:26:47.475Z"
+            "id": "attack-pattern--92e514e5-6856-4ce6-bafa-40c6bf3662a1",
+            "created": "2022-03-30T18:47:33.143Z",
+            "modified": "2022-03-30T18:47:33.143Z"
         },
         {
             "name": "Hardware Manipulation",
@@ -92,9 +108,9 @@
                 "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--26bc8ff0-e34d-4312-8e51-4d2a4f84283e",
-            "created": "2022-03-30T15:26:47.475Z",
-            "modified": "2022-03-30T15:26:47.475Z"
+            "id": "attack-pattern--64fba9cd-df2f-432c-998d-b52ce59078ad",
+            "created": "2022-03-30T18:47:33.143Z",
+            "modified": "2022-03-30T18:47:33.143Z"
         },
         {
             "name": "Isolation",
@@ -120,12 +136,12 @@
                 "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--2af0d93c-d569-4e07-b20b-2ac45ea2fca3",
-            "created": "2022-03-30T15:26:47.475Z",
-            "modified": "2022-03-30T15:26:47.475Z"
+            "id": "attack-pattern--085e7a90-474c-4c29-b248-0e5ccb8e3b9b",
+            "created": "2022-03-30T18:47:33.143Z",
+            "modified": "2022-03-30T18:47:33.143Z"
         },
         {
-            "name": "Netowrk Manipulation",
+            "name": "Network Manipulation",
             "description": "Make changes to network properties and functions to achieve a desired effect.\n\nNetwork Manipulation allows a defender to throttle network speeds, segment the network, maintain a unique IP addressing scheme, add a kill switch to cut off network access, etc. These types of manipulations can affect the adversary's ability to achieve their operational objectives by incurring an increased resource cost, forcing them to change tactics, or stopping them altogether.\nFor example, a defender can limit the allowed ports or network requests to force the adversary to alter their planned C2 or exfiltration channels. As another example, a defender could allow or deny outbound SMB requests from a network to affect the success of forced authentication. Additionally, the defender can degrade network speeds and reliability to impose a resource cost as adversaries exfiltrate large quantities of data. Finally, a defender can block primary C2 domains and IPs to determine if the adversary has additional infrastructure. While there are a range of network manipulation options, in all cases, the defender has an opportunity to learn about or influence the adversaries operating in the environment.\n",
             "kill_chain_phases": [
                 {
@@ -152,9 +168,9 @@
                 "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--7ae60e98-b4fe-4806-af12-1cb54e699de0",
-            "created": "2022-03-30T15:26:47.476Z",
-            "modified": "2022-03-30T15:26:47.476Z"
+            "id": "attack-pattern--9294d1d2-67b9-4f53-a721-9be21191c029",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Security Controls",
@@ -180,9 +196,9 @@
                 "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--af576a54-880e-4f08-b255-77a356a1f1c8",
-            "created": "2022-03-30T15:26:47.476Z",
-            "modified": "2022-03-30T15:26:47.476Z"
+            "id": "attack-pattern--9eb3bd7c-467c-494e-a74b-9b008258cacb",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Attack Vector Migration",
@@ -204,9 +220,9 @@
                 "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--337c79c0-562f-4a3e-acb5-74e16a574195",
-            "created": "2022-03-30T15:26:47.476Z",
-            "modified": "2022-03-30T15:26:47.476Z"
+            "id": "attack-pattern--6242d2b5-0354-49a3-baa3-0e653d937f7e",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Email Manipulation",
@@ -228,9 +244,9 @@
                 "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--5c5722dc-f6b7-4751-9cc8-68aede96afc1",
-            "created": "2022-03-30T15:26:47.476Z",
-            "modified": "2022-03-30T15:26:47.476Z"
+            "id": "attack-pattern--1e9ab71c-1a43-43f8-b11c-d650104c469d",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Introduced Vulnerabilities",
@@ -252,9 +268,9 @@
                 "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--9b9c8451-ece4-4148-a9a8-64287a6f00fe",
-            "created": "2022-03-30T15:26:47.476Z",
-            "modified": "2022-03-30T15:26:47.476Z"
+            "id": "attack-pattern--b816814e-73b1-4449-9e1d-6099838b9889",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Lures",
@@ -280,9 +296,9 @@
                 "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--18ae9b8b-daf0-4392-97bc-e4517825d8a9",
-            "created": "2022-03-30T15:26:47.476Z",
-            "modified": "2022-03-30T15:26:47.476Z"
+            "id": "attack-pattern--0b347d7e-583b-4f53-9d8e-5d6f55c45fe4",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Malware Detonation",
@@ -304,9 +320,9 @@
                 "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--51289d81-6322-4a7a-b689-878712f47dac",
-            "created": "2022-03-30T15:26:47.476Z",
-            "modified": "2022-03-30T15:26:47.476Z"
+            "id": "attack-pattern--d309fefe-784e-4106-9fc1-10b79a0bea4d",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Peripheral Management",
@@ -328,9 +344,9 @@
                 "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--7fefccd2-870c-4e41-86a5-d9e9169f8c97",
-            "created": "2022-03-30T15:26:47.477Z",
-            "modified": "2022-03-30T15:26:47.477Z"
+            "id": "attack-pattern--4c081ea5-dc32-40ae-a687-e839e3d69051",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Software Manipulation",
@@ -356,9 +372,51 @@
                 "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--14613422-b058-4004-9fc0-dc7926e5e7e0",
-            "created": "2022-03-30T15:26:47.477Z",
-            "modified": "2022-03-30T15:26:47.477Z"
+            "id": "attack-pattern--544f8ee7-370e-4570-b1c9-798c564b0b5f",
+            "created": "2022-03-30T18:47:33.145Z",
+            "modified": "2022-03-30T18:47:33.145Z"
+        },
+        {
+            "name": "Acquire Infrastructure",
+            "description": "Adversaries may buy, lease, or rent infrastructure for use throughout their operation.\nA wide variety of infrastructure exists for hosting and orchestrating adversary operations.\nInfrastructure solutions include physical or cloud servers, domains, mobile devices, and third-party web services.\nFree resources may also be used, but they are typically limited.\n\nUse of these infrastructure solutions allows an adversary to stage, launch, and execute an operation.\nSolutions may help adversary operations blend in with traffic that is seen as normal, such as contact to third-party web services.\nDepending on the implementation, adversaries may use infrastructure that makes it difficult to physically tie back to them as well as utilize infrastructure that can be rapidly provisioned, modified, and shut down.\n",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-engage",
+                    "phase_name": "resource-development"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/AML.T0008",
+                    "external_id": "AML.T0008"
+                }
+            ],
+            "x_mitre_platforms": [
+                "ENGAGE"
+            ],
+            "type": "attack-pattern",
+            "id": "attack-pattern--f509b9d5-c2cf-4419-8e18-90e9183381a7",
+            "created": "2022-03-30T12:50:48.710Z",
+            "modified": "2022-03-30T12:50:48.710Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--bf17feae-92c0-45e0-a2a0-26aecc3b7186",
+            "created": "2022-03-30T12:50:48.711Z",
+            "modified": "2022-03-30T12:50:48.711Z",
+            "source_ref": "attack-pattern--58c08543-0c31-4eee-b786-036086f8e2db",
+            "relationship_type": "subtechnique-of",
+            "target_ref": "attack-pattern--f509b9d5-c2cf-4419-8e18-90e9183381a7"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--8f5dbeec-9151-442e-927f-807e0b4fbaf1",
+            "created": "2022-03-30T12:50:48.711Z",
+            "modified": "2022-03-30T12:50:48.711Z",
+            "source_ref": "attack-pattern--3e0bb768-3661-4aa4-9704-c4db1b1d24b3",
+            "relationship_type": "subtechnique-of",
+            "target_ref": "attack-pattern--f509b9d5-c2cf-4419-8e18-90e9183381a7"
         },
         {
             "name": "ENGAGE 1.0.0",
@@ -371,17 +429,17 @@
                 }
             ],
             "approach_refs": [
-                "x-mitre-tactic--c8646a30-9f9f-4296-bc0c-9a1e02d88ad9",
-                "x-mitre-tactic--78b199a5-1cda-44ce-9e6b-69c0a9f0f953",
-                "x-mitre-tactic--c00b9e87-345b-4fb9-a525-f360548cf4d0"
+                "x-mitre-tactic--e77e6ac1-2c67-411b-b7e6-f5a701d3499d",
+                "x-mitre-tactic--d9227b2a-b8a1-4898-96a5-8536f9e7f0e7",
+                "x-mitre-tactic--a1a8f059-284a-4092-84d0-0faee248eddf"
             ],
             "type": "x-mitre-matrix",
-            "id": "x-mitre-matrix--d606498a-111b-468c-b5b5-e3df500100db",
-            "created": "2022-03-30T15:26:47.477Z",
-            "modified": "2022-03-30T15:26:47.477Z"
+            "id": "x-mitre-matrix--f8203289-a722-4006-a656-30afa57f00fe",
+            "created": "2022-03-30T18:47:33.145Z",
+            "modified": "2022-03-30T18:47:33.145Z"
         }
     ],
     "type": "bundle",
-    "id": "bundle--f022e4b0-7fba-4f22-8d88-5684dfd8569c",
+    "id": "bundle--dd1fb70b-1cc4-40a9-9e75-7a2e02d7d2f5",
     "spec_version": "2.0"
 }
