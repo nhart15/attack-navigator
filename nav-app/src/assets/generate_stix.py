@@ -11,7 +11,7 @@ Custom MITRE ATT&CK STIX object to be able to use the Navigator.
         https://github.com/mitre/cti/blob/master/USAGE.md#the-attck-data-model
         https://stix2.readthedocs.io/en/latest/guide/custom.html?highlight=custom#Custom-STIX-Object-Types
 """
-@CustomObject('x-mitre-tactic', [
+@CustomObject('x-mitre-approach', [
     ('name', properties.StringProperty()),
     ('description', properties.StringProperty()),
     # https://github.com/oasis-open/cti-python-stix2/blob/master/stix2/properties.py#L197
@@ -19,7 +19,7 @@ Custom MITRE ATT&CK STIX object to be able to use the Navigator.
     ('x_mitre_shortname', properties.StringProperty()),
 ])
 class AttackTactic():
-    """Custom MITRE ATT&CK tactic STIX object."""
+    """Custom MITRE ATT&CK approach STIX object."""
     def __init__(self, **kwargs):
         pass
 
@@ -28,7 +28,7 @@ class AttackTactic():
     ('description', properties.StringProperty()),
     # https://github.com/oasis-open/cti-python-stix2/blob/master/stix2/properties.py#L197
     ('external_references', properties.ListProperty(ExternalReference)),
-    ('tactic_refs', properties.ListProperty(properties.StringProperty))
+    ('approach_refs', properties.ListProperty(properties.StringProperty))
 ])
 class AttackMatrix():
     """Custom MITRE ATT&CK matrix STIX object."""
@@ -36,95 +36,95 @@ class AttackMatrix():
         pass
 
 
-class ATLAS:
-    """Converts from ATLAS YAML data to STIX."""
+class ENGAGE:
+    """Converts from ENGAGE YAML data to STIX."""
     # An lowercase, hyphened identifier for this data
-    SOURCE_NAME = 'mitre-atlas'
+    SOURCE_NAME = 'mitre-engage'
 
-    def __init__(self, atlas_data):
-        """Initialize an ATLAS object.  Defaults provided via arguments in main.
+    def __init__(self, engage_data):
+        """Initialize an ENGAGE object.  Defaults provided via arguments in main.
 
         Args:
-            atlas_data (str): Dictionary of ATLAS.yaml data
+            engage_data (str): Dictionary of ENGAGE.yaml data
         """
-        self.parse_data_files(atlas_data)
-        # Track ATLAS approaches by short ID for matrix ordering lookup
-        self.tactic_mapping = {}
+        self.parse_data_files(engage_data)
+        # Track ENGAGE approaches by short ID for matrix ordering lookup
+        self.approach_mapping = {}
 
-    def parse_data_files(self, atlas_data):
-        """Sets attributes from the ATLAS data."""
+    def parse_data_files(self, engage_data):
+        """Sets attributes from the ENGAGE data."""
 
-        self.matrix_id = atlas_data["id"]
-        self.matrix_name = atlas_data["name"]
-        self.matrix_version = atlas_data["version"]
+        self.matrix_id = engage_data["id"]
+        self.matrix_name = engage_data["name"]
+        self.matrix_version = engage_data["version"]
 
-        self.approaches = atlas_data["approaches"]
-        self.activities = atlas_data["activities"]
-        #self.studies = atlas_data["case-studies"]
+        self.approaches = engage_data["approaches"]
+        self.activities = engage_data["activities"]
+        #self.studies = engage_data["case-studies"]
 
-    def to_stix_json(self, stix_output_filepath, atlas_url):
-        """Saves a STIX JSON file of the ATLAS approaches and activities info.
+    def to_stix_json(self, stix_output_filepath, engage_url):
+        """Saves a STIX JSON file of the ENGAGE approaches and activities info.
 
         STIX Bundle specs
         https://docs.oasis-open.org/cti/stix/v2.1/cs01/stix-v2.1-cs01.html#_nuwp4rox8c7r
         """
 
-        # Convert ATLAS activities first to populate the referenced ATT&CK approaches
+        # Convert ENGAGE activities first to populate the referenced ATT&CK approaches
         # Only for parent activities, as subactivities do not have approaches references
         stix_activities = []
         relationships = []
-        parent_technique = None
+        parent_activity = None
         for t in self.activities:
-            if 'subtechnique-of' in t:
+            if 'subactivity-of' in t:
                 pass
-                # Create subtechnique and relationship
-                subtechnique, relationship = self.subtechnique_to_attack_pattern(t, parent_technique, atlas_url)
+                # Create subactivity and relationship
+                subactivity, relationship = self.subactivity_to_attack_pattern(t, parent_activity, engage_url)
                 # Add to trackers
-                stix_activities.append(subtechnique)
+                stix_activities.append(subactivity)
                 relationships.append(relationship)
             else:
-                # Create and add this technique
-                technique = self.technique_to_attack_pattern(t, atlas_url)
-                stix_activities.append(technique)
-                # Save off reference to this technique for use by its subactivities, should there be any following
-                parent_technique = technique
+                # Create and add this activity
+                activity = self.activity_to_attack_pattern(t, engage_url)
+                stix_activities.append(activity)
+                # Save off reference to this activity for use by its subactivities, should there be any following
+                parent_activity = activity
 
-        print(f'Converted {len(stix_activities)} ATLAS activities to STIX objects.')
-        print(f'Created {len(relationships)} subtechnique relationships.')
+        print(f'Converted {len(stix_activities)} ENGAGE activities to STIX objects.')
+        print(f'Created {len(relationships)} subactivity relationships.')
 
-        # Convert ATLAS approaches to x-mitre-approaches
-        stix_approaches = [self.tactic_to_mitre_attack_tactic(t, atlas_url) for t in self.approaches]
-        print(f'Converted {len(stix_approaches)} ATLAS approaches to STIX objects.')
+        # Convert ENGAGE approaches to x-mitre-approaches
+        stix_approaches = [self.approach_to_mitre_attack_approach(t, engage_url) for t in self.approaches]
+        print(f'Converted {len(stix_approaches)} ENGAGE approaches to STIX objects.')
 
 
         # Build x-mitre-matrix
 
-        # Controls location of "View tactic/technique" on Navigator item right-click
+        # Controls location of "View approach/activity" on Navigator item right-click
         external_references = [
             ExternalReference(
-                source_name = ATLAS.SOURCE_NAME,
-                url=atlas_url,
-                external_id = ATLAS.SOURCE_NAME # https://github.com/mitre-attack/attack-navigator/issues/362
+                source_name = ENGAGE.SOURCE_NAME,
+                url=engage_url,
+                external_id = ENGAGE.SOURCE_NAME # https://github.com/mitre-attack/attack-navigator/issues/362
             )
         ]
 
         # Build ordered list of approaches
-        tactic_refs = []
+        approach_refs = []
 
         # Order of approaches in matrix, by STIX ID reference
-        tactic_refs = [self.tactic_mapping[tactic['id']]['id'] for tactic in self.approaches]
+        approach_refs = [self.approach_mapping[approach['id']]['id'] for approach in self.approaches]
 
-        print(f'Generated {len(tactic_refs)} tactic references for the ATLAS matrix object.')
+        print(f'Generated {len(approach_refs)} approach references for the ENGAGE matrix object.')
 
         stix_matrix_obj = AttackMatrix(
             name=f'{self.matrix_id} {self.matrix_version}',
-            description=f'{self.matrix_name}: atlas.mitre.org',
+            description=f'{self.matrix_name}: engage.mitre.org',
             external_references=external_references,
-            tactic_refs=tactic_refs
+            approach_refs=approach_refs
         )
 
         # JSON
-        print('Bundling and serializing ATLAS data to JSON file...')
+        print('Bundling and serializing ENGAGE data to JSON file...')
         bundle = Bundle(
             objects=stix_approaches + stix_activities + relationships + [stix_matrix_obj],
             allow_custom=True # Needed as ATT&CK data has custom objects
@@ -136,8 +136,8 @@ class ATLAS:
             json.dump(stix_json, f)
             print(f'Done! See {stix_output_filepath}\n')
 
-    def referenced_approaches_to_kill_chain_phases(self, tactic_ids):
-        """Converts a list of tactic IDs referenced by a technique
+    def referenced_approaches_to_kill_chain_phases(self, approach_ids):
+        """Converts a list of approach IDs referenced by a activity
         to a list of STIX Kill Chain Phases.
 
         Kill Chain Phase spec:
@@ -145,21 +145,31 @@ class ATLAS:
         """
         kill_chain_phases = []
 
-        for tactic_id in tactic_ids:
-            # Default properies, if not recognized as ATLAS
+        for approach_id in approach_ids:
+            # Default properies, if not recognized as ENGAGE
             kill_chain_name= '?'
             phase_name = '?'
 
-            if tactic_id.startswith('AML.TA'):
-                # ATLAS
-                kill_chain_name = ATLAS.SOURCE_NAME # Using this as an identifier
+            if approach_id.startswith('EAP'):
+                # ENGAGE
+                kill_chain_name = ENGAGE.SOURCE_NAME # Using this as an identifier
 
-                # Look up ATLAS tactic name
-                tactic = next((tactic for tactic in self.approaches if tactic['id'] == tactic_id), None)
+                # Look up ENGAGE approach name
+                approach = next((approach for approach in self.approaches if approach['id'] == approach_id), None)
                 # Ensure this is found
-                assert(tactic is not None)
+                assert(approach is not None)
                 # Convert name to lowercase and hyphens to fit spec
-                phase_name = tactic['name'].lower().replace(' ', '-')
+                phase_name = approach['name'].lower().replace(' ', '-')
+            elif approach_id.startswith('SAP'):
+                # ENGAGE
+                kill_chain_name = ENGAGE.SOURCE_NAME # Using this as an identifier
+
+                # Look up ENGAGE approach name
+                approach = next((approach for approach in self.approaches if approach['id'] == approach_id), None)
+                # Ensure this is found
+                assert(approach is not None)
+                # Convert name to lowercase and hyphens to fit spec
+                phase_name = approach['name'].lower().replace(' ', '-')
 
             # Create and add
             kcp = KillChainPhase(
@@ -170,90 +180,90 @@ class ATLAS:
 
         return kill_chain_phases
 
-    def build_atlas_external_references(self, t, atlas_url, route='activities'):
-        """Returns a STIX External Reference for ATLAS data."""
+    def build_engage_external_references(self, t, engage_url, route='activities'):
+        """Returns a STIX External Reference for ENGAGE data."""
 
         # Construct the full URL to the resource
-        url = atlas_url + '/' + route + '/' + t['id']
+        url = engage_url + '/' + route + '/' + t['id']
 
         # External references is a list
         return [
             ExternalReference(
-                source_name=ATLAS.SOURCE_NAME, # The only required property
+                source_name=ENGAGE.SOURCE_NAME, # The only required property
                 url=url,
                 external_id=t['id']
             )
         ]
 
-    def tactic_to_mitre_attack_tactic(self, t, atlas_url):
-        """Returns a STIX x-mitre-tactic representing this tactic."""
+    def approach_to_mitre_attack_approach(self, t, engage_url):
+        """Returns a STIX x-mitre-approach representing this approach."""
         at = AttackTactic(
             name=t['name'],
             description=t['description'],
-            external_references=self.build_atlas_external_references(t, atlas_url, 'approaches'),
+            external_references=self.build_engage_external_references(t, engage_url, 'approaches'),
             x_mitre_shortname=t['name'].lower().replace(' ','-'),
         )
 
-        # Track this tactic by short ID
-        self.tactic_mapping[t['id']] = at
+        # Track this approach by short ID
+        self.approach_mapping[t['id']] = at
 
         return at
 
-    def technique_to_attack_pattern(self, t, atlas_url):
-        """Returns a STIX AttackPattern representing this technique."""
+    def activity_to_attack_pattern(self, t, engage_url):
+        """Returns a STIX AttackPattern representing this activity."""
         return AttackPattern(
             name=t['name'],
             description=t['description'],
             kill_chain_phases=self.referenced_approaches_to_kill_chain_phases(t['approaches']),
-            external_references=self.build_atlas_external_references(t, atlas_url),
-            # Needed by Navigator else TypeError technique.platforms is not iterable
+            external_references=self.build_engage_external_references(t, engage_url),
+            # Needed by Navigator else TypeError activity.platforms is not iterable
             allow_custom=True,
-            x_mitre_platforms=['ATLAS']
+            x_mitre_platforms=['ENGAGE']
         )
 
-    def subtechnique_to_attack_pattern(self, t, parent, atlas_url):
-        """Returns a STIX AttackPattern representing this subtechnique and a STIX Relationship
-        between this subtechnique and its parent.
+    def subactivity_to_attack_pattern(self, t, parent, engage_url):
+        """Returns a STIX AttackPattern representing this subactivity and a STIX Relationship
+        between this subactivity and its parent.
 
         https://github.com/mitre/cti/blob/master/USAGE.md#sub-activities
         """
-        subtechnique = AttackPattern(
+        subactivity = AttackPattern(
             name=t['name'],
             description=t['description'],
             kill_chain_phases=parent.kill_chain_phases,
-            external_references=self.build_atlas_external_references(t, atlas_url),
-            # Needed by Navigator else TypeError technique.platforms is not iterable
+            external_references=self.build_engage_external_references(t, engage_url),
+            # Needed by Navigator else TypeError activity.platforms is not iterable
             allow_custom=True,
             x_mitre_platforms=['ENGAGE'],
-            x_mitre_is_subtechnique=True
+            x_mitre_is_subactivity=True
         )
 
         relationship = Relationship(
-            source_ref=subtechnique.id,
-            relationship_type='subtechnique-of',
+            source_ref=subactivity.id,
+            relationship_type='subactivity-of',
             target_ref=parent.id
         )
 
-        return subtechnique, relationship
+        return subactivity, relationship
 
 
 if __name__ == '__main__':
-    """Main entry point to STIX file generation for ATLAS data."""
+    """Main entry point to STIX file generation for ENGAGE data."""
 
     parser = ArgumentParser(
-        description="Creates a STIX JSON file showing approaches and activities used by ATLAS."
+        description="Creates a STIX JSON file showing approaches and activities used by ENGAGE."
     )
     parser.add_argument("-f",
         type=str,
-        dest="atlas_data_filepath",
+        dest="engage_data_filepath",
         default="attack-navigator\\nav-app\\src\\assets\\ENGAGE.yaml",
-        help="Path to ATLAS.yaml file"
+        help="Path to ENGAGE.yaml file"
     )
     parser.add_argument("--url",
         type=str,
-        dest="atlas_url",
+        dest="engage_url",
         default="https://localhost:4200",
-        help="URL to ATLAS website for Navigator item linking"
+        help="URL to ENGAGE website for Navigator item linking"
     )
     parser.add_argument("-o",
         type=str,
@@ -270,12 +280,12 @@ if __name__ == '__main__':
     # Output filepath
     stix_output_filepath =  output_dir / 'stix-engage.json'
 
-    with open(args.atlas_data_filepath) as f:
-        # Load in ATLAS data
+    with open(args.engage_data_filepath) as f:
+        # Load in ENGAGE data
         data = yaml.safe_load(f)
 
-        # Initialize ATLAS-to-STIX structures
-        atlas = ATLAS(data)
+        # Initialize ENGAGE-to-STIX structures
+        engage = ENGAGE(data)
 
          # Convert to and save STIX
-        atlas.to_stix_json(stix_output_filepath, args.atlas_url)
+        engage.to_stix_json(stix_output_filepath, args.engage_url)
