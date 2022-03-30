@@ -3,57 +3,6 @@ id: ENGAGE
 name: Engage Navigator
 version: 1.0.0
 approaches:
-- id: SAP0001
-  name: Plan
-  object-type: approach
-  description: 'Identify and align an operation with a desired end-state.
-
-
-    Planning is used to identify and align an operation within the context of strategic
-    goals. By helping the defender to first identify their goals, Planning ensures
-    that all engagement activities are focused and driving forward progress. Additionally,
-    planning ensures that the defender can integrate the inputs of the various stakeholders
-    at the beginning of an operation to ensure that the operation is efficient, effective,
-    and safe. Finally, Planning activities ensure that each operation is informed
-    by the successes and learns from the failures of past operations.
-
-    '
-- id: EAP0001
-  name: Collect
-  object-type: approach
-  description: 'Gather adversary tools, observe tactics, and collect other raw intelligence
-    about the adversary''s activity.
-
-
-    Collection is used to gather information about an adversary or their activities.
-    This collection can include gathering system logs, network traffic, adversary
-    artifacts, or other data that can be used to expose adversary activity. In many
-    cases, Collection activities are also good cybersecurity practices. However, in
-    Engage, these activities will focus exclusively on the intersection of denial,
-    deception, and adversary engagement technologies and the defender\u2019s ability
-    to Expose the adversary.
-
-    '
-- id: EAP0002
-  name: Detect
-  object-type: approach
-  description: 'Establish or maintain awareness in regard to adversary activity.
-
-
-    Detection focuses on the defender''s ability to monitor adversary activity throughout
-    an environment, often by creating high-fidelity detections. These detections can
-    be produced in several ways. For example, a defender can deploy decoy artifacts
-    as tripwires in the environment. The defender may create custom alerts based on
-    TTPs or IOCs observed during a malware detonation operation. Finally, the defender
-    may write customer decoders to analyze and alert on malicious traffic.
-
-    In all these cases, detection activities allow the defender to produce a high-fidelity
-    alert to monitor adversary activities. Often Detection activities are also good
-    cybersecurity practices. However, in Engage, these activities will focus exclusively
-    on the intersection of denial, deception, and adversary engagement technologies
-    and the defender''s ability to Expose the adversary.
-
-    '
 - id: EAP0003
   name: Prevent
   object-type: approach
@@ -114,58 +63,6 @@ approaches:
 
     Disruptions may also include planting misinformation designed to influence the
     adversary''s decision-makers to make the wrong decisions or to waste resources.
-
-    '
-- id: EAP0006
-  name: Reassure
-  object-type: approach
-  description: 'Add authenticity to deceptive components to convince an adversary
-    that an environment is real.
-
-
-    Reassurance is used to add authenticity to deceptive components to reduce adversary
-    suspicion about the legitimacy of the environment. Activities include adding realistic
-    user accounts, files, system activity, and any other content that an adversary
-    might expect to find on the system. Reassurance may add new artifacts, such as
-    peripherals and pocket litter, while concealing others, such as how recently an
-    environment was stood up. If done correctly, Reassurance may help to make an adversary
-    feel more comfortable upon landing in a new environment. This initial level of
-    comfort can help anchor the adversary in the environment, increasing their tolerance
-    to faults or weaknesses discovered later.
-
-    '
-- id: EAP0007
-  name: Motivate
-  object-type: approach
-  description: 'Encourage an adversary to conduct part or all of their mission.
-
-
-    Motivation is used to encourage an adversary to conduct part or all of their mission
-    by providing a target-rich environment. To do this, the defender can use unpatched
-    versions of operating systems and software, remove end-point detection software,
-    and use weak passwords. Additionally, the defender can open firewall ports, add
-    proxy capabilities, or introduce elements that an adversary can easily leverage
-    to bypass an obstacle in their operations. Finally, the defender can include enticing
-    data to the environment to encourage the adversary to steal the data.
-
-    '
-- id: SAP0002
-  name: Analyze
-  object-type: approach
-  description: 'Retrospective review of information gained from an operation.
-
-
-    Analysis is used to aggregate, examine, and evaluate the results of an operation.
-    Analysis is useful for improving the defender''s security posture through the
-    synthesis of operational data. Additionally, analysis can be used to turn data
-    into actionable intelligence about an adversary''s motivators, behaviors, tactics,
-    and techniques.
-
-    Defenders can use analysis to gain insight into adversary activity and thus inform
-    detection and analytics refinements. Reviewing the execution of an operation also
-    provides feedback for the team to improve the quality of future operations. Finally,
-    Analysis activities ensure that each operation is informed by the successes and
-    learns from the failures of past operations.
 
     '
 activities:
