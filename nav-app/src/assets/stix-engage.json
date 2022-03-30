@@ -431,7 +431,8 @@
             "approach_refs": [
                 "x-mitre-tactic--e77e6ac1-2c67-411b-b7e6-f5a701d3499d",
                 "x-mitre-tactic--d9227b2a-b8a1-4898-96a5-8536f9e7f0e7",
-                "x-mitre-tactic--a1a8f059-284a-4092-84d0-0faee248eddf"
+                "x-mitre-tactic--a1a8f059-284a-4092-84d0-0faee248eddf",
+                "x-mitre-tactic--8fb30c8b-43fa-486b-b652-5bedc52328da"
             ],
             "type": "x-mitre-matrix",
             "id": "x-mitre-matrix--f8203289-a722-4006-a656-30afa57f00fe",
