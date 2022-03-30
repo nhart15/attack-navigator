@@ -6,7 +6,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/approaches/EAP0003",
+                    "url": "https://localhost:4200/tactics/EAP0003",
                     "external_id": "EAP0003"
                 }
             ],
@@ -22,7 +22,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/approaches/EAP0004",
+                    "url": "https://localhost:4200/tactics/EAP0004",
                     "external_id": "EAP0004"
                 }
             ],
@@ -38,7 +38,7 @@
             "external_references": [
                 {
                     "source_name": "mitre-engage",
-                    "url": "https://localhost:4200/approaches/EAP0005",
+                    "url": "https://localhost:4200/tactics/EAP0005",
                     "external_id": "EAP0005"
                 }
             ],
