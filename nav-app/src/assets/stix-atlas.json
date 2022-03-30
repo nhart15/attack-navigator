@@ -245,12 +245,8 @@
             "description": "Alter security controls to make the system more or less vulnerable to attack.\n\nManipulating Security Controls involves making configuration changes to a system's security settings including modifying Group Policies, disabling/enabling autorun for removable media, tightening or relaxing system firewalls, etc. Such security controls can be tightened to dissuade or prevent adversary activity. Conversely, security controls can be weakened or left overly permissive to encourage or enable adversary activity. \\n<br><br>\\nTightening security controls can typically be done by implementing any of the mitigations described in MITRE ATT&CK. See https://attack.mitre.org/mitigations/enterprise/ for a full list of mitigation strategies. While loosening security controls may seem obvious (i.e., simply don't employ a given mitigation strategy), there is an additional level of nuance that must be considered\n",
             "kill_chain_phases": [
                 {
-                    "kill_chain_name": "?",
-                    "phase_name": "?"
-                },
-                {
-                    "kill_chain_name": "?",
-                    "phase_name": "?"
+                    "kill_chain_name": "mitre-atlas",
+                    "phase_name": "reconnaissance"
                 }
             ],
             "external_references": [
