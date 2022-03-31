@@ -1,0 +1,14 @@
+---
+
+id: ENGAGE
+name: Engage Navigator
+version: 1.0.0
+
+tactics:
+  - "{{prevent.id}}"
+  - "{{direct.id}}"
+  - "{{disrupt.id}}"
+ 
+data:
+  - !include engage_tactics.yaml
+  - !include engage_techniques.yaml

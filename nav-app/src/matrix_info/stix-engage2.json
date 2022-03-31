@@ -5,383 +5,492 @@
             "description": "Stop all or part of the adversary's ability to conduct their operation as intended.\n\nPrevention focuses on stopping the adversary's ability to conduct their operations as intended. The defender can physically or virtually remove or disable resources, tighten security controls, or otherwise impair the adversary's ability to operate. A defender might prevent an adversary from operating to force them to reveal different, possibly more advanced, capabilities. Additionally, a defender can use Prevention to discourage the adversary from operating against a specific target. In this case, the defender may be attempting to encourage the adversary to focus elsewhere in the engagement environment.\nThere are many more Prevention activities that are also good cybersecurity practices. However, in Engage, we are focused on a subset of activities. Those are focused exclusively on the intersection of denial, deception, and adversary engagement technologies and the defender\\u2019s ability to Affect the adversary.\n",
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/tactics/EAP0003",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/approaches/EAP0003",
                     "external_id": "EAP0003"
                 }
             ],
             "x_mitre_shortname": "prevent",
             "type": "x-mitre-tactic",
-            "id": "x-mitre-tactic--09835a6d-20fd-4cef-85fe-18c4198d44c9",
-            "created": "2022-03-31T12:39:59.908Z",
-            "modified": "2022-03-31T12:39:59.908Z"
+            "id": "x-mitre-tactic--e77e6ac1-2c67-411b-b7e6-f5a701d3499d",
+            "created": "2022-03-30T18:47:33.145Z",
+            "modified": "2022-03-30T18:47:33.145Z"
         },
         {
             "name": "Direct",
             "description": "Encourage or discourage the adversary from conducting their operation as intended.\n\nDirection focuses on moving the adversary towards or away from an intended path. This forced direction can be accomplished by removing or disabling some resources, while adding or enabling others. The defender can add decoy articles or otherwise manipulate the environment to attempt to elicit specific responses from the adversary. Additionally, the defender can tighten some security controls while leaving others overly permissive or weakened. Finally, the defender can physically move the adversary by moving threats from their intended environment and into a safe engagement environment.\nFor example, a suspicious email attachment can be moved from the intended target to an engagement environment for analysis. No matter how the Direction is achieved, the defender hopes to force the adversary to take unintended actions, or stop intended actions.\n",
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/tactics/EAP0004",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/approaches/EAP0004",
                     "external_id": "EAP0004"
                 }
             ],
             "x_mitre_shortname": "direct",
             "type": "x-mitre-tactic",
-            "id": "x-mitre-tactic--0a6c39a1-5921-435f-ab56-fe38b822c74b",
-            "created": "2022-03-31T12:39:59.908Z",
-            "modified": "2022-03-31T12:39:59.908Z"
+            "id": "x-mitre-tactic--d9227b2a-b8a1-4898-96a5-8536f9e7f0e7",
+            "created": "2022-03-30T18:47:33.145Z",
+            "modified": "2022-03-30T18:47:33.145Z"
         },
         {
             "name": "Disrupt",
             "description": "Impair an adversary's ability to conduct their operation as intended.\n\nDisruption is used to stop or discourage an adversary from conducting part or all of their mission. This disruption may increase the time, skills, or resources needed for the adversary to accomplish a specific task. For example, a defender may degrade network speeds as the adversary attempts to exfiltrate large blocks of data. As a second example, the defender may manipulate the output of commonly used discovery commands to show targets that do not exist or to hide real targets. In either case, the adversary may waste resources acting on partial or falsified data.\nDisruptions may also include planting misinformation designed to influence the adversary's decision-makers to make the wrong decisions or to waste resources.\n",
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/tactics/EAP0005",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/approaches/EAP0005",
                     "external_id": "EAP0005"
                 }
             ],
             "x_mitre_shortname": "disrupt",
             "type": "x-mitre-tactic",
-            "id": "x-mitre-tactic--e85712bb-ddca-4aaa-8837-c64f1791294d",
-            "created": "2022-03-31T12:39:59.908Z",
-            "modified": "2022-03-31T12:39:59.908Z"
+            "id": "x-mitre-tactic--a1a8f059-284a-4092-84d0-0faee248eddf",
+            "created": "2022-03-30T18:47:33.145Z",
+            "modified": "2022-03-30T18:47:33.145Z"
+        },
+        {
+            "name": "Resource Development",
+            "description": "The adversary is trying to establish resources they can use to support operations.\n\nResource Development consists of techniques that involve adversaries creating,\npurchasing, or compromising/stealing resources that can be used to support targeting.\nSuch resources include machine learning artifacts, infrastructure, accounts, or capabilities.\nThese resources can be leveraged by the adversary to aid in other phases of the adversary lifecycle, such as ML Attack Staging.\n",
+            "external_references": [
+                {
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/approaches/AML.TA0003",
+                    "external_id": "AML.TA0003"
+                }
+            ],
+            "x_mitre_shortname": "resource-development",
+            "type": "x-mitre-tactic",
+            "id": "x-mitre-tactic--8fb30c8b-43fa-486b-b652-5bedc52328da",
+            "created": "2022-03-30T12:50:48.721Z",
+            "modified": "2022-03-30T12:50:48.721Z"
         },
         {
             "name": "Baseline",
-            "description": "Identify key system elements to establish a baseline and be prepared to reset a system to that baseline when necessary.\n\nTo determine the system Baseline, the defender must identify software and configuration elements that are critical to a set of objectives. The defender must define the proper values and be prepared to reset a running system to its intended state. Reverting to a Baseline configuration can be essential when restoring an operational environment to a safe state or when looking to impose a cost on adversaries by preventing their technique.\nFor example, the defender can watch for an adversary to make changes in the environment and then revert the environment with the goal of either forcing the adversary to target elsewhere in the network or to display a new, possibly more advanced TTP. The baseline values will also be crucial post-operation when analyzing changes to the environment over time.\n",
+            "description": "Identify key system elements to establish a baseline and be prepared to reset a system to that baseline when necessary.\n\nTo determine the system Baseline, the defender must identify software and configuration elements that are critical to a set of objectives. The defender must define the proper values and be prepared to reset a running system to its intended state. Reverting to a Baseline configuration can be essential when restoring an operational environment to a safe state or when looking to impose a cost on adversaries by preventing their activity.\nFor example, the defender can watch for an adversary to make changes in the environment and then revert the environment with the goal of either forcing the adversary to target elsewhere in the network or to display a new, possibly more advanced TTP. The baseline values will also be crucial post-operation when analyzing changes to the environment over time.\n",
             "kill_chain_phases": [
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "prevent"
                 }
             ],
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/techniques/EAC0019",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/EAC0019",
                     "external_id": "EAC0019"
                 }
             ],
             "x_mitre_platforms": [
-                "ATLAS"
+                "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--80b90f77-11b3-48d2-82eb-406b3489ce63",
-            "created": "2022-03-31T12:39:59.906Z",
-            "modified": "2022-03-31T12:39:59.906Z"
+            "id": "attack-pattern--92e514e5-6856-4ce6-bafa-40c6bf3662a1",
+            "created": "2022-03-30T18:47:33.143Z",
+            "modified": "2022-03-30T18:47:33.143Z"
         },
         {
             "name": "Hardware Manipulation",
             "description": "Alter the hardware configuration of a system to limit what an adversary can do with the device.\n\nHardware Manipulation can include physical or configuration changes to the hardware in the environment. This manipulation can include physically removing a system's microphone, camera, on-board Wi-Fi adapter, etc. or using software controls to disable those devices. These types of manipulations can affect the adversary's ability to achieve their operational objectives by incurring an increased resource cost, forcing them to change tactics, or stopping them altogether.\nHardware Manipulation is often required to maintain operational safety. For example, if the operation includes Detonating Malware using a laptop physically located in a shared space, it is likely that the defender will not have the ability to hide the legitimate conversations and individuals present in the space. Unless the defender has the ability to control the background sounds and visuals, it is likely too risky to leave the camera and microphone connected to the machine.\n",
             "kill_chain_phases": [
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "prevent"
                 }
             ],
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/techniques/EAC0017",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/EAC0017",
                     "external_id": "EAC0017"
                 }
             ],
             "x_mitre_platforms": [
-                "ATLAS"
+                "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--384c6dc1-0142-4705-b33b-42b4f474586b",
-            "created": "2022-03-31T12:39:59.906Z",
-            "modified": "2022-03-31T12:39:59.906Z"
+            "id": "attack-pattern--64fba9cd-df2f-432c-998d-b52ce59078ad",
+            "created": "2022-03-30T18:47:33.143Z",
+            "modified": "2022-03-30T18:47:33.143Z"
         },
         {
             "name": "Isolation",
-            "description": "Using Isolation, a defender can limit the effectiveness and scope of malicious technique and/or lower exposure to unintended risks. When a system or resource is isolated, a defender can observe adversary behaviors or tools without allowing lateral movement. For example, a defender may detonate a piece of malware on an isolated system to perform dynamic analysis without risk to other network resources.\nDetermining which systems should be isolated in an operation is a critical decision when calculating acceptable operational risk. However, if the adversary expects to find an entire corporate network but instead finds only an isolated system, they may not be interested in engaging with the target. Balancing acceptable risk, believability, and operational goals is essential when determining if or when a system should be isolated.\n",
+            "description": "Using Isolation, a defender can limit the effectiveness and scope of malicious activity and/or lower exposure to unintended risks. When a system or resource is isolated, a defender can observe adversary behaviors or tools without allowing lateral movement. For example, a defender may detonate a piece of malware on an isolated system to perform dynamic analysis without risk to other network resources.\nDetermining which systems should be isolated in an operation is a critical decision when calculating acceptable operational risk. However, if the adversary expects to find an entire corporate network but instead finds only an isolated system, they may not be interested in engaging with the target. Balancing acceptable risk, believability, and operational goals is essential when determining if or when a system should be isolated.\n",
             "kill_chain_phases": [
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "prevent"
                 },
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "disrupt"
                 }
             ],
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/techniques/EAC0020",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/EAC0020",
                     "external_id": "EAC0020"
                 }
             ],
             "x_mitre_platforms": [
-                "ATLAS"
+                "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--8ee1d38f-faab-47bb-8ef3-e391cb8692fb",
-            "created": "2022-03-31T12:39:59.906Z",
-            "modified": "2022-03-31T12:39:59.906Z"
+            "id": "attack-pattern--085e7a90-474c-4c29-b248-0e5ccb8e3b9b",
+            "created": "2022-03-30T18:47:33.143Z",
+            "modified": "2022-03-30T18:47:33.143Z"
         },
         {
             "name": "Network Manipulation",
             "description": "Make changes to network properties and functions to achieve a desired effect.\n\nNetwork Manipulation allows a defender to throttle network speeds, segment the network, maintain a unique IP addressing scheme, add a kill switch to cut off network access, etc. These types of manipulations can affect the adversary's ability to achieve their operational objectives by incurring an increased resource cost, forcing them to change tactics, or stopping them altogether.\nFor example, a defender can limit the allowed ports or network requests to force the adversary to alter their planned C2 or exfiltration channels. As another example, a defender could allow or deny outbound SMB requests from a network to affect the success of forced authentication. Additionally, the defender can degrade network speeds and reliability to impose a resource cost as adversaries exfiltrate large quantities of data. Finally, a defender can block primary C2 domains and IPs to determine if the adversary has additional infrastructure. While there are a range of network manipulation options, in all cases, the defender has an opportunity to learn about or influence the adversaries operating in the environment.\n",
             "kill_chain_phases": [
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "prevent"
                 },
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "direct"
                 },
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "disrupt"
                 }
             ],
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/techniques/EAC0016",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/EAC0016",
                     "external_id": "EAC0016"
                 }
             ],
             "x_mitre_platforms": [
-                "ATLAS"
+                "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--204fe73f-3d36-45c9-924a-37c55ba81cbd",
-            "created": "2022-03-31T12:39:59.906Z",
-            "modified": "2022-03-31T12:39:59.906Z"
+            "id": "attack-pattern--9294d1d2-67b9-4f53-a721-9be21191c029",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Security Controls",
-            "description": "Alter security controls to make the system more or less vulnerable to attack.\n\nManipulating Security Controls involves making configuration changes to a system's security settings including modifying Group Policies, disabling/enabling autorun for removable media, tightening or relaxing system firewalls, etc. Such security controls can be tightened to dissuade or prevent adversary technique. Conversely, security controls can be weakened or left overly permissive to encourage or enable adversary technique.\nTightening security controls can typically be done by implementing any of the mitigations described in MITRE ATT&CK. See https://attack.mitre.org/mitigations/enterprise/ for a full list of mitigation strategies. While loosening security controls may seem obvious (i.e., simply don't employ a given mitigation strategy), there is an additional level of nuance that must be considered. Some security controls are considered so routine that its absence may be suspicious.\nFor example, completely turning off Windows Defender would likely raise the adversary's suspicion. However, it is possible to turn off Windows Defender in certain shared drives to encourage adversary technique in predetermined locations. Therefore, it will likely be far less suspicious to turn off Windows Defender in a single directory or share. When assessing the likelihood that removing a given security control is overly suspicious, it is important to consider how prevalent that security control is, the target adversary's sophistication, and the deception story.\n",
+            "description": "Alter security controls to make the system more or less vulnerable to attack.\n\nManipulating Security Controls involves making configuration changes to a system's security settings including modifying Group Policies, disabling/enabling autorun for removable media, tightening or relaxing system firewalls, etc. Such security controls can be tightened to dissuade or prevent adversary activity. Conversely, security controls can be weakened or left overly permissive to encourage or enable adversary activity.\nTightening security controls can typically be done by implementing any of the mitigations described in MITRE ATT&CK. See https://attack.mitre.org/mitigations/enterprise/ for a full list of mitigation strategies. While loosening security controls may seem obvious (i.e., simply don't employ a given mitigation strategy), there is an additional level of nuance that must be considered. Some security controls are considered so routine that its absence may be suspicious.\nFor example, completely turning off Windows Defender would likely raise the adversary's suspicion. However, it is possible to turn off Windows Defender in certain shared drives to encourage adversary activity in predetermined locations. Therefore, it will likely be far less suspicious to turn off Windows Defender in a single directory or share. When assessing the likelihood that removing a given security control is overly suspicious, it is important to consider how prevalent that security control is, the target adversary's sophistication, and the deception story.\n",
             "kill_chain_phases": [
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "prevent"
                 },
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "direct"
                 }
             ],
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/techniques/EAC0018",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/EAC0018",
                     "external_id": "EAC0018"
                 }
             ],
             "x_mitre_platforms": [
-                "ATLAS"
+                "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--43a0c24d-2c9a-4312-9c7a-56e313fbde61",
-            "created": "2022-03-31T12:39:59.906Z",
-            "modified": "2022-03-31T12:39:59.906Z"
+            "id": "attack-pattern--9eb3bd7c-467c-494e-a74b-9b008258cacb",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Attack Vector Migration",
             "description": "Move a malicious link, file, or device from its intended location to a decoy system or network for execution/use.\n\nWhen a defender Migrates an Attack Vector, the defender intercepts a malicious element and moves it to a safe environment, such as a decoy system within a decoy network, for continued engagement or analysis. A defender may choose to migrate attack vectors, which may appear in the form of phishing emails, suspicious email attachments, or malicious USBs. For example, a defender might move a suspicious attachment from a corporate inbox to an inbox on a system that, while in the corporate IP space, is completely segmented from the enterprise network. This segregated environment will allow the adversary to move laterally throughout the environment without risk to enterprise resources.\nDetermining when an engagement should be moved to an engagement environment is a critical decision when calculating acceptable operational risk. However, if the adversary sent a custom malware sample to a phishing victim, but ultimately find themselves on an unrelated victim, they may be suspicious. Balancing this acceptable risk, believability, and operational goals is essential when determining if or when to migrate an attack vector.\n",
             "kill_chain_phases": [
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "direct"
                 }
             ],
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/techniques/EAC0021",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/EAC0021",
                     "external_id": "EAC0021"
                 }
             ],
             "x_mitre_platforms": [
-                "ATLAS"
+                "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--b77747d9-a163-4ef7-9d3b-2a96fda18802",
-            "created": "2022-03-31T12:39:59.907Z",
-            "modified": "2022-03-31T12:39:59.907Z"
+            "id": "attack-pattern--6242d2b5-0354-49a3-baa3-0e653d937f7e",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Email Manipulation",
             "description": "Modify the flow of email in the environment.\n\nEmail Manipulation covers the various ways email flows in the environment can be affected. Email Manipulation can affect which mail appliances process mail flows, where mail is forwarded, or what mail is present in an inbox. A common use case for email manipulation is as a vector to introduce malware into the engagement environment.\nSuspicious emails may be removed from production mailbox and placed into an inbox in an engagement environment. Then, any suspicious attachments or links could be detonated from within the environment. As another example, emails collected over a long period of time from a legitimate inbox outside the environment may be moved into the environment to reassure the adversary of the environment's legitimacy by creating a mailbox that more closely resembles a real, lived-in inbox.\n",
             "kill_chain_phases": [
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "direct"
                 }
             ],
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/techniques/EAC0009",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/EAC0009",
                     "external_id": "EAC0009"
                 }
             ],
             "x_mitre_platforms": [
-                "ATLAS"
+                "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--7f0209ea-5297-4f09-953c-c3ed70b875cc",
-            "created": "2022-03-31T12:39:59.907Z",
-            "modified": "2022-03-31T12:39:59.907Z"
+            "id": "attack-pattern--1e9ab71c-1a43-43f8-b11c-d650104c469d",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Introduced Vulnerabilities",
             "description": "Intentionally introduce vulnerabilities into the environment for the adversary to exploit.\n\nBy intentionally Introducing Vulnerabilities into the engagement environment, the defender can attempt to motivate the adversary to target specific resources. This targeting may serve to move the adversary towards a particular resource, or away from another resource. At other times, the defender may Introduce Vulnerabilities as amean of encouraging the adversary to reveal targeting preferences, available capabilities, or even to influence future targeting decisions. The operational objectives will drive how and why the defender Introduces Vulnerabilities in the engagement environment.\n",
             "kill_chain_phases": [
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "direct"
                 }
             ],
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/techniques/EAC0023",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/EAC0023",
                     "external_id": "EAC0023"
                 }
             ],
             "x_mitre_platforms": [
-                "ATLAS"
+                "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--47c78d10-7539-4655-a906-69c3fa9df27b",
-            "created": "2022-03-31T12:39:59.907Z",
-            "modified": "2022-03-31T12:39:59.907Z"
+            "id": "attack-pattern--b816814e-73b1-4449-9e1d-6099838b9889",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Lures",
             "description": "Deceptive systems and artifacts intended to serve as decoys, breadcrumbs, or bait to elicit a specific response from the adversary.\n\nLures are intended to elicit a particular response from the adversary. For example, the defender may utilize Lures to enable or block adversary's intended action or encourage or discourage a specific action or response. Lures can take a veriety of forms including credentials, accounts, files/directories, browser extensions/bookmarks, system processes, etc. Regardless of form, Lures provide opportunities to the defender to drive adversary behavior in ways that align with operational outcomes.\n",
             "kill_chain_phases": [
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "direct"
                 },
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "disrupt"
                 }
             ],
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/techniques/EAC0005",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/EAC0005",
                     "external_id": "EAC0005"
                 }
             ],
             "x_mitre_platforms": [
-                "ATLAS"
+                "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--4d4c6ee0-09ec-4d2e-bdea-678c193b5709",
-            "created": "2022-03-31T12:39:59.907Z",
-            "modified": "2022-03-31T12:39:59.907Z"
+            "id": "attack-pattern--0b347d7e-583b-4f53-9d8e-5d6f55c45fe4",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Malware Detonation",
             "description": "Execute malware under controlled conditions to analyze its functionality.\n\nMalware can be detonated in a controlled and safe environment. Clear goals and safety procedures should always be established before detonation to ensure that the operation is focused and safe. The malware can be detonated in an execution environment ranging from a somewhat sterile commercial malware execution appliance to a bespoke engagement environment crafted to support an extended engagement.\nOutcomes of a malware detonation operation can include new IOCs collected during dynamic analysis, additional TTPs elicited by detonating the malware in a target rich environment, and/or negative impacts to the adversary and their operation. These outcomes can be used to produce new analytics for high-fidelity analytics.\n",
             "kill_chain_phases": [
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "direct"
                 }
             ],
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/techniques/EAC0013",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/EAC0013",
                     "external_id": "EAC0013"
                 }
             ],
             "x_mitre_platforms": [
-                "ATLAS"
+                "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--c6622a04-74e4-4653-8c9b-d15708b5a4f7",
-            "created": "2022-03-31T12:39:59.907Z",
-            "modified": "2022-03-31T12:39:59.907Z"
+            "id": "attack-pattern--d309fefe-784e-4106-9fc1-10b79a0bea4d",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Peripheral Management",
-            "description": "Manage peripheral devices used on systems within the network for engagement purposes.\n\nPeripheral Management is the administration of peripheral devices used on systems within the engagement environment. A defender can choose to allow or deny certain types of peripherals from being used on systems to either motivate or demotivate adversary technique or to direct the adversary towards specific targets. Defenders can also introduce peripherals to an adversary-controlled system to see how the adversary reacts. For example, the defender can introduce external Wi-Fi adapters, USB devices, etc. to determine if adversaries attempt to use them for exfiltration purposes.\nAdditionally, peripherals provide an avenue for the defender to present new or additional information to the adversary. This information can be used to introduce an additional attack surface, motivate or demotivate adversary technique, or to further the deception story. For example, the defender may include data on a connected USB device or stage an important conversation near an externally connected camera or microphone. Depending on the contents of this data, the adversary may be encouraged to take a specific action and/or reassured about the legitimacy of the environment.\n",
+            "description": "Manage peripheral devices used on systems within the network for engagement purposes.\n\nPeripheral Management is the administration of peripheral devices used on systems within the engagement environment. A defender can choose to allow or deny certain types of peripherals from being used on systems to either motivate or demotivate adversary activity or to direct the adversary towards specific targets. Defenders can also introduce peripherals to an adversary-controlled system to see how the adversary reacts. For example, the defender can introduce external Wi-Fi adapters, USB devices, etc. to determine if adversaries attempt to use them for exfiltration purposes.\nAdditionally, peripherals provide an avenue for the defender to present new or additional information to the adversary. This information can be used to introduce an additional attack surface, motivate or demotivate adversary activity, or to further the deception story. For example, the defender may include data on a connected USB device or stage an important conversation near an externally connected camera or microphone. Depending on the contents of this data, the adversary may be encouraged to take a specific action and/or reassured about the legitimacy of the environment.\n",
             "kill_chain_phases": [
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "direct"
                 }
             ],
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/techniques/EAC0010",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/EAC0010",
                     "external_id": "EAC0010"
                 }
             ],
             "x_mitre_platforms": [
-                "ATLAS"
+                "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--3e980c94-07ec-49c2-9a40-efdecfffa93d",
-            "created": "2022-03-31T12:39:59.907Z",
-            "modified": "2022-03-31T12:39:59.907Z"
+            "id": "attack-pattern--4c081ea5-dc32-40ae-a687-e839e3d69051",
+            "created": "2022-03-30T18:47:33.144Z",
+            "modified": "2022-03-30T18:47:33.144Z"
         },
         {
             "name": "Software Manipulation",
             "description": "Make changes to a system's software properties and functions to achieve a desired effect.\n\nSoftware Manipulation allows a defender to alter or replace elements of the OS, file system, or any other software installed and executed on a system. These alterations can affect outputs, degrade effectiveness, and/or prevent the software from functioning altogether. For example, the defender can manipulate software by changing the output of commonly used discovery commands to hide legitimate systems and artifacts and/or reveal decoy artifacts and systems.\nAlternatively, the defender can change the output of the password policy description for an adversary attempting to brute-force credentials. This manipulation may cause the adversary to waste resources brute-forcing passwords with inaccurate complexity requirements. If the defender wanted to degrade software effectiveness, they might weaken algorithms to expose data that is being archived, encoded, and/or encrypted.\nFinally, to prevent software from functioning altogether, the defender may cause software typically used to delete data or hide adversary artifacts to fail. For some Software Manipulation use cases, it may be possible to make changes in such a way that adversary actions and legitimate user actions are handled differently. For example, the defender could show all files when viewed in a graphical application but hide files or introduce decoy files when viewed via a terminal command. This would allow legitimate users full access to the file system while adversaries using a reverse shell to access the target would see the manipulated the files.\n",
             "kill_chain_phases": [
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "direct"
                 },
                 {
-                    "kill_chain_name": "mitre-atlas",
+                    "kill_chain_name": "mitre-engage",
                     "phase_name": "disrupt"
                 }
             ],
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
-                    "url": "https://localhost:4200/techniques/EAC0014",
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/EAC0014",
                     "external_id": "EAC0014"
                 }
             ],
             "x_mitre_platforms": [
-                "ATLAS"
+                "ENGAGE"
             ],
             "type": "attack-pattern",
-            "id": "attack-pattern--a304e4a8-a1be-4bf2-ad35-f2a858991727",
-            "created": "2022-03-31T12:39:59.907Z",
-            "modified": "2022-03-31T12:39:59.907Z"
+            "id": "attack-pattern--544f8ee7-370e-4570-b1c9-798c564b0b5f",
+            "created": "2022-03-30T18:47:33.145Z",
+            "modified": "2022-03-30T18:47:33.145Z"
+        },
+        {
+            "name": "Acquire Infrastructure",
+            "description": "Adversaries may buy, lease, or rent infrastructure for use throughout their operation.\nA wide variety of infrastructure exists for hosting and orchestrating adversary operations.\nInfrastructure solutions include physical or cloud servers, domains, mobile devices, and third-party web services.\nFree resources may also be used, but they are typically limited.\n\nUse of these infrastructure solutions allows an adversary to stage, launch, and execute an operation.\nSolutions may help adversary operations blend in with traffic that is seen as normal, such as contact to third-party web services.\nDepending on the implementation, adversaries may use infrastructure that makes it difficult to physically tie back to them as well as utilize infrastructure that can be rapidly provisioned, modified, and shut down.\n",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-engage",
+                    "phase_name": "resource-development"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/activities/AML.T0008",
+                    "external_id": "AML.T0008"
+                }
+            ],
+            "x_mitre_platforms": [
+                "ENGAGE"
+            ],
+            "type": "attack-pattern",
+            "id": "attack-pattern--f509b9d5-c2cf-4419-8e18-90e9183381a7",
+            "created": "2022-03-30T12:50:48.710Z",
+            "modified": "2022-03-30T12:50:48.710Z"
+        },
+        {
+            "name": "ML Development Workspaces",
+            "description": "Developing and staging machine learning attacks often requires expensive compute resources.\nAdversaries may need access to one or many GPUs in order to develop an attack.\nThey may try to anonymously use free resources such as Google Colaboratory, or cloud resources such as AWS, Azure, or Google Cloud as an efficient way to stand up temporary resources to conduct operations.\nMultiple workspaces may be used to avoid detection.\n",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-engage",
+                    "phase_name": "resource-development"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/techniques/AML.T0008.000",
+                    "external_id": "AML.T0008.000"
+                }
+            ],
+            "x_mitre_platforms": [
+                "ENGAGE"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "type": "attack-pattern",
+            "id": "attack-pattern--58c08543-0c31-4eee-b786-036086f8e2db",
+            "created": "2022-03-30T12:50:48.710Z",
+            "modified": "2022-03-30T12:50:48.710Z"
+        },
+        {
+            "name": "Consumer Hardware",
+            "description": "Adversaries may acquire consumer hardware to conduct their attacks.\nOwning the hardware provides the adversary with complete control of the environment. These devices can be hard to trace.\n",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-engage",
+                    "phase_name": "resource-development"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-engage",
+                    "url": "https://localhost:4200/techniques/AML.T0008.001",
+                    "external_id": "AML.T0008.001"
+                }
+            ],
+            "x_mitre_platforms": [
+                "ENGAGE"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "type": "attack-pattern",
+            "id": "attack-pattern--3e0bb768-3661-4aa4-9704-c4db1b1d24b3",
+            "created": "2022-03-30T12:50:48.711Z",
+            "modified": "2022-03-30T12:50:48.711Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--bf17feae-92c0-45e0-a2a0-26aecc3b7186",
+            "created": "2022-03-30T12:50:48.711Z",
+            "modified": "2022-03-30T12:50:48.711Z",
+            "source_ref": "attack-pattern--58c08543-0c31-4eee-b786-036086f8e2db",
+            "relationship_type": "subtechnique-of",
+            "target_ref": "attack-pattern--f509b9d5-c2cf-4419-8e18-90e9183381a7"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--8f5dbeec-9151-442e-927f-807e0b4fbaf1",
+            "created": "2022-03-30T12:50:48.711Z",
+            "modified": "2022-03-30T12:50:48.711Z",
+            "source_ref": "attack-pattern--3e0bb768-3661-4aa4-9704-c4db1b1d24b3",
+            "relationship_type": "subtechnique-of",
+            "target_ref": "attack-pattern--f509b9d5-c2cf-4419-8e18-90e9183381a7"
         },
         {
             "name": "ENGAGE 1.0.0",
-            "description": "Engage Navigator: atlas.mitre.org",
+            "description": "Engage Navigator: engage.mitre.org",
             "external_references": [
                 {
-                    "source_name": "mitre-atlas",
+                    "source_name": "mitre-engage",
                     "url": "https://localhost:4200",
-                    "external_id": "mitre-atlas"
+                    "external_id": "mitre-engage"
                 }
             ],
-            "tactic_refs": [
-                "x-mitre-tactic--09835a6d-20fd-4cef-85fe-18c4198d44c9",
-                "x-mitre-tactic--0a6c39a1-5921-435f-ab56-fe38b822c74b",
-                "x-mitre-tactic--e85712bb-ddca-4aaa-8837-c64f1791294d"
+            "approach_refs": [
+                "x-mitre-tactic--e77e6ac1-2c67-411b-b7e6-f5a701d3499d",
+                "x-mitre-tactic--d9227b2a-b8a1-4898-96a5-8536f9e7f0e7",
+                "x-mitre-tactic--a1a8f059-284a-4092-84d0-0faee248eddf",
+                "x-mitre-tactic--8fb30c8b-43fa-486b-b652-5bedc52328da"
             ],
             "type": "x-mitre-matrix",
-            "id": "x-mitre-matrix--e565d35f-4963-4f73-a536-e28b390add72",
-            "created": "2022-03-31T12:39:59.908Z",
-            "modified": "2022-03-31T12:39:59.908Z"
+            "id": "x-mitre-matrix--f8203289-a722-4006-a656-30afa57f00fe",
+            "created": "2022-03-30T18:47:33.145Z",
+            "modified": "2022-03-30T18:47:33.145Z"
         }
     ],
     "type": "bundle",
-    "id": "bundle--8c020cae-b50f-4036-8497-d0a99cfa6b47",
+    "id": "bundle--dd1fb70b-1cc4-40a9-9e75-7a2e02d7d2f5",
     "spec_version": "2.0"
 }
