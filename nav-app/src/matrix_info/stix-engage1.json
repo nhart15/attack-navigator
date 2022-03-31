@@ -466,7 +466,7 @@
                     "external_id": "mitre-engage"
                 }
             ],
-            "approach_refs": [
+            "tactic_refs": [
                 "x-mitre-approach--8f524eff-6ccd-44f9-9977-fa2896bf0fb2",
                 "x-mitre-approach--d029d9e3-6850-4b46-87fe-99f35b104e86",
                 "x-mitre-approach--d44c5cea-8fce-417b-b5f7-a52c62de6f91",
