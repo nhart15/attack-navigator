@@ -1,0 +1,366 @@
+---
+id: ENGAGE
+name: Engage Navigator
+version: 1.0.0
+tactics:
+- id: EAP0003
+  name: Prevent
+  object-type: tactic
+  description: 'Stop all or part of the adversary''s ability to conduct their operation
+    as intended.
+
+
+    Prevention focuses on stopping the adversary''s ability to conduct their operations
+    as intended. The defender can physically or virtually remove or disable resources,
+    tighten security controls, or otherwise impair the adversary''s ability to operate.
+    A defender might prevent an adversary from operating to force them to reveal different,
+    possibly more advanced, capabilities. Additionally, a defender can use Prevention
+    to discourage the adversary from operating against a specific target. In this
+    case, the defender may be attempting to encourage the adversary to focus elsewhere
+    in the engagement environment.
+
+    There are many more Prevention activities that are also good cybersecurity practices.
+    However, in Engage, we are focused on a subset of activities. Those are focused
+    exclusively on the intersection of denial, deception, and adversary engagement
+    technologies and the defender\u2019s ability to Affect the adversary.
+
+    '
+- id: EAP0004
+  name: Direct
+  object-type: tactic
+  description: 'Encourage or discourage the adversary from conducting their operation
+    as intended.
+
+
+    Direction focuses on moving the adversary towards or away from an intended path.
+    This forced direction can be accomplished by removing or disabling some resources,
+    while adding or enabling others. The defender can add decoy articles or otherwise
+    manipulate the environment to attempt to elicit specific responses from the adversary.
+    Additionally, the defender can tighten some security controls while leaving others
+    overly permissive or weakened. Finally, the defender can physically move the adversary
+    by moving threats from their intended environment and into a safe engagement environment.
+
+    For example, a suspicious email attachment can be moved from the intended target
+    to an engagement environment for analysis. No matter how the Direction is achieved,
+    the defender hopes to force the adversary to take unintended actions, or stop
+    intended actions.
+
+    '
+- id: EAP0005
+  name: Disrupt
+  object-type: tactic
+  description: 'Impair an adversary''s ability to conduct their operation as intended.
+
+
+    Disruption is used to stop or discourage an adversary from conducting part or
+    all of their mission. This disruption may increase the time, skills, or resources
+    needed for the adversary to accomplish a specific task. For example, a defender
+    may degrade network speeds as the adversary attempts to exfiltrate large blocks
+    of data. As a second example, the defender may manipulate the output of commonly
+    used discovery commands to show targets that do not exist or to hide real targets.
+    In either case, the adversary may waste resources acting on partial or falsified
+    data.
+
+    Disruptions may also include planting misinformation designed to influence the
+    adversary''s decision-makers to make the wrong decisions or to waste resources.
+
+    '
+techniques:
+- id: EAC0019
+  name: Baseline
+  object-type: technique
+  description: 'Identify key system elements to establish a baseline and be prepared
+    to reset a system to that baseline when necessary.
+
+
+    To determine the system Baseline, the defender must identify software and configuration
+    elements that are critical to a set of objectives. The defender must define the
+    proper values and be prepared to reset a running system to its intended state.
+    Reverting to a Baseline configuration can be essential when restoring an operational
+    environment to a safe state or when looking to impose a cost on adversaries by
+    preventing their technique.
+
+    For example, the defender can watch for an adversary to make changes in the environment
+    and then revert the environment with the goal of either forcing the adversary
+    to target elsewhere in the network or to display a new, possibly more advanced
+    TTP. The baseline values will also be crucial post-operation when analyzing changes
+    to the environment over time.
+
+    '
+  tactics:
+  - EAP0003
+- id: EAC0017
+  name: Hardware Manipulation
+  object-type: technique
+  description: 'Alter the hardware configuration of a system to limit what an adversary
+    can do with the device.
+
+
+    Hardware Manipulation can include physical or configuration changes to the hardware
+    in the environment. This manipulation can include physically removing a system''s
+    microphone, camera, on-board Wi-Fi adapter, etc. or using software controls to
+    disable those devices. These types of manipulations can affect the adversary''s
+    ability to achieve their operational objectives by incurring an increased resource
+    cost, forcing them to change tactics, or stopping them altogether.
+
+    Hardware Manipulation is often required to maintain operational safety. For example,
+    if the operation includes Detonating Malware using a laptop physically located
+    in a shared space, it is likely that the defender will not have the ability to
+    hide the legitimate conversations and individuals present in the space. Unless
+    the defender has the ability to control the background sounds and visuals, it
+    is likely too risky to leave the camera and microphone connected to the machine.
+
+    '
+  tactics:
+  - EAP0003
+- id: EAC0020
+  name: Isolation
+  object-type: technique
+  description: 'Using Isolation, a defender can limit the effectiveness and scope
+    of malicious technique and/or lower exposure to unintended risks. When a system
+    or resource is isolated, a defender can observe adversary behaviors or tools without
+    allowing lateral movement. For example, a defender may detonate a piece of malware
+    on an isolated system to perform dynamic analysis without risk to other network
+    resources.
+
+    Determining which systems should be isolated in an operation is a critical decision
+    when calculating acceptable operational risk. However, if the adversary expects
+    to find an entire corporate network but instead finds only an isolated system,
+    they may not be interested in engaging with the target. Balancing acceptable risk,
+    believability, and operational goals is essential when determining if or when
+    a system should be isolated.
+
+    '
+  tactics:
+  - EAP0003
+  - EAP0005
+- id: EAC0016
+  name: Network Manipulation
+  object-type: technique
+  description: 'Make changes to network properties and functions to achieve a desired
+    effect.
+
+
+    Network Manipulation allows a defender to throttle network speeds, segment the
+    network, maintain a unique IP addressing scheme, add a kill switch to cut off
+    network access, etc. These types of manipulations can affect the adversary''s
+    ability to achieve their operational objectives by incurring an increased resource
+    cost, forcing them to change tactics, or stopping them altogether.
+
+    For example, a defender can limit the allowed ports or network requests to force
+    the adversary to alter their planned C2 or exfiltration channels. As another example,
+    a defender could allow or deny outbound SMB requests from a network to affect
+    the success of forced authentication. Additionally, the defender can degrade network
+    speeds and reliability to impose a resource cost as adversaries exfiltrate large
+    quantities of data. Finally, a defender can block primary C2 domains and IPs to
+    determine if the adversary has additional infrastructure. While there are a range
+    of network manipulation options, in all cases, the defender has an opportunity
+    to learn about or influence the adversaries operating in the environment.
+
+    '
+  tactics:
+  - EAP0003
+  - EAP0004
+  - EAP0005
+- id: EAC0018
+  name: Security Controls
+  object-type: technique
+  description: 'Alter security controls to make the system more or less vulnerable
+    to attack.
+
+
+    Manipulating Security Controls involves making configuration changes to a system''s
+    security settings including modifying Group Policies, disabling/enabling autorun
+    for removable media, tightening or relaxing system firewalls, etc. Such security
+    controls can be tightened to dissuade or prevent adversary technique. Conversely,
+    security controls can be weakened or left overly permissive to encourage or enable
+    adversary technique.
+
+    Tightening security controls can typically be done by implementing any of the
+    mitigations described in MITRE ATT&CK. See https://attack.mitre.org/mitigations/enterprise/
+    for a full list of mitigation strategies. While loosening security controls may
+    seem obvious (i.e., simply don''t employ a given mitigation strategy), there is
+    an additional level of nuance that must be considered. Some security controls
+    are considered so routine that its absence may be suspicious.
+
+    For example, completely turning off Windows Defender would likely raise the adversary''s
+    suspicion. However, it is possible to turn off Windows Defender in certain shared
+    drives to encourage adversary technique in predetermined locations. Therefore,
+    it will likely be far less suspicious to turn off Windows Defender in a single
+    directory or share. When assessing the likelihood that removing a given security
+    control is overly suspicious, it is important to consider how prevalent that security
+    control is, the target adversary''s sophistication, and the deception story.
+
+    '
+  tactics:
+  - EAP0003
+  - EAP0004
+- id: EAC0021
+  name: Attack Vector Migration
+  object-type: technique
+  description: 'Move a malicious link, file, or device from its intended location
+    to a decoy system or network for execution/use.
+
+
+    When a defender Migrates an Attack Vector, the defender intercepts a malicious
+    element and moves it to a safe environment, such as a decoy system within a decoy
+    network, for continued engagement or analysis. A defender may choose to migrate
+    attack vectors, which may appear in the form of phishing emails, suspicious email
+    attachments, or malicious USBs. For example, a defender might move a suspicious
+    attachment from a corporate inbox to an inbox on a system that, while in the corporate
+    IP space, is completely segmented from the enterprise network. This segregated
+    environment will allow the adversary to move laterally throughout the environment
+    without risk to enterprise resources.
+
+    Determining when an engagement should be moved to an engagement environment is
+    a critical decision when calculating acceptable operational risk. However, if
+    the adversary sent a custom malware sample to a phishing victim, but ultimately
+    find themselves on an unrelated victim, they may be suspicious. Balancing this
+    acceptable risk, believability, and operational goals is essential when determining
+    if or when to migrate an attack vector.
+
+    '
+  tactics:
+  - EAP0004
+- id: EAC0009
+  name: Email Manipulation
+  object-type: technique
+  description: 'Modify the flow of email in the environment.
+
+
+    Email Manipulation covers the various ways email flows in the environment can
+    be affected. Email Manipulation can affect which mail appliances process mail
+    flows, where mail is forwarded, or what mail is present in an inbox. A common
+    use case for email manipulation is as a vector to introduce malware into the engagement
+    environment.
+
+    Suspicious emails may be removed from production mailbox and placed into an inbox
+    in an engagement environment. Then, any suspicious attachments or links could
+    be detonated from within the environment. As another example, emails collected
+    over a long period of time from a legitimate inbox outside the environment may
+    be moved into the environment to reassure the adversary of the environment''s
+    legitimacy by creating a mailbox that more closely resembles a real, lived-in
+    inbox.
+
+    '
+  tactics:
+  - EAP0004
+- id: EAC0023
+  name: Introduced Vulnerabilities
+  object-type: technique
+  description: 'Intentionally introduce vulnerabilities into the environment for the
+    adversary to exploit.
+
+
+    By intentionally Introducing Vulnerabilities into the engagement environment,
+    the defender can attempt to motivate the adversary to target specific resources.
+    This targeting may serve to move the adversary towards a particular resource,
+    or away from another resource. At other times, the defender may Introduce Vulnerabilities
+    as amean of encouraging the adversary to reveal targeting preferences, available
+    capabilities, or even to influence future targeting decisions. The operational
+    objectives will drive how and why the defender Introduces Vulnerabilities in the
+    engagement environment.
+
+    '
+  tactics:
+  - EAP0004
+- id: EAC0005
+  name: Lures
+  object-type: technique
+  description: 'Deceptive systems and artifacts intended to serve as decoys, breadcrumbs,
+    or bait to elicit a specific response from the adversary.
+
+
+    Lures are intended to elicit a particular response from the adversary. For example,
+    the defender may utilize Lures to enable or block adversary''s intended action
+    or encourage or discourage a specific action or response. Lures can take a veriety
+    of forms including credentials, accounts, files/directories, browser extensions/bookmarks,
+    system processes, etc. Regardless of form, Lures provide opportunities to the
+    defender to drive adversary behavior in ways that align with operational outcomes.
+
+    '
+  tactics:
+  - EAP0004
+  - EAP0005
+- id: EAC0013
+  name: Malware Detonation
+  object-type: technique
+  description: 'Execute malware under controlled conditions to analyze its functionality.
+
+
+    Malware can be detonated in a controlled and safe environment. Clear goals and
+    safety procedures should always be established before detonation to ensure that
+    the operation is focused and safe. The malware can be detonated in an execution
+    environment ranging from a somewhat sterile commercial malware execution appliance
+    to a bespoke engagement environment crafted to support an extended engagement.
+
+    Outcomes of a malware detonation operation can include new IOCs collected during
+    dynamic analysis, additional TTPs elicited by detonating the malware in a target
+    rich environment, and/or negative impacts to the adversary and their operation.
+    These outcomes can be used to produce new analytics for high-fidelity analytics.
+
+    '
+  tactics:
+  - EAP0004
+- id: EAC0010
+  name: Peripheral Management
+  object-type: technique
+  description: 'Manage peripheral devices used on systems within the network for engagement
+    purposes.
+
+
+    Peripheral Management is the administration of peripheral devices used on systems
+    within the engagement environment. A defender can choose to allow or deny certain
+    types of peripherals from being used on systems to either motivate or demotivate
+    adversary technique or to direct the adversary towards specific targets. Defenders
+    can also introduce peripherals to an adversary-controlled system to see how the
+    adversary reacts. For example, the defender can introduce external Wi-Fi adapters,
+    USB devices, etc. to determine if adversaries attempt to use them for exfiltration
+    purposes.
+
+    Additionally, peripherals provide an avenue for the defender to present new or
+    additional information to the adversary. This information can be used to introduce
+    an additional attack surface, motivate or demotivate adversary technique, or to
+    further the deception story. For example, the defender may include data on a connected
+    USB device or stage an important conversation near an externally connected camera
+    or microphone. Depending on the contents of this data, the adversary may be encouraged
+    to take a specific action and/or reassured about the legitimacy of the environment.
+
+    '
+  tactics:
+  - EAP0004
+- id: EAC0014
+  name: Software Manipulation
+  object-type: technique
+  description: 'Make changes to a system''s software properties and functions to achieve
+    a desired effect.
+
+
+    Software Manipulation allows a defender to alter or replace elements of the OS,
+    file system, or any other software installed and executed on a system. These alterations
+    can affect outputs, degrade effectiveness, and/or prevent the software from functioning
+    altogether. For example, the defender can manipulate software by changing the
+    output of commonly used discovery commands to hide legitimate systems and artifacts
+    and/or reveal decoy artifacts and systems.
+
+    Alternatively, the defender can change the output of the password policy description
+    for an adversary attempting to brute-force credentials. This manipulation may
+    cause the adversary to waste resources brute-forcing passwords with inaccurate
+    complexity requirements. If the defender wanted to degrade software effectiveness,
+    they might weaken algorithms to expose data that is being archived, encoded, and/or
+    encrypted.
+
+    Finally, to prevent software from functioning altogether, the defender may cause
+    software typically used to delete data or hide adversary artifacts to fail. For
+    some Software Manipulation use cases, it may be possible to make changes in such
+    a way that adversary actions and legitimate user actions are handled differently.
+    For example, the defender could show all files when viewed in a graphical application
+    but hide files or introduce decoy files when viewed via a terminal command. This
+    would allow legitimate users full access to the file system while adversaries
+    using a reverse shell to access the target would see the manipulated the files.
+
+    '
+  tactics:
+  - EAP0004
+  - EAP0005
+case-studies: []
