@@ -3,6 +3,42 @@ id: ENGAGE
 name: Engage Navigator
 version: 1.0.0
 tactics:
+- id: EAP0001
+  name: Collect
+  object-type: tactic
+  description: 'Gather adversary tools, observe tactics, and collect other raw intelligence
+    about the adversary''s activity.
+
+
+    Collection is used to gather information about an adversary or their activities.
+    This collection can include gathering system logs, network traffic, adversary
+    artifacts, or other data that can be used to expose adversary activity. In many
+    cases, Collection activities are also good cybersecurity practices. However, in
+    Engage, these activities will focus exclusively on the intersection of denial,
+    deception, and adversary engagement technologies and the defender\u2019s ability
+    to Expose the adversary.
+
+    '
+- id: EAP0002
+  name: Detect
+  object-type: tactic
+  description: 'Establish or maintain awareness in regard to adversary activity.
+
+
+    Detection focuses on the defender''s ability to monitor adversary activity throughout
+    an environment, often by creating high-fidelity detections. These detections can
+    be produced in several ways. For example, a defender can deploy decoy artifacts
+    as tripwires in the environment. The defender may create custom alerts based on
+    TTPs or IOCs observed during a malware detonation operation. Finally, the defender
+    may write customer decoders to analyze and alert on malicious traffic.
+
+    In all these cases, detection activities allow the defender to produce a high-fidelity
+    alert to monitor adversary activities. Often Detection activities are also good
+    cybersecurity practices. However, in Engage, these activities will focus exclusively
+    on the intersection of denial, deception, and adversary engagement technologies
+    and the defender''s ability to Expose the adversary.
+
+    '
 - id: EAP0003
   name: Prevent
   object-type: tactic
@@ -65,7 +101,137 @@ tactics:
     adversary''s decision-makers to make the wrong decisions or to waste resources.
 
     '
+- id: EAP0006
+  name: Reassure
+  object-type: tactic
+  description: 'Add authenticity to deceptive components to convince an adversary
+    that an environment is real.
+
+
+    Reassurance is used to add authenticity to deceptive components to reduce adversary
+    suspicion about the legitimacy of the environment. Activities include adding realistic
+    user accounts, files, system activity, and any other content that an adversary
+    might expect to find on the system. Reassurance may add new artifacts, such as
+    peripherals and pocket litter, while concealing others, such as how recently an
+    environment was stood up. If done correctly, Reassurance may help to make an adversary
+    feel more comfortable upon landing in a new environment. This initial level of
+    comfort can help anchor the adversary in the environment, increasing their tolerance
+    to faults or weaknesses discovered later.
+
+    '
+- id: EAP0007
+  name: Motivate
+  object-type: tactic
+  description: 'Encourage an adversary to conduct part or all of their mission.
+
+
+    Motivation is used to encourage an adversary to conduct part or all of their mission
+    by providing a target-rich environment. To do this, the defender can use unpatched
+    versions of operating systems and software, remove end-point detection software,
+    and use weak passwords. Additionally, the defender can open firewall ports, add
+    proxy capabilities, or introduce elements that an adversary can easily leverage
+    to bypass an obstacle in their operations. Finally, the defender can include enticing
+    data to the environment to encourage the adversary to steal the data.
+
+    '
 techniques:
+- id: EAC0001
+  name: API Monitoring
+  object-type: technique
+  description: 'Monitor local APIs that might be used by adversary tools and activity.
+
+
+    API Monitoring involves capturing an internal OS function for its usage, accompanying
+    arguments, and result. When a defender captures this information, the data gathered
+    can be analyzed to gain insights into the activity of an adversary at a level
+    deeper than normal system activity monitoring. This type of monitoring can also
+    be used to produce high-fidelity detections.
+
+    For example, the defender can trace activity through WinSock TCP API functions
+    to view potentially malicious network events or trace usage of the Win32 DeleteFile()
+    function to log all attempts at deleting a given file.
+
+    '
+  tactics:
+  - EAP0001
+- id: EAC0002
+  name: Network Monitoring
+  object-type: technique
+  description: 'Monitor network traffic in order to detect adversary activity.
+
+
+    Network Monitoring involves capturing network activity data, including capturing
+    server, firewall, and other relevant logs. A defender can send this data to a
+    centralized collection location for further analysis. This analysis can be automated
+    or manual. In either case, a defender can use Network Monitoring to identify anomalous
+    traffic patterns, large or unexpected data transfers, and other activity that
+    may reveal the presence of an adversary. \n<br><br>\nMonitoring is essential to
+    maintain situational awareness of adversary activities to ensure operational safety
+    and make progress towards the defender''s goals.
+
+    Careful pre-operational planning should be done to properly instrument the engagement
+    environment to ensure that all key network traffic is collected. Some use cases
+    of network monitoring include detecting unexpected outbound traffic, systems establishing
+    connections using encapsulated protocols, and known adversary C2 protocols.
+
+    '
+  tactics:
+  - EAP0001
+- id: EAC0003
+  name: System Activity Monitoring
+  object-type: technique
+  description: 'Collect system activity logs that can reveal adversary activity.
+
+
+    Capturing system logs can show logins, user and system events, etc. A defender
+    can use such inherent system logging to study and collect first-hand observations
+    about the adversary''s actions and tools. This data can be sent to a centralized
+    collection location for further analysis. Careful planning should be used to guide
+    which system logs are collected and at what level. If the logging level is set
+    too high or too many system logs are collected, the defender may be blinded by
+    the excess data.
+
+    For example, understanding the adversary''s known TTPs will highlight resources
+    the adversary is likely to touch and therefore which system logs are likely to
+    capture adversary activity. Overall, System Activity Monitoring is essential to
+    maintain situational awareness of adversarial activities in order to ensure operational
+    safety and progress towards operational goals. Careful pre-operational planning
+    should be done to properly instrument the engagement environment. This will ensure
+    that all key network traffic is collected.
+
+    '
+  tactics:
+  - EAP0001
+- id: EAC0004
+  name: Network Analysis
+  object-type: technique
+  description: 'Analyze network traffic to gain intelligence on communications between
+    systems.
+
+
+    Network analysis can be an automated or manual task to review communications between
+    systems to expose adversary activity, such as C2 or data exfiltration traffic.
+    This analysis is normally done by capturing and analyzing traffic on the wire
+    or from previously collected packet capture. When custom protocols are in use,
+    defender can leverage protocol decoder frameworks. These are customized code modules
+    that can read network traffic and contextualize activity between the C2 operator
+    and the implant.
+
+    These frameworks are often required to process complex encryption ciphers and
+    custom protocols into a human-readable format for an analyst to interpret. Decoder
+    creation requires malware analysis of the implant to understand the design of
+    the protocol. While a high level of technical maturity is required to create such
+    a decoder, once created they are invaluable to a defender. For example, a defender
+    can use a protocol decode to decrypt network capture data and expose an adversary''s
+    C2 exfiltration activity.
+
+    Not only does this data provide exquisate intelligence in regard to the adversary''s
+    communications channels and targeting preferences, but it also provides future
+    opportunities for data manipulation to further operational goals.
+
+    '
+  tactics:
+  - EAP0002
 - id: EAC0019
   name: Baseline
   object-type: technique
@@ -245,6 +411,7 @@ techniques:
     '
   tactics:
   - EAP0004
+  - EAP0006
 - id: EAC0023
   name: Introduced Vulnerabilities
   object-type: technique
@@ -263,7 +430,9 @@ techniques:
 
     '
   tactics:
+  - EAP0002
   - EAP0004
+  - EAP0007
 - id: EAC0005
   name: Lures
   object-type: technique
@@ -280,6 +449,7 @@ techniques:
 
     '
   tactics:
+  - EAP0002
   - EAP0004
   - EAP0005
 - id: EAC0013
@@ -301,7 +471,9 @@ techniques:
 
     '
   tactics:
+  - EAP0002
   - EAP0004
+  - EAP0007
 - id: EAC0010
   name: Peripheral Management
   object-type: technique
@@ -329,6 +501,7 @@ techniques:
     '
   tactics:
   - EAP0004
+  - EAP0006
 - id: EAC0014
   name: Software Manipulation
   object-type: technique
@@ -361,6 +534,203 @@ techniques:
 
     '
   tactics:
+  - EAP0001
   - EAP0004
   - EAP0005
+- id: EAC0006
+  name: Application Diversity
+  object-type: technique
+  description: 'Present the adversary with a veriety of installed applications and
+    services.
+
+
+    Application Diversity presents an array of software targets to the adversary.
+    One a single target system, defenders can configure multiple services or software
+    applications. This diversity may include not only a variety of diffrent types
+    of applications, but also verious versions of the same application. Application
+    Diversity can be used to encourage engagement by offering a broad attack surface.
+    By monitoring adversary activity in a diverse environment, the defender can gain
+    information on the adversary''s capabilities and targeting preferences.
+
+    For example, a defender can install one or more applications with a veriety of
+    patch levels to see how the adversary''s response differs across versions. Additionally,
+    a diverse set of applications provides a veriety of avenues for the defender to
+    present additional information throughout an operation. This information can be
+    used to introduce additional attack surfaces, motivate or demotivate the adversary,
+    or further the engagement narrative. For example, if the adversary is close to
+    uncovering something that might raise suspicion around a target, the defender
+    can add an event to a shared calendar application or a message in a notes application
+    that the system will be offline for scheduled maintenance.
+
+    Having a variety of applications on the system provides the defender with multiple
+    engagement avenues to handle whatever events happen during the operation. Finally,
+    diversity can increase the adversary''s overall comfort level by adding to the
+    believability of the environment.
+
+    '
+  tactics:
+  - EAP0006
+  - EAP0007
+- id: EAC0022
+  name: Artifact Diversity
+  object-type: technique
+  description: 'Present the adversary with a variety of network and system artifacts.
+
+
+    Artifact Diversity means presenting multiple network and system artifacts to the
+    adversary including accounts, files/directories, credentials, logs, web browsing
+    history, browser cookies, etc. These artifacts can be legitimate artifacts created
+    as the result of natural usage over time or manually added to the environment
+    by the defender. Artifact Diversity can be used to encourage the adversary to
+    engage by offering a broad attack surface or can increase the adversary''s overall
+    comfort level by adding to the believability of the environment.
+
+    Additionally, these artifacts may be Lures intended to elicit a specific response
+    from the adversary. In any case, by monitoring adversary activity in a diverse
+    environment, the defender can gain information on the adversary''s capabilities
+    and targeting preferences. For example, a defender can include a diverse set of
+    accounts and credentials and then monitor to determine which accounts the adversary
+    targets in the future.
+
+    '
+  tactics:
+  - EAP0006
+  - EAP0007
+- id: EAC0008
+  name: Burn-In
+  object-type: technique
+  description: 'Exercise a target system in a manner where it will generate desirable
+    system artifacts.
+
+
+    Burn-In involves exercising the system to create desirable system artifacts such
+    as web browsing history, file system usage, or running of user applications. At
+    times, Burn-In can be accomplished by simply letting a system or application run
+    for an extended period of time. Other times, the defender engages with the environment
+    to produce the Burn-In artifacts, such as when the defender logs into a decoy
+    account or accesses a decoy website to generate session cookies and browser history.
+
+    These tasks can be accomplished manually or via automated tooling. Burn-In should
+    occur pre-operation and continue as appropriate during the operation. The artifacts
+    generated during the Burn-In process can reassure the adversary of the environment''s
+    legitimacy by creating an environment that more closely resembles a real, lived
+    in, system or network.
+
+    '
+  tactics:
+  - EAP0006
+- id: EAC0015
+  name: Information Manupulation
+  object-type: technique
+  description: 'Conceal and reveal both facts and fictions to support a deception
+    story.
+
+
+    Information Manipulation is used to support the deception story. Revealed facts
+    and fictions can be used to adjust the adversary\u2019s trust in the environment.
+    Concealed facts and fiction can be used to adjust the adversary\u2019s sense of
+    uncertainty towards the environment. Revealed facts may include OS type and version,
+    geographic location, hardware type and version, accounts, credentials, etc. Revealed
+    fictions may include the content of decoy files, emails, messages, etc. Revealed
+    facts and fictions may or may not be believed by the adversary.\n<br><br>\n
+
+    If an adversary believes a revealed fact or fiction, it may lend credibility to
+    the environment or encourage a specific action. If an adversary is suspicious
+    or does not believe a revealed fact or fiction, it may erode adversary trust in
+    the environment. For example, if the adversary discovers that a collection of
+    legitimate passwords all contain the phrase \"honeytoken\" or \"canarytoken\"
+    they may lose trust in the legitimacy of the environment, even if the credentials
+    are real and valid in the enterprise network. Conversely, if the adversary checks
+    the timestamps on various files on the target and finds timestamps going back
+    multiple years, they may trust that the environment is legitimate even if, in
+    reality, the files are new and the timestamps were falsified. In this way, revealed
+    facts and fictions can be used to adjust the adversary''s trust in the environment
+    in ways that support the defender''s goals. \n<br><br>\n
+
+    Concealed facts may include virtualized systems disguised as physical systems,
+    monitoring software, or collection efforts. Concealed fictions may include an
+    encrypted, interestingly named, decoy file or a partially deleted email thread
+    referencing high value, but decoy, assets. Concealed facts and fictions may or
+    may not be discovered by the adversary. If the adversary discovers a concealed
+    fact or fiction, it may increase the ambiguity of the environment and affect the
+    adversary''s sense of uncertainty. \n<br><br>\nFor example, if an adversary discovers
+    a hidden monitoring solution is deployed, they may feel less comfortable engaging
+    with that specific target. Conversely, if the defender deploys a hidden monitoring
+    solution with an intentional blind spot that the adversary discovers, the adversary
+    may feel a decrease in ambiguity and take additional actions believing that they
+    will be undetected. In this way, concealed facts and fictions can be used to adjust
+    the ambiguity and affect the adversary''s sense of uncertainty in ways that support
+    the defender''s goals.
+
+    '
+  tactics:
+  - EAP0006
+  - EAP0007
+- id: EAC0007
+  name: Network Diversity
+  object-type: technique
+  description: 'Use a diverse set of devices on the network to help establish the
+    legitimacy of a decoy network.
+
+
+    Network Diversity involves the use of an assorted collection of network resources
+    such as networking devices, firewalls, printers, phones, etc. Network Diversity
+    can be used to encourage adversaries to engage by offering a broad attack surface.
+    Additionally, diversity can increase the adversary''s overall comfort level by
+    adding to the believability of the environment.
+
+    By monitoring adversary activity in a diverse environment, the defender can gain
+    information on the adversary''s capabilities and targeting preferences. For example,
+    a defender can deploy a variety of network resources to identify which devices
+    are targeted by the adversary.
+
+    '
+  tactics:
+  - EAP0006
+  - EAP0007
+- id: EAC0011
+  name: Pocket Litter
+  object-type: technique
+  description: 'Place data on a system to reinforce the legitimacy of the system or
+    user.
+
+
+    Pocket Litter is data placed on a system to convince an adversary that the system
+    and users are real. Pocket Litter can be used to establish a cognitive bias to
+    raise the adversary''s tolerance to weaknesses in the environment. Unlike Decoy
+    Artifacts, Pocket Litter does not necessarily aim to encourage the adversary to
+    take a specific action, but rather it supports the overall deception story.\n<br><br>\n
+
+    Pocket Litter can include documents, pictures, registry entries, installed software,
+    log history, browsing history, connection history, and other user data that an
+    adversary would expect to exist on a user''s computer. For example, a defender
+    might conduct a series of web searches to generate browser artifacts, or scatter
+    a variety of photos and documents across the desktop to make the computer feel
+    lived in.
+
+    '
+  tactics:
+  - EAP0006
+- id: EAC0012
+  name: Personas
+  object-type: technique
+  description: 'Create fictitious human user(s) through a combination of planted data
+    and revealed behavior patterns.
+
+
+    A Persona is used to establish background information about a victim to increase
+    the believability of the target. To create a persona, the defender must develop
+    a backstory and seed the environment with varying data in support of this story.
+    Depending on the need for realism, the constructed persona can be supported by
+    evidence of hobbies, social and professional interactions, consumer transactions,
+    employment, browsing habits, etc.\n<br><br>\n
+
+    In addition to lending legitimacy to the environment, personas can be used to
+    engage directly with adversaries, such as during phishing email exchanges. Additionally,
+    personas can make changes to the environment during the operation, such as adding
+    or removing a USB device or introducing new decoy documents or credentials.
+
+    '
+  tactics:
+  - EAP0007
 case-studies: []

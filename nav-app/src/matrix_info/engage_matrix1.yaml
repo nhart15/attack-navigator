@@ -5,9 +5,13 @@ name: Engage Navigator
 version: 1.0.0
 
 tactics:
+  - "{{collect.id}}"
+  - "{{detect.id}}"
   - "{{prevent.id}}"
   - "{{direct.id}}"
   - "{{disrupt.id}}"
+  - "{{reassure.id}}"
+  - "{{motivate.id}}"
  
 data:
   - !include engage_tactics.yaml
