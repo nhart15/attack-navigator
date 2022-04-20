@@ -150,7 +150,7 @@ class ENGAGE:
             kill_chain_name= '?'
             phase_name = '?'
 
-            if tactic_id.startswith('EAP'):
+            if tactic_id.startswith('EAP') or tactic_id.startswith('SAP'):
                 # ENGAGE
                 kill_chain_name = ENGAGE.SOURCE_NAME # Using this as an identifier
 
