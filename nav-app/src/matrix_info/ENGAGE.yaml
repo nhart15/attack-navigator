@@ -3,6 +3,28 @@ id: ENGAGE
 name: Engage Navigator
 version: 1.0.0
 tactics:
+- id: EAP0003
+  name: Prevent
+  object-type: tactic
+  description: 'Stop all or part of the adversary''s ability to conduct their operation
+    as intended.
+
+
+    Prevention focuses on stopping the adversary''s ability to conduct their operations
+    as intended. The defender can physically or virtually remove or disable resources,
+    tighten security controls, or otherwise impair the adversary''s ability to operate.
+    A defender might prevent an adversary from operating to force them to reveal different,
+    possibly more advanced, capabilities. Additionally, a defender can use Prevention
+    to discourage the adversary from operating against a specific target. In this
+    case, the defender may be attempting to encourage the adversary to focus elsewhere
+    in the engagement environment.
+
+    There are many more Prevention activities that are also good cybersecurity practices.
+    However, in Engage, we are focused on a subset of activities. Those are focused
+    exclusively on the intersection of denial, deception, and adversary engagement
+    technologies and the defender\u2019s ability to Affect the adversary.
+
+    '
 - id: EAP0001
   name: Collect
   object-type: tactic
@@ -39,28 +61,7 @@ tactics:
     and the defender''s ability to Expose the adversary.
 
     '
-- id: EAP0003
-  name: Prevent
-  object-type: tactic
-  description: 'Stop all or part of the adversary''s ability to conduct their operation
-    as intended.
-
-
-    Prevention focuses on stopping the adversary''s ability to conduct their operations
-    as intended. The defender can physically or virtually remove or disable resources,
-    tighten security controls, or otherwise impair the adversary''s ability to operate.
-    A defender might prevent an adversary from operating to force them to reveal different,
-    possibly more advanced, capabilities. Additionally, a defender can use Prevention
-    to discourage the adversary from operating against a specific target. In this
-    case, the defender may be attempting to encourage the adversary to focus elsewhere
-    in the engagement environment.
-
-    There are many more Prevention activities that are also good cybersecurity practices.
-    However, in Engage, we are focused on a subset of activities. Those are focused
-    exclusively on the intersection of denial, deception, and adversary engagement
-    technologies and the defender\u2019s ability to Affect the adversary.
-
-    '
+- EAP0003
 - id: EAP0004
   name: Direct
   object-type: tactic
@@ -132,6 +133,25 @@ tactics:
     proxy capabilities, or introduce elements that an adversary can easily leverage
     to bypass an obstacle in their operations. Finally, the defender can include enticing
     data to the environment to encourage the adversary to steal the data.
+
+    '
+- id: SAP0002
+  name: Analyze
+  object-type: tactic
+  description: 'Retrospective review of information gained from an operation.
+
+
+    Analysis is used to aggregate, examine, and evaluate the results of an operation.
+    Analysis is useful for improving the defender''s security posture through the
+    synthesis of operational data. Additionally, analysis can be used to turn data
+    into actionable intelligence about an adversary''s motivators, behaviors, tactics,
+    and techniques.
+
+    Defenders can use analysis to gain insight into adversary activity and thus inform
+    detection and analytics refinements. Reviewing the execution of an operation also
+    provides feedback for the team to improve the quality of future operations. Finally,
+    Analysis activities ensure that each operation is informed by the successes and
+    learns from the failures of past operations.
 
     '
 techniques:
