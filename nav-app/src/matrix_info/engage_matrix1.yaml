@@ -5,7 +5,7 @@ name: Engage Navigator
 version: 1.0.0
 
 tactics:
-  - "{{prevent.id}}"
+  - "{{plan.id}}"
   - "{{collect.id}}"
   - "{{detect.id}}"
   - "{{prevent.id}}"
