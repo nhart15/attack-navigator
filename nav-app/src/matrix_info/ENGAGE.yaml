@@ -3,28 +3,6 @@ id: ENGAGE
 name: Engage Navigator
 version: 1.0.0
 tactics:
-<<<<<<< HEAD
-- id: EAP0003
-  name: Prevent
-  object-type: tactic
-  description: 'Stop all or part of the adversary''s ability to conduct their operation
-    as intended.
-
-
-    Prevention focuses on stopping the adversary''s ability to conduct their operations
-    as intended. The defender can physically or virtually remove or disable resources,
-    tighten security controls, or otherwise impair the adversary''s ability to operate.
-    A defender might prevent an adversary from operating to force them to reveal different,
-    possibly more advanced, capabilities. Additionally, a defender can use Prevention
-    to discourage the adversary from operating against a specific target. In this
-    case, the defender may be attempting to encourage the adversary to focus elsewhere
-    in the engagement environment.
-
-    There are many more Prevention activities that are also good cybersecurity practices.
-    However, in Engage, we are focused on a subset of activities. Those are focused
-    exclusively on the intersection of denial, deception, and adversary engagement
-    technologies and the defender\u2019s ability to Affect the adversary.
-=======
 - id: SAP0001
   name: Plan
   object-type: tactic
@@ -38,7 +16,6 @@ tactics:
     at the beginning of an operation to ensure that the operation is efficient, effective,
     and safe. Finally, Planning activities ensure that each operation is informed
     by the successes and learns from the failures of past operations.
->>>>>>> 74add7a60ea745cbf40d46f399e94d4ebedcb2d8
 
     '
 - id: EAP0001
@@ -77,7 +54,28 @@ tactics:
     and the defender''s ability to Expose the adversary.
 
     '
-- EAP0003
+- id: EAP0003
+  name: Prevent
+  object-type: tactic
+  description: 'Stop all or part of the adversary''s ability to conduct their operation
+    as intended.
+
+
+    Prevention focuses on stopping the adversary''s ability to conduct their operations
+    as intended. The defender can physically or virtually remove or disable resources,
+    tighten security controls, or otherwise impair the adversary''s ability to operate.
+    A defender might prevent an adversary from operating to force them to reveal different,
+    possibly more advanced, capabilities. Additionally, a defender can use Prevention
+    to discourage the adversary from operating against a specific target. In this
+    case, the defender may be attempting to encourage the adversary to focus elsewhere
+    in the engagement environment.
+
+    There are many more Prevention activities that are also good cybersecurity practices.
+    However, in Engage, we are focused on a subset of activities. Those are focused
+    exclusively on the intersection of denial, deception, and adversary engagement
+    technologies and the defender\u2019s ability to Affect the adversary.
+
+    '
 - id: EAP0004
   name: Direct
   object-type: tactic
@@ -221,7 +219,7 @@ techniques:
     because future operational safety cannot be guaranteed. Or events have occurred
     that outweigh the agreed upon acceptable risk. Finally, it may just be that if
     the adversary operates any longer, they may learn something the defender doesn''t
-    want them to know.
+    want them to know.\n<br><br>\n
 
     Multiple parties from the technical operations, threat intel, legal, and management
     perspectives should be included when Defining Gaiting Criteria. For example, if
@@ -248,6 +246,31 @@ techniques:
   description: 'Plan and create a fictitious human user through a combination of planted
     data and revealed behavior patterns in support of your strategic objectives.
 
+
+    Persona Creation is the process of planning for and creating the personas required
+    to support the deception story. This process should be informed by the previously
+    generated threat model for the defender''s target adversary. For example, if the
+    adversary targets a specific industry, the persona might be created to look like
+    someone who works in that industry. The persona outline should include basic information
+    about the persona itself such as their name, their relationship to the environment
+    (is it a work computer with no personal information? A personal computer with
+    no work information? Some mix of both?), and geographic location. Often, and especially
+    for a short-term engagement operation, these persona traits can be fairly broad.
+    \n<br><br>\n
+
+    For example, it is unlikely that a persona used in a short-term ransomware detonation
+    operation would require a lot of details to be effective. However, for a longer-term
+    insider threat protection operation, the defender may need to create a persona
+    with the online presence of a corporate employee, including name, birthday, address,
+    etc. Many factors should be considered when determining how in-depth a persona
+    should be, including adversary sophistication, defender resources, and deception
+    story.\n<br><br>\nOnce the persona traits have been decided, the planning process
+    should determine how these traits will manifest in the environment. For example,
+    if the persona is named Jane Doe, then maybe that persona has a mailbox on her
+    desktop for the email janedoe1234@example.com. Persona creation is important to
+    running an operation, as personas are resource intensive to create and maintain
+    and can reveal the ruse if discovered as fake by the adversary.
+
     '
   tactics:
   - SAP0001
@@ -262,17 +285,17 @@ techniques:
     Storyboarding is creating this pattern of life for the persona(s) using the system(s).
     The pattern of life can include behaviors such as using email or chat software,
     browsing the Internet, using system software, or physically moving the device
-    (particularly important for mobile devices and laptops).
+    (particularly important for mobile devices and laptops). \n<br><br>\n
 
     The defender must determine how the Persona''s behavior and other events in the
     environment will be generated. Personas may be generated automatically with tooling,
     manually with human operators, or some combination of both. The availability of
     defender resources may greatly impact the frequency of manually executing behaviors.
-    Not every action taken in the environment needs to be planned in advance. However,
-    the defender should have a general idea of what actions will be taken. Setting
-    up a storyboard early in the planning process will allow the operation to run
-    smoothly, efficiently, and most importantly, consistently, regardless of operator,
-    so as not to reveal the ruse.
+    \n<br><br>\nNot every action taken in the environment needs to be planned in advance.
+    However, the defender should have a general idea of what actions will be taken.
+    Setting up a storyboard early in the planning process will allow the operation
+    to run smoothly, efficiently, and most importantly, consistently, regardless of
+    operator, so as not to reveal the ruse.
 
     '
   tactics:
@@ -281,6 +304,35 @@ techniques:
   name: Threat Model
   object-type: technique
   description: 'Identify, understand, and prioritize potential engagement targets.
+
+
+    Developing a Threat Model allows the potential target adversary to be identified
+    and understood. This model should be informed by a combination of open and closed
+    source research. It can be supplemented with internal and external threat intelligence
+    feeds and information gleaned from previous operations. \n<br><br>\nAdditionally,
+    in order to build the model, the defender must have a thorough understanding of
+    themselves. Among other things, this includes their own organization, trusted
+    partners, infrastructure, current security strengths and weaknesses, and critical
+    cyber assets. This understanding will inform the threat modeling by outlining
+    the defender''s attack surface and highlighting areas that may be of particular
+    interest to a given adversary. The threat model output from this analysis should
+    include information about the adversary''s TTPs, IOCs, victimology, and level
+    of sophistication. \n<br><br>\n
+
+    pplying the Strategic Goal to these models allows the defender to prioritize target
+    adversaries. For example, if the defender''s intended operational outcome is to
+    expose adversaries on the network, the defender should prioritize adversaries
+    that historically target their organization or similar organizations and have
+    displayed TTPs that are likely to evade current defenses. Additionally, Storyboarding
+    should use the threat model for the target adversary to anticipate what the adversary
+    will do in the environment, how they will react to what they find, and what the
+    defender plans to do in response. \n<br><br>\nOnce one or more adversaries have
+    been selected as the target adversary, the corresponding threat model should guide
+    the creation of the engagement environment and storyboard including hardware and
+    software requirements, the required level of realism for Decoy Artifacts and Pocket
+    Litter, and acceptable operational risk. For example, if the target adversary
+    is known to use ransomware, then having a domain controller (DC) in the environment
+    will be a requirement as most ransomware requires a DC in order to execute.
 
     '
   tactics:
@@ -316,9 +368,9 @@ techniques:
     centralized collection location for further analysis. This analysis can be automated
     or manual. In either case, a defender can use Network Monitoring to identify anomalous
     traffic patterns, large or unexpected data transfers, and other activity that
-    may reveal the presence of an adversary. Monitoring is essential to maintain situational
-    awareness of adversary activities to ensure operational safety and make progress
-    towards the defender''s goals.
+    may reveal the presence of an adversary. \n<br><br>\nMonitoring is essential to
+    maintain situational awareness of adversary activities to ensure operational safety
+    and make progress towards the defender''s goals.
 
     Careful pre-operational planning should be done to properly instrument the engagement
     environment to ensure that all key network traffic is collected. Some use cases
@@ -773,39 +825,47 @@ techniques:
 - id: EAC0015
   name: Information Manupulation
   object-type: technique
-  description: "Conceal and reveal both facts and fictions to support a deception\
-    \ story.\n\nInformation Manipulation is used to support the deception story. Revealed\
-    \ facts and fictions can be used to adjust the adversary\\u2019s trust in the\
-    \ environment. Concealed facts and fiction can be used to adjust the adversary\\\
-    u2019s sense of uncertainty towards the environment. Revealed facts may include\
-    \ OS type and version, geographic location, hardware type and version, accounts,\
-    \ credentials, etc. Revealed fictions may include the content of decoy files,\
-    \ emails, messages, etc. Revealed facts and fictions may or may not be believed\
-    \ by the adversary.\nIf an adversary believes a revealed fact or fiction, it may\
-    \ lend credibility to the environment or encourage a specific action. If an adversary\
-    \ is suspicious or does not believe a revealed fact or fiction, it may erode adversary\
-    \ trust in the environment. For example, if the adversary discovers that a collection\
-    \ of legitimate passwords all contain the phrase \\\"honeytoken\\\" or \\\"canarytoken\\\
-    \" they may lose trust in the legitimacy of the environment, even if the credentials\
-    \ are real and valid in the enterprise network. Conversely, if the adversary checks\
-    \ the timestamps on various files on the target and finds timestamps going back\
-    \ multiple years, they may trust that the environment is legitimate even if, in\
-    \ reality, the files are new and the timestamps were falsified. In this way, revealed\
-    \ facts and fictions can be used to adjust the adversary's trust in the environment\
-    \ in ways that support the defender's goals. \nConcealed facts may include virtualized\
-    \ systems disguised as physical systems, monitoring software, or collection efforts.\
-    \ Concealed fictions may include an encrypted, interestingly named, decoy file\
-    \ or a partially deleted email thread referencing high value, but decoy, assets.\
-    \ Concealed facts and fictions may or may not be discovered by the adversary.\
-    \ If the adversary discovers a concealed fact or fiction, it may increase the\
-    \ ambiguity of the environment and affect the adversary's sense of uncertainty.\
-    \ For example, if an adversary discovers a hidden monitoring solution is deployed,\
-    \ they may feel less comfortable engaging with that specific target. Conversely,\
-    \ if the defender deploys a hidden monitoring solution with an intentional blind\
-    \ spot that the adversary discovers, the adversary may feel a decrease in ambiguity\
-    \ and take additional actions believing that they will be undetected. In this\
-    \ way, concealed facts and fictions can be used to adjust the ambiguity and affect\
-    \ the adversary's sense of uncertainty in ways that support the defender's goals.\n"
+  description: 'Conceal and reveal both facts and fictions to support a deception
+    story.
+
+
+    Information Manipulation is used to support the deception story. Revealed facts
+    and fictions can be used to adjust the adversary\u2019s trust in the environment.
+    Concealed facts and fiction can be used to adjust the adversary\u2019s sense of
+    uncertainty towards the environment. Revealed facts may include OS type and version,
+    geographic location, hardware type and version, accounts, credentials, etc. Revealed
+    fictions may include the content of decoy files, emails, messages, etc. Revealed
+    facts and fictions may or may not be believed by the adversary.\n<br><br>\n
+
+    If an adversary believes a revealed fact or fiction, it may lend credibility to
+    the environment or encourage a specific action. If an adversary is suspicious
+    or does not believe a revealed fact or fiction, it may erode adversary trust in
+    the environment. For example, if the adversary discovers that a collection of
+    legitimate passwords all contain the phrase \"honeytoken\" or \"canarytoken\"
+    they may lose trust in the legitimacy of the environment, even if the credentials
+    are real and valid in the enterprise network. Conversely, if the adversary checks
+    the timestamps on various files on the target and finds timestamps going back
+    multiple years, they may trust that the environment is legitimate even if, in
+    reality, the files are new and the timestamps were falsified. In this way, revealed
+    facts and fictions can be used to adjust the adversary''s trust in the environment
+    in ways that support the defender''s goals. \n<br><br>\n
+
+    Concealed facts may include virtualized systems disguised as physical systems,
+    monitoring software, or collection efforts. Concealed fictions may include an
+    encrypted, interestingly named, decoy file or a partially deleted email thread
+    referencing high value, but decoy, assets. Concealed facts and fictions may or
+    may not be discovered by the adversary. If the adversary discovers a concealed
+    fact or fiction, it may increase the ambiguity of the environment and affect the
+    adversary''s sense of uncertainty. \n<br><br>\nFor example, if an adversary discovers
+    a hidden monitoring solution is deployed, they may feel less comfortable engaging
+    with that specific target. Conversely, if the defender deploys a hidden monitoring
+    solution with an intentional blind spot that the adversary discovers, the adversary
+    may feel a decrease in ambiguity and take additional actions believing that they
+    will be undetected. In this way, concealed facts and fictions can be used to adjust
+    the ambiguity and affect the adversary''s sense of uncertainty in ways that support
+    the defender''s goals.
+
+    '
   tactics:
   - EAP0006
   - EAP0007
@@ -842,7 +902,7 @@ techniques:
     and users are real. Pocket Litter can be used to establish a cognitive bias to
     raise the adversary''s tolerance to weaknesses in the environment. Unlike Decoy
     Artifacts, Pocket Litter does not necessarily aim to encourage the adversary to
-    take a specific action, but rather it supports the overall deception story.
+    take a specific action, but rather it supports the overall deception story.\n<br><br>\n
 
     Pocket Litter can include documents, pictures, registry entries, installed software,
     log history, browsing history, connection history, and other user data that an
@@ -866,7 +926,7 @@ techniques:
     a backstory and seed the environment with varying data in support of this story.
     Depending on the need for realism, the constructed persona can be supported by
     evidence of hobbies, social and professional interactions, consumer transactions,
-    employment, browsing habits, etc.
+    employment, browsing habits, etc.\n<br><br>\n
 
     In addition to lending legitimacy to the environment, personas can be used to
     engage directly with adversaries, such as during phishing email exchanges. Additionally,
