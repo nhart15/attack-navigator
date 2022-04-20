@@ -24,7 +24,87 @@
 
 
 
-- &api_moonitoring
+- &cyber_threat_intelligence
+  id: SAC0004
+  name: Cyber Threat Intelligence 
+  object-type: technique
+  description: |
+    Identify, understand, and prioritize potential engagement targets.
+  tactics:
+    - "{{plan.id}}"
+    - "{{analyze.id}}"
+
+- &engagement_environment
+  id: SAC0012
+  name: Engagement Environment 
+  object-type: technique
+  description: |
+    Design the systems and network for the operation.
+
+    The Engagement Environment is the set of carefully tailored, highly instrumented systems designed on an engagement-by-engagement basis as the backdrop to the engagement narrative. It is the actual environment that the adversary will operate in. It is important to ensure that the Engagement Environment complements, rather than competes with, the engagement narrative. Additionally, these systems should provide conduits to allow the target adversary necessary movement throughout the environment, as needed to meet operational outcomes.
+    While not strictly part of the Engagement Environment, the collection system is the set of systems used to gather artifacts and other data from an operation to monitor the engagement to ensure operational safety. It is important to consider the collection system while designing the engagement environment. By designing these environments in lockstep, the defender guarantees that all aspects oft he engagement environment can be monitored. This is essential to ensure operations remain within the guardrails set by the Rules of Engagement. For Example, available resources, capabilities, or skills may limit the type of assets in, or size of, the Engagement Environment.
+  tactics:
+    - "{{plan.id}}"
+
+- &gaiting_criteria
+  id: SAC0005
+  name: API Monitoring
+  object-type: technique
+  description: |
+    Define the set of events that would lead to the unnegotiable conclusion to the operation.
+
+    Gaiting Criteria are the event or sequence of events that are agreed to be the unnegotiable immediate pause or end to the operation. Sometimes, these events include the successful completion of the agreed upon strategic goals. Other times, these events may signify the operation has reached a hard stop. This is often because future operational safety cannot be guaranteed. Or events have occurred that outweigh the agreed upon acceptable risk. Finally, it may just be that if the adversary operates any longer, they may learn something the defender doesn't want them to know.\n<br><br>\n
+    Multiple parties from the technical operations, threat intel, legal, and management perspectives should be included when Defining Gaiting Criteria. For example, if an adversary begins to use the engagement environment as a platform to operate against other targets, stakeholders may decide that the operation must be suspended until the unacceptable traffic can be blocked. Defining Exit Criteria is an essential step to ensure operational safety
+  tactics:
+    - "{{plan.id}}"
+
+- &operational_objective
+  id: SAC0001
+  name: Operational Objective
+  object-type: technique
+  description: |
+    Define the objective of the desired end-state of your adversary engagement operations.
+  tactics:
+    - "{{plan.id}}"
+
+- &persona_creation
+  id: SAC0002
+  name: Persona Creation
+  object-type: technique
+  description: |
+    Plan and create a fictitious human user through a combination of planted data and revealed behavior patterns in support of your strategic objectives.
+
+    Persona Creation is the process of planning for and creating the personas required to support the deception story. This process should be informed by the previously generated threat model for the defender's target adversary. For example, if the adversary targets a specific industry, the persona might be created to look like someone who works in that industry. The persona outline should include basic information about the persona itself such as their name, their relationship to the environment (is it a work computer with no personal information? A personal computer with no work information? Some mix of both?), and geographic location. Often, and especially for a short-term engagement operation, these persona traits can be fairly broad. \n<br><br>\n
+    For example, it is unlikely that a persona used in a short-term ransomware detonation operation would require a lot of details to be effective. However, for a longer-term insider threat protection operation, the defender may need to create a persona with the online presence of a corporate employee, including name, birthday, address, etc. Many factors should be considered when determining how in-depth a persona should be, including adversary sophistication, defender resources, and deception story.\n<br><br>\nOnce the persona traits have been decided, the planning process should determine how these traits will manifest in the environment. For example, if the persona is named Jane Doe, then maybe that persona has a mailbox on her desktop for the email janedoe1234@example.com. Persona creation is important to running an operation, as personas are resource intensive to create and maintain and can reveal the ruse if discovered as fake by the adversary.
+  tactics:
+    - "{{plan.id}}"
+
+- &storyboarding
+  id: SAC0003
+  name: Storyboarding
+  object-type: technique
+  description: |
+    Plan and create the deception story.
+
+    Storyboarding is the process of creating the deception story through a sequence of events, interactions, the persona's pattern of life, etc. A large part of Storyboarding is creating this pattern of life for the persona(s) using the system(s). The pattern of life can include behaviors such as using email or chat software, browsing the Internet, using system software, or physically moving the device (particularly important for mobile devices and laptops). \n<br><br>\n
+    The defender must determine how the Persona's behavior and other events in the environment will be generated. Personas may be generated automatically with tooling, manually with human operators, or some combination of both. The availability of defender resources may greatly impact the frequency of manually executing behaviors. \n<br><br>\nNot every action taken in the environment needs to be planned in advance. However, the defender should have a general idea of what actions will be taken. Setting up a storyboard early in the planning process will allow the operation to run smoothly, efficiently, and most importantly, consistently, regardless of operator, so as not to reveal the ruse.
+  tactics:
+    - "{{plan.id}}"
+
+- &threat_model
+  id: SAC0009
+  name: Threat Model
+  object-type: technique
+  description: |
+    Identify, understand, and prioritize potential engagement targets.
+
+    Developing a Threat Model allows the potential target adversary to be identified and understood. This model should be informed by a combination of open and closed source research. It can be supplemented with internal and external threat intelligence feeds and information gleaned from previous operations. \n<br><br>\nAdditionally, in order to build the model, the defender must have a thorough understanding of themselves. Among other things, this includes their own organization, trusted partners, infrastructure, current security strengths and weaknesses, and critical cyber assets. This understanding will inform the threat modeling by outlining the defender's attack surface and highlighting areas that may be of particular interest to a given adversary. The threat model output from this analysis should include information about the adversary's TTPs, IOCs, victimology, and level of sophistication. \n<br><br>\n
+    pplying the Strategic Goal to these models allows the defender to prioritize target adversaries. For example, if the defender's intended operational outcome is to expose adversaries on the network, the defender should prioritize adversaries that historically target their organization or similar organizations and have displayed TTPs that are likely to evade current defenses. Additionally, Storyboarding should use the threat model for the target adversary to anticipate what the adversary will do in the environment, how they will react to what they find, and what the defender plans to do in response. \n<br><br>\nOnce one or more adversaries have been selected as the target adversary, the corresponding threat model should guide the creation of the engagement environment and storyboard including hardware and software requirements, the required level of realism for Decoy Artifacts and Pocket Litter, and acceptable operational risk. For example, if the target adversary is known to use ransomware, then having a domain controller (DC) in the environment will be a requirement as most ransomware requires a DC in order to execute.
+  tactics:
+    - "{{plan.id}}"
+    - "{{analyze.id}}"
+
+- &api_monitoring
   id: EAC0001
   name: API Monitoring
   object-type: technique
@@ -318,3 +398,14 @@
     In addition to lending legitimacy to the environment, personas can be used to engage directly with adversaries, such as during phishing email exchanges. Additionally, personas can make changes to the environment during the operation, such as adding or removing a USB device or introducing new decoy documents or credentials.
   tactics:
     - "{{motivate.id}}"
+
+- &after_action_review
+  id: SAC0006
+  name: After-Action Review
+  object-type: technique
+  description: |
+    Review of operational activities.
+
+    The After-Action Review (AAR) is the opportunity for the team to review the events of the operation to ensure progress towards strategic outcomes. This retrospective can include a review of the entire operational process from planning, implementation, engagement activity, and impact. In additional to the operation itself, the Hotwash is an important time to assess the communication and teamwork of the operations team and all contributing stakeholders. While a Hotwash should always occur at the end of an operation, periodic hotwashes during long-running operations are vital to ensure alignment and progress towards the Strategic Goal.
+  tactics:
+    - "{{analyze.id}}"
