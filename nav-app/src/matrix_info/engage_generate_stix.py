@@ -246,7 +246,7 @@ if __name__ == '__main__':
     parser.add_argument("-f",
         type=str,
         dest="engage_data_filepath",
-        default="attack-navigator\\nav-app\\src\\matrix_info\\ENGAGE.yaml",
+        default="attack-navigator\\attack-navigator\\nav-app\\src\\matrix_info\\ENGAGE.yaml",
         help="Path to ENGAGE.yaml file"
     )
     parser.add_argument("--url",
@@ -258,7 +258,7 @@ if __name__ == '__main__':
     parser.add_argument("-o",
         type=str,
         dest="output_dir",
-        default="attack-navigator\\nav-app\\src\\matrix_info",
+        default="attack-navigator\\attack-navigator\\nav-app\\src\\matrix_info",
         help="Output directory for STIX JSON"
     )
 
